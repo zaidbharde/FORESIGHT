@@ -16,6 +16,8 @@ from backend.risk_engine import HybridRiskEngine, RiskRuleContext
 
 logger = logging.getLogger(__name__)
 
+MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "xgboost_baseline.pkl"
+
 
 class PredictionService:
     def __init__(self, rule_engine: HybridRiskEngine | None = None) -> None:
@@ -139,16 +141,8 @@ class PredictionService:
         return recommendations.get(risk_level, "Review before payment.")
 
     def _resolve_model_path(self) -> Path | None:
-        filename = "xgboost_baseline.pkl"
-        project_root = Path(__file__).resolve().parents[2]
-        candidates = [
-            project_root / filename,
-            project_root / "VISION ON" / filename,
-            project_root / "backend" / filename,
-        ]
-        for candidate in candidates:
-            if candidate.exists():
-                return candidate
+        if MODEL_PATH.exists():
+            return MODEL_PATH
         return None
 
     def _predict_probability(self, features: pd.DataFrame) -> float:
