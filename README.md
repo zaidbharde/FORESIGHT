@@ -277,18 +277,35 @@ The app includes one-tap demo scenarios for live presentation:
 
 ## 🗺️ Roadmap
 
-- [x] React frontend with full payment flow
-- [x] Rule-based risk engine (JS)
-- [x] Safety Hub — elderly mode, guardian mode, emergency override
-- [x] Demo mode with preset scenarios
-- [x] FastAPI backend foundation
-- [ ] ML model training (IEEE-CIS dataset)
-- [ ] SHAP integration
-- [ ] OTP Fraud Shield screens
-- [ ] Trusted Circle management
-- [ ] Vercel + Render deployment
-- [ ] GPay UPI deep link integration
+- [x] Android app built with Jetpack Compose
+- [x] FastAPI backend with hybrid AI Risk Engine
+- [x] Firebase Phone Authentication
+- [x] UPI payment flow and QR payment support
+- [x] QR code scanner integration
+- [x] AI-powered real-time fraud risk assessment
+- [x] Rule-based fraud detection engine
+- [x] ML model trained using IEEE-CIS Fraud Detection dataset
+- [x] Explainable AI (SHAP) integration
+- [x] Hybrid Rule + ML risk scoring
+- [x] Transaction history
+- [x] Multi-language support (English & Hindi)
+- [x] Light/Dark/System theme support
+- [x] Safety Hub
+- [x] Trusted Contacts
+- [x] Security hardening and penetration testing
+- [x] Secure Firebase authentication
+- [x] Backend API with Swagger documentation
 
+### 🚧 Planned
+
+- [ ] Production cloud deployment
+- [ ] HTTPS + SSL backend hosting
+- [ ] Certificate pinning
+- [ ] Encrypted local storage
+- [ ] Play Store release
+- [ ] RBI sandbox / real banking API integration
+- [ ] Push notification fraud alerts
+- [ ] Admin analytics dashboard
 ---
 
 ## 🛠️ Tech Stack
