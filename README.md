@@ -184,17 +184,6 @@ uvicorn backend.main:app --reload
 cd frontend
 npm install
 npm run dev
-```
-
-### Access
-
-| Service | URL |
-|---------|-----|
-| 🌐 Frontend App | http://localhost:5173 |
-| ⚡ API Root | http://localhost:8000 |
-| ❤️ Health Check | http://localhost:8000/health |
-| 📖 Swagger UI | http://localhost:8000/docs |
-| 🔷 OpenAPI Schema | http://localhost:8000/openapi.json |
 
 ---
 
