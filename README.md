@@ -104,15 +104,20 @@ IEEE-CIS Dataset (590K transactions)
 
 ---
 
-## 🛡️ OTP Fraud Shield
+## 🛡️ Smart Fraud Protection
 
-India's #1 UPI scam vector — social engineering via phone calls — gets its own dedicated layer **before** the ML model runs:
+FORESIGHT combines AI-driven fraud detection with multiple security layers to protect users before every UPI transaction.
 
-- 📞 **Active call detection** — warns if a call is ongoing during payment
-- 🚫 **Receive-money OTP blocker** — "You never need OTP to receive money"
-- 🔄 **SIM change lock** — restricts high-value transfers for 7 days after SIM change
-- ⏱️ **90-second OTP expiry** — eliminates the manipulation window
-- ❓ **"Who Asked You?" screen** — 4-option confirmation before any OTP entry
+- 🔐 **Firebase Phone Authentication** — Secure OTP-based user verification.
+- 🤖 **AI Risk Engine** — Hybrid ML + Rule-based fraud analysis before payment.
+- 📊 **Real-time Risk Score** — Calculates transaction risk in milliseconds.
+- ⚠️ **Risk-based Decision Engine** — Categorizes transactions into Low, Medium, High, and Critical risk levels.
+- 📷 **Secure QR Payment Validation** — Validates scanned UPI QR data before processing.
+- 💳 **UPI Deep Link Protection** — Strict validation of VPA, payee, currency, and transaction amount.
+- 👥 **Trusted Contacts** — Quick access to verified contacts for safer payments.
+- 🛡️ **Security-Hardened Authentication Flow** — Input validation, protected navigation, and secure session handling.
+- 🚫 **Sensitive Data Protection** — No sensitive logs, disabled Android backups, and screenshot protection (`FLAG_SECURE`).
+- 🌐 **Secure Backend Communication** — FastAPI backend with robust request validation and error handling.
 
 ---
 
