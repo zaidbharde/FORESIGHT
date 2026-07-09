@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
 
-    private var baseUrl = "http://10.33.52.142:8000/"
+    private var baseUrl = BuildConfig.API_BASE_URL
 
     fun updateBaseUrl(newUrl: String) {
         val normalized = if (newUrl.endsWith("/")) newUrl else "$newUrl/"
