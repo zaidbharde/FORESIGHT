@@ -1,0 +1,57 @@
+{
+  "LOW": {
+    "blocked_by_rule_engine": false,
+    "risk_score": 10,
+    "risk_category": "LOW",
+    "recommended_action": "Proceed Normally",
+    "fraud_probability": 0.10000070929527283,
+    "top_reasons": [
+      "Late Night Transaction (+7%)",
+      "Round Amount Transaction (+5%)",
+      "Device type (+5%)"
+    ]
+  },
+  "MEDIUM": {
+    "blocked_by_rule_engine": false,
+    "risk_score": 45,
+    "risk_category": "MEDIUM",
+    "recommended_action": "Show Warning and Review Screen",
+    "fraud_probability": 0.4500068426132202,
+    "top_reasons": [
+      "Payment method (+14%)",
+      "Round Amount Transaction (+14%)",
+      "Large Amount (+9%)"
+    ]
+  },
+  "HIGH": {
+    "blocked_by_rule_engine": false,
+    "risk_score": 70,
+    "risk_category": "HIGH",
+    "recommended_action": "Require Additional Verification and User Confirmation",
+    "fraud_probability": 0.7000095844268799,
+    "top_reasons": [
+      "Large Amount (+19%)",
+      "Round Amount Transaction (+14%)",
+      "Payment method (+12%)"
+    ]
+  },
+  "CRITICAL": {
+    "blocked_by_rule_engine": false,
+    "risk_score": 90,
+    "risk_category": "CRITICAL",
+    "recommended_action": "Display Strong Scam Warning and Require Explicit Confirmation",
+    "fraud_probability": 0.8999976515769958,
+    "top_reasons": [
+      "Card Pattern (+17%)",
+      "Product category (+16%)",
+      "Card Pattern (+10%)"
+    ]
+  },
+  "OTP_SCAM_BLOCKED": {
+    "blocked_by_rule_engine": true,
+    "risk_score": 100,
+    "risk_category": "CRITICAL",
+    "recommended_action": "Immediate Scam Warning",
+    "reason": "active_call_detected"
+  }
+}

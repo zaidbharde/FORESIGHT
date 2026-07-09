@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1 Score,ROC-AUC,TN,FP,FN,TP,Desired Behavioral Features In Top 20,Removed Features In Top 20,Behavioral Features Dominant,Recall Difference,ROC-AUC Difference,Baseline Model,Baseline Recall,Baseline ROC-AUC
+Explainability XGBoost,0.8196989196328783,0.133133817870885,0.7534478586982821,0.226283472005232,0.8666218152122981,93699,20276,1019,3114,7,0,True,0.021047858698282074,0.011821815212298081,XGBoost,0.7324,0.8548

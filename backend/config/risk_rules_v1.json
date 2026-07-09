@@ -1,0 +1,60 @@
+{
+  "config_version": "1.0.0",
+  "minimum_score": 0.0,
+  "maximum_score": 100.0,
+  "risk_thresholds": {
+    "medium": 30.0,
+    "high": 60.0,
+    "critical": 80.0
+  },
+  "recommendations": {
+    "LOW": "Proceed normally.",
+    "MEDIUM": "Review the payment details before proceeding.",
+    "HIGH": "Require additional verification before payment.",
+    "CRITICAL": "Cancel the payment and verify the recipient independently."
+  },
+  "rules": [
+    {
+      "rule_id": "trusted_contact",
+      "enabled": true,
+      "adjustment": -10.0,
+      "parameters": {},
+      "explanation": "Recipient is a trusted contact, which slightly lowers contextual risk."
+    },
+    {
+      "rule_id": "known_device",
+      "enabled": true,
+      "adjustment": -5.0,
+      "parameters": {},
+      "explanation": "Payment uses a known device, which slightly lowers contextual risk."
+    },
+    {
+      "rule_id": "location_anomaly",
+      "enabled": true,
+      "adjustment": 20.0,
+      "parameters": {},
+      "explanation": "Payment location differs from established history, increasing contextual risk."
+    },
+    {
+      "rule_id": "large_amount",
+      "enabled": true,
+      "adjustment": 15.0,
+      "parameters": {"minimum_amount": 10000.0},
+      "explanation": "Transaction amount meets the configured high-value threshold."
+    },
+    {
+      "rule_id": "late_night",
+      "enabled": true,
+      "adjustment": 8.0,
+      "parameters": {"start_hour": 22, "end_hour": 5},
+      "explanation": "Payment occurs during configured late-night hours."
+    },
+    {
+      "rule_id": "many_transactions",
+      "enabled": true,
+      "adjustment": 12.0,
+      "parameters": {"last_hour_threshold": 3, "last_24h_threshold": 10},
+      "explanation": "Recent transaction frequency meets a configured velocity threshold."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Stage,Model,Accuracy,Precision,Recall,F1 Score,ROC-AUC
+Baseline,Random Forest,0.982,0.8534,0.5858,0.6947,0.9434
+Baseline,XGBoost,0.8202,0.1313,0.7363,0.2228,0.8611
+Tuned + SMOTE,Random Forest,0.9147,0.2379,0.6526,0.3487,0.8902
+Tuned + SMOTE,XGBoost,0.9634,0.4474,0.1974,0.274,0.8414

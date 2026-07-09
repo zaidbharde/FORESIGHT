@@ -1,0 +1,54 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.iml
+.idea/
+.vscode/
+
+# Local environment
+.env
+.env.*
+!.env.example
+local.properties
+
+# Android / Gradle generated files
+.gradle/
+.kotlin/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+Foresight/app/build/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Java crash dumps / local diagnostics
+java_pid*.hprof
+hs_err_pid*
+
+# JavaScript generated files
+node_modules/
+dist/
+
+# ML/data artifacts
+*.pkl
+*.joblib
+*.h5
+*.onnx
+processed_data.csv
+X_train.csv
+X_test.csv
+y_train.csv
+y_test.csv
+
+**/google-services.json
+
+VISION ON/ml-training/data/

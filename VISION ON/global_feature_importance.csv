@@ -1,0 +1,2055 @@
+Feature,Mean Absolute SHAP
+DeviceInfo = SM-A300H Build/LRX22G,0.85047096
+R_emaildomain_protonmail.com,0.778574
+DeviceInfo = hi6210sft Build/MRA58K,0.6707226
+R_emaildomain_msn.com,0.6343141
+P_emaildomain_sbcglobal.net,0.6111286
+card1,0.5803865
+DeviceInfo = SM-A520F Build/NRD90M,0.5630039
+P_emaildomain_att.net,0.506703
+id_30_iOS 10.3.2,0.5015987
+id_31_chrome 62.0,0.49282974
+id_30_other,0.38755178
+DeviceInfo = TA-1039 Build/NMF26F,0.3788803
+DeviceInfo = LG-K500 Build/MMB29M,0.37031555
+P_emaildomain_anonymous.com,0.36189434
+id_31_comodo,0.3591409
+TransactionAmt,0.34605873
+card4 = discover,0.32754597
+DeviceInfo = SM-J105B Build/LMY47V,0.30496284
+R_emaildomain_gmail.com,0.29915774
+P_emaildomain_outlook.es,0.2970837
+DeviceInfo = Hisense L675 Build/MRA58K,0.29521957
+P_emaildomain_Unknown,0.27910396
+P_emaildomain_mail.com,0.2665584
+DeviceInfo = PRA-LX3 Build/HUAWEIPRA-LX3,0.25934166
+P_emaildomain_web.de,0.2561781
+P_emaildomain_verizon.net,0.25506648
+R_emaildomain_verizon.net,0.2489354
+DeviceInfo = LG-D693n Build/LRX22G,0.24493732
+R_emaildomain_Unknown,0.24321514
+transactions_last_day,0.21863386
+P_emaildomain_protonmail.com,0.21638115
+amount_to_average_ratio,0.21013342
+P_emaildomain_earthlink.net,0.20204577
+id_30_Windows 8.1,0.19734852
+id_30_Windows 10,0.19211085
+R_emaildomain_outlook.com,0.1911532
+P_emaildomain_hotmail.com,0.18427312
+R_emaildomain_comcast.net,0.18025333
+device_change_flag,0.17700776
+P_emaildomain_prodigy.net.mx,0.17349449
+DeviceInfo = SM-G570M Build/MMB29K,0.17142972
+R_emaildomain_icloud.com,0.16984397
+hour_of_day,0.16801646
+card6 = credit,0.16779736
+id_31_firefox 59.0,0.15424393
+addr1,0.15297103
+P_emaildomain_gmail.com,0.15286775
+id_31_opera,0.14571992
+P_emaildomain_aim.com,0.14417669
+id_31_chrome generic,0.1427645
+DeviceInfo = HUAWEI RIO-L03 Build/HUAWEIRIO-L03,0.14178991
+id_31_firefox,0.13682477
+card4 = american express,0.13199107
+P_emaildomain_yahoo.com.mx,0.1311169
+DeviceInfo = VS5012 Build/NRD90M,0.1294576
+P_emaildomain_aol.com,0.12480246
+DeviceInfo = Trident/7.0,0.123918265
+is_round_amount,0.122218415
+card2,0.12192637
+P_emaildomain_comcast.net,0.11835176
+DeviceInfo = SM-G930V Build/NRD90M,0.116414055
+R_emaildomain_anonymous.com,0.11456129
+id_30_Android,0.114464305
+card5,0.1084401
+DeviceInfo = Moto E (4) Build/NMA26.42-19,0.10515951
+P_emaildomain_ymail.com,0.10317077
+id_31_mobile safari 10.0,0.10026751
+P_emaildomain_rocketmail.com,0.097624846
+DeviceInfo = HTC Desire 650 Build/MMB29M,0.09667465
+R_emaildomain_att.net,0.093265034
+DeviceInfo = SM-G935V Build/NRD90M,0.09127395
+id_31_ie 11.0 for tablet,0.09117262
+id_31_samsung browser 6.4,0.08992695
+R_emaildomain_live.com.mx,0.08788177
+DeviceInfo = SM-N920A Build/MMB29K,0.08737024
+DeviceInfo = MacOS,0.084049046
+id_31_ie 11.0 for desktop,0.082046
+id_31_chrome 63.0 for android,0.081720024
+DeviceInfo = SM-J710MN Build/MMB29K,0.07947458
+id_31_android browser 4.0,0.076801814
+id_31_safari generic,0.07679837
+DeviceInfo = LG-D320 Build/KOT49I.V10a,0.076050304
+days_since_last_transaction,0.075710826
+P_emaildomain_optonline.net,0.07567856
+ProductCD = R,0.06674482
+DeviceInfo = CRO-L03 Build/HUAWEICRO-L03,0.06556823
+id_31_chrome 64.0,0.06456907
+DeviceInfo = FRD-L09 Build/HUAWEIFRD-L09,0.06291999
+ProductCD = H,0.058187094
+id_30_iOS 11.1.2,0.055876225
+ProductCD = C,0.054523904
+ProductCD = S,0.050891504
+id_30_Android 8.0.0,0.0503182
+card3,0.04723465
+R_emaildomain_mail.com,0.04723328
+ProductCD = W,0.04611359
+P_emaildomain_netzero.com,0.04608848
+id_31_chrome 65.0 for android,0.045111313
+DeviceInfo = CHC-U03 Build/HuaweiCHC-U03,0.04193069
+DeviceInfo = rv:51.0,0.041041587
+DeviceInfo = Unknown,0.040228985
+P_emaildomain_bellsouth.net,0.039853938
+P_emaildomain_windstream.net,0.039703187
+DeviceType = Unknown,0.038814053
+DeviceInfo = SM-A510M Build/MMB29K,0.03831985
+P_emaildomain_embarqmail.com,0.03708879
+addr2,0.03669698
+transactions_last_hour,0.036393918
+id_31_chrome 63.0,0.03600311
+DeviceInfo = TA-1038 Build/NMF26O,0.035454646
+DeviceInfo = M4 SS4456 Build/LMY47V,0.03545441
+id_31_opera generic,0.034271996
+id_31_chrome 61.0,0.033807978
+DeviceInfo = Moto G (5) Build/NPP25.137-93,0.033531073
+R_emaildomain_hotmail.com,0.033388842
+id_31_safari 10.0,0.032645714
+id_31_chrome 58.0,0.030639961
+is_large_amount,0.027775267
+id_30_Mac OS X 10_11_6,0.027106436
+P_emaildomain_outlook.com,0.026735831
+id_31_Samsung/SM-G532M,0.026676718
+R_emaildomain_bellsouth.net,0.02634905
+DeviceInfo = SM-G532M Build/MMB29T,0.026212748
+id_30_iOS 11.3.0,0.025831366
+id_31_firefox generic,0.025744881
+id_31_edge 16.0,0.02541504
+id_30_iOS 11.2.6,0.024932032
+DeviceType = desktop,0.024343805
+id_31_mobile safari generic,0.024241434
+DeviceInfo = H1711 Build/HUAWEIH1711,0.022417706
+id_30_iOS 10.2.1,0.022213077
+id_30_iOS 11.0.3,0.02127765
+id_30_Mac OS X 10_13_3,0.021188611
+R_emaildomain_me.com,0.021008408
+id_31_mobile,0.020824065
+DeviceInfo = Moto Z (2,0.020488124
+DeviceType = mobile,0.020077957
+id_30_Mac OS X 10_13_2,0.01978254
+DeviceInfo = SAMSUNG SM-G930T Build/NRD90M,0.019485723
+id_30_Android 7.1.1,0.018602725
+P_emaildomain_live.com,0.017820116
+DeviceInfo = Windows,0.017375287
+DeviceInfo = SM-J700M Build/MMB29K,0.017232673
+id_31_firefox 57.0,0.01686
+card4 = mastercard,0.01649251
+id_31_chrome 61.0 for android,0.01600477
+DeviceInfo = SAMSUNG SM-G531H Build/LMY48B,0.015948115
+id_30_Windows 8,0.015741792
+id_31_chrome 66.0 for android,0.015288115
+P_emaildomain_icloud.com,0.014656199
+id_31_edge 15.0,0.014616412
+DeviceInfo = SM-G531H Build/LMY48B,0.014401959
+id_30_iOS 11.2.1,0.014200534
+id_30_Android 5.1.1,0.014084143
+DeviceInfo = SM-A300M Build/KTU84P,0.013920504
+P_emaildomain_yahoo.com,0.013285595
+id_30_iOS 11.2.5,0.012260717
+P_emaildomain_charter.net,0.011707864
+id_30_Mac OS X 10_13_4,0.011390709
+DeviceInfo = SM-G935F Build/NRD90M,0.010605024
+id_30_Mac OS X 10_12_6,0.010374077
+DeviceInfo = rv:11.0,0.009484009
+P_emaildomain_msn.com,0.008823013
+DeviceInfo = SM-T280 Build/LMY47V,0.008086413
+id_30_Windows 7,0.007874439
+id_31_chrome 52.0 for android,0.007046025
+R_emaildomain_yahoo.com,0.006848688
+DeviceInfo = SAMSUNG-SM-G530AZ Build/LMY48B,0.0062937248
+id_30_iOS 11.2.2,0.006211168
+DeviceInfo = iOS Device,0.006192297
+id_31_Unknown,0.0061777225
+id_31_chrome 66.0,0.005724788
+id_31_mobile safari 11.0,0.005422765
+card6 = debit,0.004506288
+id_30_iOS 11.1.0,0.0044058897
+R_emaildomain_rocketmail.com,0.004075246
+id_31_chrome 65.0,0.0038287195
+card4 = visa,0.0038204684
+id_30_Linux,0.0037881904
+id_31_chrome 64.0 for android,0.0037817156
+id_31_mobile safari 9.0,0.0036492776
+DeviceInfo = F5121 Build/34.3.A.0.238,0.0036103753
+id_30_Mac OS X 10_10_5,0.0031911242
+DeviceInfo = SAMSUNG SM-G965U Build/R16NW,0.002906986
+P_emaildomain_suddenlink.net,0.002596865
+P_emaildomain_hotmail.es,0.002055599
+id_30_iOS 10.3.1,0.0019403286
+P_emaildomain_cox.net,0.0019012376
+DeviceInfo = SM-J320M Build/LMY47V,0.0015780733
+DeviceInfo = SM-J730GM Build/NRD90M,0.0013523123
+id_30_Mac OS X 10_12_3,0.0009827353
+DeviceInfo = Moto E (4) Build/NMA26.42-69,0.00093579356
+DeviceInfo = Moto Z2 Play Build/NPS26.74-16-1,0.0005487377
+id_30_Unknown,0.0005013732
+DeviceInfo = Redmi Note 4 Build/NRD90M,0.00029235973
+DeviceInfo = HUAWEI CUN-L03 Build/HUAWEICUN-L03,0.00025703895
+DeviceInfo = SM-J500M Build/LMY48B,0.000118729855
+DeviceInfo = BLADE V8Q Build/N2G47H,0.0
+DeviceInfo = BLL-L23 Build/HUAWEIBLL-L23,0.0
+DeviceInfo = BLN-L21 Build/HONORBLN-L21,0.0
+DeviceInfo = BLN-L24 Build/HONORBLN-L24,0.0
+DeviceInfo = BLU,0.0
+DeviceInfo = BLU ENERGY X PLUS Build/LRX21M,0.0
+DeviceInfo = BLU LIFE XL Build/L050U,0.0
+DeviceInfo = BLU STUDIO C 5+5 Build/LRX21M,0.0
+DeviceInfo = BND-L21 Build/HONORBND-L21,0.0
+DeviceInfo = BND-L34,0.0
+DeviceInfo = BNTV400,0.0
+DeviceInfo = BOIE9,0.0
+DeviceInfo = BV6000,0.0
+DeviceInfo = BV7000,0.0
+DeviceInfo = BV8000Pro,0.0
+DeviceInfo = Beat,0.0
+DeviceInfo = Blade,0.0
+DeviceInfo = Blade A460 Build/LMY47O,0.0
+DeviceInfo = Blade A465 Build/LMY47D,0.0
+DeviceInfo = Blade A475 Build/LMY47D,0.0
+DeviceInfo = Blade A510 Build/MRA58K,0.0
+DeviceInfo = Blade L2 Plus Build/KOT49H,0.0
+DeviceInfo = Blade L3 Build/KOT49H,0.0
+DeviceInfo = Blade L5 Build/LMY47I,0.0
+DeviceInfo = Blade V580 Build/LMY47D,0.0
+DeviceInfo = Blade V6 Build/LRX22G,0.0
+DeviceInfo = Blade V6 Max Build/MRA58K,0.0
+DeviceInfo = Blade V6 Plus Build/MRA58K,0.0
+DeviceInfo = Bolt,0.0
+DeviceInfo = Build/KOT49H,0.0
+DeviceInfo = Build/OPM1.171019.011,0.0
+DeviceInfo = Build/OPR1.170623.032,0.0
+DeviceInfo = Build/OPR6.170623.013,0.0
+DeviceInfo = C1904,0.0
+DeviceInfo = C2104,0.0
+DeviceInfo = C6603,0.0
+DeviceInfo = C6743 Build/LMY47V,0.0
+DeviceInfo = C6903,0.0
+DeviceInfo = C6906,0.0
+DeviceInfo = C6906 Build/14.6.A.1.236,0.0
+DeviceInfo = CAM-L03 Build/HUAWEICAM-L03,0.0
+DeviceInfo = CAM-L23,0.0
+DeviceInfo = CLT-L09,0.0
+DeviceInfo = COVET Build/NRD90M,0.0
+DeviceInfo = CPH1607,0.0
+DeviceInfo = CPH1701,0.0
+DeviceInfo = CPH1723,0.0
+DeviceInfo = Coolpad,0.0
+DeviceInfo = D2306,0.0
+DeviceInfo = D2306 Build/18.6.A.0.182,0.0
+DeviceInfo = D5106,0.0
+DeviceInfo = D5306,0.0
+DeviceInfo = D5306 Build/19.4.A.0.182,0.0
+DeviceInfo = D5316,0.0
+DeviceInfo = D5316 Build/19.4.A.0.182,0.0
+DeviceInfo = D5503,0.0
+DeviceInfo = D5803 Build/23.5.A.1.291,0.0
+DeviceInfo = D6503,0.0
+DeviceInfo = D6603 Build/23.5.A.1.291,0.0
+DeviceInfo = D6708,0.0
+DeviceInfo = DASH,0.0
+DeviceInfo = DLI-L22 Build/HONORDLI-L22,0.0
+DeviceInfo = DOMOS,0.0
+DeviceInfo = DT0704K08,0.0
+DeviceInfo = DUK-AL20,0.0
+DeviceInfo = Dash,0.0
+DeviceInfo = Dream,0.0
+DeviceInfo = E2006,0.0
+DeviceInfo = E2104,0.0
+DeviceInfo = E2104 Build/24.0.A.5.14,0.0
+DeviceInfo = E2303,0.0
+DeviceInfo = E2306 Build/26.1.A.3.111,0.0
+DeviceInfo = E2306 Build/26.3.A.1.33,0.0
+DeviceInfo = E501,0.0
+DeviceInfo = E5306,0.0
+DeviceInfo = E5306 Build/27.3.A.0.129,0.0
+DeviceInfo = E5306 Build/27.3.A.0.165,0.0
+DeviceInfo = E5506,0.0
+DeviceInfo = E5506 Build/29.1.A.0.101,0.0
+DeviceInfo = E5506 Build/29.2.A.0.166,0.0
+DeviceInfo = E5606,0.0
+DeviceInfo = E5606 Build/30.2.A.1.21,0.0
+DeviceInfo = E5803,0.0
+DeviceInfo = E5803 Build/32.4.A.1.54,0.0
+DeviceInfo = E5823,0.0
+DeviceInfo = E5823 Build/32.4.A.1.54,0.0
+DeviceInfo = E6553,0.0
+DeviceInfo = E6603,0.0
+DeviceInfo = E6603 Build/32.4.A.1.54,0.0
+DeviceInfo = E6633,0.0
+DeviceInfo = E6653 Build/32.4.A.1.54,0.0
+DeviceInfo = E6683,0.0
+DeviceInfo = E6810,0.0
+DeviceInfo = E6810 Build/5.320VZ.03.r,0.0
+DeviceInfo = E6833,0.0
+DeviceInfo = E6853,0.0
+DeviceInfo = E6853 Build/32.4.A.1.54,0.0
+DeviceInfo = E8QP,0.0
+DeviceInfo = EGO,0.0
+DeviceInfo = EML-L29 Build/HUAWEIEML-L29,0.0
+DeviceInfo = EVA-L09 Build/HUAWEIEVA-L09,0.0
+DeviceInfo = EVA-L19 Build/HUAWEIEVA-L19,0.0
+DeviceInfo = Edison,0.0
+DeviceInfo = Energy X 2 Build/E050L,0.0
+DeviceInfo = F1f Build/LMY47V,0.0
+DeviceInfo = F3111 Build/33.3.A.1.115,0.0
+DeviceInfo = F3111 Build/33.3.A.1.97,0.0
+DeviceInfo = F3113,0.0
+DeviceInfo = F3113 Build/33.2.A.3.81,0.0
+DeviceInfo = F3113 Build/33.2.A.4.70,0.0
+DeviceInfo = F3113 Build/33.3.A.1.97,0.0
+DeviceInfo = F3213,0.0
+DeviceInfo = F3213 Build/36.0.A.2.146,0.0
+DeviceInfo = F3213 Build/36.1.A.1.86,0.0
+DeviceInfo = F3311,0.0
+DeviceInfo = F3313,0.0
+DeviceInfo = F3313 Build/37.0.A.2.108,0.0
+DeviceInfo = F3313 Build/37.0.A.2.248,0.0
+DeviceInfo = F5121,0.0
+DeviceInfo = F5121 Build/34.3.A.0.228,0.0
+DeviceInfo = F5121 Build/34.3.A.0.252,0.0
+DeviceInfo = F5121 Build/34.4.A.2.19,0.0
+DeviceInfo = F5122,0.0
+DeviceInfo = F5321,0.0
+DeviceInfo = F5321 Build/34.3.A.0.238,0.0
+DeviceInfo = F80 PIABELLA Build/MRA58K,0.0
+DeviceInfo = F80'S+,0.0
+DeviceInfo = F8331,0.0
+DeviceInfo = F8331 Build/41.2.A.7.76,0.0
+DeviceInfo = F8332,0.0
+DeviceInfo = FIG-LX3 Build/HUAWEIFIG-LX3,0.0
+DeviceInfo = FP2,0.0
+DeviceInfo = FRD-L04 Build/HUAWEIFRD-L04,0.0
+DeviceInfo = FRD-L14 Build/HUAWEIFRD-L14,0.0
+DeviceInfo = FTJ152D,0.0
+DeviceInfo = Fractal,0.0
+DeviceInfo = Fusion5_u7,0.0
+DeviceInfo = G3123,0.0
+DeviceInfo = G3123 Build/40.0.A.6.135,0.0
+DeviceInfo = G3123 Build/40.0.A.6.175,0.0
+DeviceInfo = G3123 Build/40.0.A.6.189,0.0
+DeviceInfo = G3223,0.0
+DeviceInfo = G3223 Build/42.0.A.4.101,0.0
+DeviceInfo = G3223 Build/42.0.A.4.167,0.0
+DeviceInfo = G3313,0.0
+DeviceInfo = G3313 Build/43.0.A.5.79,0.0
+DeviceInfo = G3313 Build/43.0.A.7.25,0.0
+DeviceInfo = G3423,0.0
+DeviceInfo = G527-U081,0.0
+DeviceInfo = G620S-L03,0.0
+DeviceInfo = G8141,0.0
+DeviceInfo = G8141 Build/47.1.A.5.51,0.0
+DeviceInfo = G8142,0.0
+DeviceInfo = G8341,0.0
+DeviceInfo = GRANT,0.0
+DeviceInfo = GT-I8190L Build/JZO54K,0.0
+DeviceInfo = GT-I8190N,0.0
+DeviceInfo = GT-I8200N,0.0
+DeviceInfo = GT-I9060L Build/JDQ39,0.0
+DeviceInfo = GT-I9060M Build/KTU84P,0.0
+DeviceInfo = GT-I9195L,0.0
+DeviceInfo = GT-I9300,0.0
+DeviceInfo = GT-I9500,0.0
+DeviceInfo = GT-I9505 Build/LRX22C,0.0
+DeviceInfo = GT-I9506,0.0
+DeviceInfo = GT-I9515,0.0
+DeviceInfo = GT-N5110,0.0
+DeviceInfo = GT-N5110 Build/JDQ39,0.0
+DeviceInfo = GT-N7100,0.0
+DeviceInfo = GT-N8010,0.0
+DeviceInfo = GT-P3100,0.0
+DeviceInfo = GT-P5113,0.0
+DeviceInfo = GT-P5210 Build/JDQ39,0.0
+DeviceInfo = GT-P5210 Build/KOT49H,0.0
+DeviceInfo = GT-S7275B,0.0
+DeviceInfo = GT-S7390,0.0
+DeviceInfo = GT-S7580L Build/JDQ39,0.0
+DeviceInfo = GT-S7582,0.0
+DeviceInfo = GT-S7582L,0.0
+DeviceInfo = Gigaset,0.0
+DeviceInfo = Grand2c,0.0
+DeviceInfo = Gravity Build/NRD90M,0.0
+DeviceInfo = H1611,0.0
+DeviceInfo = H3321,0.0
+DeviceInfo = H550,0.0
+DeviceInfo = HELIO,0.0
+DeviceInfo = HIGHWAY,0.0
+DeviceInfo = HP,0.0
+DeviceInfo = HT0701A16,0.0
+DeviceInfo = HT0703K16,0.0
+DeviceInfo = HTC,0.0
+DeviceInfo = HTC 10 Build/NRD90M,0.0
+DeviceInfo = HTC Desire 10 lifestyle Build/MMB29M,0.0
+DeviceInfo = HTC Desire 510 Build/KOT49H,0.0
+DeviceInfo = HTC Desire 526G Build/KOT49H,0.0
+DeviceInfo = HTC Desire 530 Build/MMB29M,0.0
+DeviceInfo = HTC Desire 626s Build/LMY47O,0.0
+DeviceInfo = HTC One A9 Build/NRD90M,0.0
+DeviceInfo = HTC One A9s Build/MRA58K,0.0
+DeviceInfo = HTC One Build/LRX22G,0.0
+DeviceInfo = HTC One M9 Build/NRD90M,0.0
+DeviceInfo = HTC One mini Build/KOT49H,0.0
+DeviceInfo = HTC One_M8 Build/MRA58K,0.0
+DeviceInfo = HTC U11 Build/NMF26X,0.0
+DeviceInfo = HTC U11 Build/OPR6.170623.013,0.0
+DeviceInfo = HTC6525LVW,0.0
+DeviceInfo = HTC6535LVW,0.0
+DeviceInfo = HTC6545LVW,0.0
+DeviceInfo = HTCD100LVWPP,0.0
+DeviceInfo = HTCD160LVWPP,0.0
+DeviceInfo = HTCD200LVW,0.0
+DeviceInfo = HTC_Desire_820,0.0
+DeviceInfo = HTC_One,0.0
+DeviceInfo = HTC_One_M8/4.28.502.2,0.0
+DeviceInfo = HTC_One_M8s/2.12.111.1,0.0
+DeviceInfo = HUAWEI,0.0
+DeviceInfo = HUAWEI Build/MMB28B,0.0
+DeviceInfo = HUAWEI CAN-L01 Build/HUAWEICAN-L01,0.0
+DeviceInfo = HUAWEI CAN-L11 Build/HUAWEICAN-L11,0.0
+DeviceInfo = HUAWEI G7-L03 Build/HuaweiG7-L03,0.0
+DeviceInfo = HUAWEI GRA-L09 Build/HUAWEIGRA-L09,0.0
+DeviceInfo = HUAWEI LUA-U23 Build/HUAWEILUA-U23,0.0
+DeviceInfo = HUAWEI LYO-L21 Build/HUAWEILYO-L21,0.0
+DeviceInfo = HUAWEI M2-801W Build/HUAWEIM2-801W,0.0
+DeviceInfo = HUAWEI NXT-L09 Build/HUAWEINXT-L09,0.0
+DeviceInfo = HUAWEI TAG-L13 Build/HUAWEITAG-L13,0.0
+DeviceInfo = HUAWEI VNS-L21 Build/HUAWEIVNS-L21,0.0
+DeviceInfo = HUAWEI VNS-L23 Build/HUAWEIVNS-L23,0.0
+DeviceInfo = HUAWEI VNS-L31 Build/HUAWEIVNS-L31,0.0
+DeviceInfo = HUAWEI VNS-L53 Build/HUAWEIVNS-L53,0.0
+DeviceInfo = HUAWEI Y360-U23 Build/HUAWEIY360-U23,0.0
+DeviceInfo = HUAWEI Y520-U03 Build/HUAWEIY520-U03,0.0
+DeviceInfo = HUAWEI Y560-L03 Build/HUAWEIY560-L03,0.0
+DeviceInfo = HUAWEI Y625-U13 Build/HUAWEIY625-U13,0.0
+DeviceInfo = Helix,0.0
+DeviceInfo = Hisense,0.0
+DeviceInfo = Hisense E51 Build/LMY47V,0.0
+DeviceInfo = Hisense F102 Build/NRD90M,0.0
+DeviceInfo = Hisense F20 Build/MMB29M,0.0
+DeviceInfo = Hisense F23 Build/NRD90M,0.0
+DeviceInfo = Hisense F24 Build/NRD90M,0.0
+DeviceInfo = Hisense F32 Build/NMF26F,0.0
+DeviceInfo = Hisense F8 MINI Build/NRD90M,0.0
+DeviceInfo = Hisense L675 PRO Build/NRD90M,0.0
+DeviceInfo = Hisense T963 Build/MRA58K,0.0
+DeviceInfo = Hisense U963 Build/MRA58K,0.0
+DeviceInfo = ICON,0.0
+DeviceInfo = ILIUM,0.0
+DeviceInfo = IO,0.0
+DeviceInfo = IdeaTab,0.0
+DeviceInfo = IdeaTabA1000-F,0.0
+DeviceInfo = IdeaTabA2109A,0.0
+DeviceInfo = Ilium,0.0
+DeviceInfo = Ilium L1000 Build/LRX22G,0.0
+DeviceInfo = Ilium L1120 Build/NRD90M,0.0
+DeviceInfo = Ilium L610 Build/MRA58K,0.0
+DeviceInfo = Ilium L620 Build/NRD90M,0.0
+DeviceInfo = Ilium L910 Build/MRA58K,0.0
+DeviceInfo = Ilium L950 Build/KTU84P,0.0
+DeviceInfo = Ilium LT500 Build/LMY47O,0.0
+DeviceInfo = Ilium LT510 Build/MRA58K,0.0
+DeviceInfo = Ilium LT520 Build/NRD90M,0.0
+DeviceInfo = Ilium Pad T7X Build/LMY47I,0.0
+DeviceInfo = Ilium X210 Build/LMY47I,0.0
+DeviceInfo = Ilium X220 Build/MRA58K,0.0
+DeviceInfo = Ilium X510 Build/MRA58K,0.0
+DeviceInfo = Ilium X520 Build/NRD90M,0.0
+DeviceInfo = Ilium X710 Build/MRA58K,0.0
+DeviceInfo = Infinix,0.0
+DeviceInfo = Intel,0.0
+DeviceInfo = Joy,0.0
+DeviceInfo = K10,0.0
+DeviceInfo = K88 Build/MMB29M,0.0
+DeviceInfo = K90U,0.0
+DeviceInfo = K92,0.0
+DeviceInfo = KFAPWI Build/KTU84M,0.0
+DeviceInfo = KFASWI Build/LVY48F,0.0
+DeviceInfo = KFAUWI Build/LVY48F,0.0
+DeviceInfo = KFDOWI Build/LVY48F,0.0
+DeviceInfo = KFFOWI Build/LVY48F,0.0
+DeviceInfo = KFGIWI Build/LVY48F,0.0
+DeviceInfo = KFJWI,0.0
+DeviceInfo = KFMEWI,0.0
+DeviceInfo = KFSAWI,0.0
+DeviceInfo = KFSOWI,0.0
+DeviceInfo = KFSUWI Build/LVY48F,0.0
+DeviceInfo = KFTBWI Build/LVY48F,0.0
+DeviceInfo = KFTHWI Build/KTU84M,0.0
+DeviceInfo = KFTT Build/IML74K,0.0
+DeviceInfo = KIW-L24,0.0
+DeviceInfo = KYOCERA-C6742A Build/LMY47V,0.0
+DeviceInfo = LAVA_A3,0.0
+DeviceInfo = LDN-LX3 Build/HUAWEILDN-LX3,0.0
+DeviceInfo = LEX829,0.0
+DeviceInfo = LG-D213,0.0
+DeviceInfo = LG-D331,0.0
+DeviceInfo = LG-D331 Build/LRX22G,0.0
+DeviceInfo = LG-D373 Build/KOT49I.V10a,0.0
+DeviceInfo = LG-D400,0.0
+DeviceInfo = LG-D625,0.0
+DeviceInfo = LG-D680,0.0
+DeviceInfo = LG-D680 Build/KOT49I,0.0
+DeviceInfo = LG-D681,0.0
+DeviceInfo = LG-D693n,0.0
+DeviceInfo = LG-D693n Build/KOT49I.V10a,0.0
+DeviceInfo = LG-D722,0.0
+DeviceInfo = LG-D725,0.0
+DeviceInfo = LG-D802,0.0
+DeviceInfo = LG-D850,0.0
+DeviceInfo = LG-D851,0.0
+DeviceInfo = LG-D855,0.0
+DeviceInfo = LG-D855 Build/LRX21R,0.0
+DeviceInfo = LG-D959,0.0
+DeviceInfo = LG-E450f,0.0
+DeviceInfo = LG-E975,0.0
+DeviceInfo = LG-E980h,0.0
+DeviceInfo = LG-F400K,0.0
+DeviceInfo = LG-H320 Build/LRX21Y,0.0
+DeviceInfo = LG-H343,0.0
+DeviceInfo = LG-H345,0.0
+DeviceInfo = LG-H420 Build/LRX21Y,0.0
+DeviceInfo = LG-H443/H44312g,0.0
+DeviceInfo = LG-H500 Build/LRX21Y,0.0
+DeviceInfo = LG-H520,0.0
+DeviceInfo = LG-H525n Build/MRA58K,0.0
+DeviceInfo = LG-H540,0.0
+DeviceInfo = LG-H542 Build/LRX22G,0.0
+DeviceInfo = LG-H542 Build/MRA58K,0.0
+DeviceInfo = LG-H631,0.0
+DeviceInfo = LG-H650 Build/LMY47V,0.0
+DeviceInfo = LG-H650 Build/MRA58K,0.0
+DeviceInfo = LG-H700 Build/NRD90U,0.0
+DeviceInfo = LG-H735 Build/LMY47V,0.0
+DeviceInfo = LG-H810,0.0
+DeviceInfo = LG-H810/H81021z,0.0
+DeviceInfo = LG-H810/H81022f,0.0
+DeviceInfo = LG-H811 Build/MRA58K,0.0
+DeviceInfo = LG-H812,0.0
+DeviceInfo = LG-H815,0.0
+DeviceInfo = LG-H815 Build/MRA58K,0.0
+DeviceInfo = LG-H820,0.0
+DeviceInfo = LG-H820 Build/NRD90U,0.0
+DeviceInfo = LG-H830,0.0
+DeviceInfo = LG-H830 Build/NRD90U,0.0
+DeviceInfo = LG-H831 Build/NRD90U,0.0
+DeviceInfo = LG-H840 Build/MMB29M,0.0
+DeviceInfo = LG-H840 Build/NRD90U,0.0
+DeviceInfo = LG-H850,0.0
+DeviceInfo = LG-H850 Build/MMB29M,0.0
+DeviceInfo = LG-H870 Build/NRD90U,0.0
+DeviceInfo = LG-H870DS Build/NRD90U,0.0
+DeviceInfo = LG-H871,0.0
+DeviceInfo = LG-H872 Build/NRD90U,0.0
+DeviceInfo = LG-H900/H90022b,0.0
+DeviceInfo = LG-H901,0.0
+DeviceInfo = LG-H910 Build/NRD90M,0.0
+DeviceInfo = LG-H918 Build/NRD90M,0.0
+DeviceInfo = LG-H931,0.0
+DeviceInfo = LG-H932,0.0
+DeviceInfo = LG-H933,0.0
+DeviceInfo = LG-H960,0.0
+DeviceInfo = LG-H990 Build/NRD90M,0.0
+DeviceInfo = LG-K200 Build/MXB48T,0.0
+DeviceInfo = LG-K212,0.0
+DeviceInfo = LG-K220 Build/MXB48T,0.0
+DeviceInfo = LG-K240 Build/MXB48T,0.0
+DeviceInfo = LG-K330,0.0
+DeviceInfo = LG-K350,0.0
+DeviceInfo = LG-K371,0.0
+DeviceInfo = LG-K373,0.0
+DeviceInfo = LG-K410 Build/LRX22G,0.0
+DeviceInfo = LG-K420,0.0
+DeviceInfo = LG-K428 Build/MMB29M,0.0
+DeviceInfo = LG-K428 Build/NRD90U,0.0
+DeviceInfo = LG-K430 Build/MRA58K,0.0
+DeviceInfo = LG-K450 Build/MXB48T,0.0
+DeviceInfo = LG-K530 Build/MMB29M,0.0
+DeviceInfo = LG-K530 Build/NRD90U,0.0
+DeviceInfo = LG-K540 Build/MMB29M,0.0
+DeviceInfo = LG-K550,0.0
+DeviceInfo = LG-K550 Build/NRD90U,0.0
+DeviceInfo = LG-K580 Build/MRA58K,0.0
+DeviceInfo = LG-LG870,0.0
+DeviceInfo = LG-LK460,0.0
+DeviceInfo = LG-LS777 Build/NRD90U,0.0
+DeviceInfo = LG-LS993 Build/NRD90U,0.0
+DeviceInfo = LG-LS995,0.0
+DeviceInfo = LG-LS997 Build/NRD90M,0.0
+DeviceInfo = LG-LS998,0.0
+DeviceInfo = LG-M150,0.0
+DeviceInfo = LG-M153 Build/MXB48T,0.0
+DeviceInfo = LG-M154,0.0
+DeviceInfo = LG-M200 Build/NRD90U,0.0
+DeviceInfo = LG-M210 Build/NRD90U,0.0
+DeviceInfo = LG-M250 Build/NRD90U,0.0
+DeviceInfo = LG-M257,0.0
+DeviceInfo = LG-M320 Build/NRD90U,0.0
+DeviceInfo = LG-M322,0.0
+DeviceInfo = LG-M327 Build/NRD90U,0.0
+DeviceInfo = LG-M400 Build/NRD90U,0.0
+DeviceInfo = LG-M430 Build/NRD90U,0.0
+DeviceInfo = LG-M700 Build/NMF26X,0.0
+DeviceInfo = LG-M710 Build/NRD90U,0.0
+DeviceInfo = LG-P708g,0.0
+DeviceInfo = LG-P714,0.0
+DeviceInfo = LG-SP200,0.0
+DeviceInfo = LG-SP320,0.0
+DeviceInfo = LG-TP260 Build/NRD90U,0.0
+DeviceInfo = LG-TP450 Build/NRD90U,0.0
+DeviceInfo = LG-V410,0.0
+DeviceInfo = LG-V410/V41020c,0.0
+DeviceInfo = LG-V495,0.0
+DeviceInfo = LG-V495/V49520l,0.0
+DeviceInfo = LG-V496,0.0
+DeviceInfo = LG-V520,0.0
+DeviceInfo = LG-V521,0.0
+DeviceInfo = LG-V522,0.0
+DeviceInfo = LG-V700,0.0
+DeviceInfo = LG-V930,0.0
+DeviceInfo = LG-X165g Build/LRX21M,0.0
+DeviceInfo = LG-X180g Build/LMY47I,0.0
+DeviceInfo = LG-X210 Build/LMY47I,0.0
+DeviceInfo = LG-X220 Build/LMY47I,0.0
+DeviceInfo = LG-X230 Build/MRA58K,0.0
+DeviceInfo = LG-X240 Build/MRA58K,0.0
+DeviceInfo = LGL163BL,0.0
+DeviceInfo = LGL164VL Build/NRD90U,0.0
+DeviceInfo = LGL41C,0.0
+DeviceInfo = LGL52VL Build/LMY47V,0.0
+DeviceInfo = LGL57BL,0.0
+DeviceInfo = LGL58VL,0.0
+DeviceInfo = LGL62VL,0.0
+DeviceInfo = LGL83BL,0.0
+DeviceInfo = LGL84VL Build/NRD90U,0.0
+DeviceInfo = LGLK430,0.0
+DeviceInfo = LGLS665 Build/LMY47V,0.0
+DeviceInfo = LGLS675 Build/LMY47V,0.0
+DeviceInfo = LGLS676 Build/MXB48T,0.0
+DeviceInfo = LGLS751,0.0
+DeviceInfo = LGLS755,0.0
+DeviceInfo = LGLS770,0.0
+DeviceInfo = LGLS775 Build/MMB29M,0.0
+DeviceInfo = LGLS775 Build/NRD90U,0.0
+DeviceInfo = LGLS990,0.0
+DeviceInfo = LGLS991,0.0
+DeviceInfo = LGLS992,0.0
+DeviceInfo = LGMP260 Build/NRD90U,0.0
+DeviceInfo = LGMP450 Build/NRD90U,0.0
+DeviceInfo = LGMS210 Build/NRD90U,0.0
+DeviceInfo = LGMS323,0.0
+DeviceInfo = LGMS330 Build/LMY47V,0.0
+DeviceInfo = LGMS345,0.0
+DeviceInfo = LGMS395,0.0
+DeviceInfo = LGMS428,0.0
+DeviceInfo = LGMS550 Build/MXB48T,0.0
+DeviceInfo = LGMS550 Build/NRD90U,0.0
+DeviceInfo = LGMS631 Build/MRA58K,0.0
+DeviceInfo = LGUS215 Build/NRD90U,0.0
+DeviceInfo = LGUS990,0.0
+DeviceInfo = LGUS991,0.0
+DeviceInfo = LGUS992,0.0
+DeviceInfo = LIMIT,0.0
+DeviceInfo = LM-X210(G,0.0
+DeviceInfo = LOGIC,0.0
+DeviceInfo = LT22i Build/6.2.A.1.100,0.0
+DeviceInfo = LT30p,0.0
+DeviceInfo = Le,0.0
+DeviceInfo = Le X520 Build/IEXCNFN5902303111S,0.0
+DeviceInfo = Lenovo,0.0
+DeviceInfo = Lenovo A2016b30 Build/MRA58K,0.0
+DeviceInfo = Lenovo A6020l37 Build/LMY47V,0.0
+DeviceInfo = Lenovo K33b36 Build/MMB29M,0.0
+DeviceInfo = Lenovo K33b36 Build/NRD90N,0.0
+DeviceInfo = Lenovo PB1-750M Build/S100,0.0
+DeviceInfo = Lenovo PB2-650Y Build/MRA58K,0.0
+DeviceInfo = Lenovo PB2-670Y Build/MRA58K,0.0
+DeviceInfo = Lenovo TAB 2 A7-30GC Build/KOT49H,0.0
+DeviceInfo = Lenovo TB-7703X Build/S100,0.0
+DeviceInfo = Lenovo TB-X103F Build/LenovoTB-X103F,0.0
+DeviceInfo = Lenovo TB2-X30F Build/LenovoTB2-X30F,0.0
+DeviceInfo = Lenovo TB3-710F Build/LRX21M,0.0
+DeviceInfo = Lenovo TB3-710I Build/LMY47I,0.0
+DeviceInfo = Lenovo YT3-850F Build/MMB29M,0.0
+DeviceInfo = Lenovo YT3-850M Build/MMB29M,0.0
+DeviceInfo = Lenovo YT3-X50F Build/MMB29M,0.0
+DeviceInfo = Lenovo-A6020l36 Build/LMY47V,0.0
+DeviceInfo = LenovoA3300-GV Build/JDQ39,0.0
+DeviceInfo = Linux,0.0
+DeviceInfo = Linux i686,0.0
+DeviceInfo = Linux x86_64,0.0
+DeviceInfo = M10/Q1010,0.0
+DeviceInfo = M4,0.0
+DeviceInfo = M4 SS4450 Build/MRA58K,0.0
+DeviceInfo = M4 SS4451 Build/LMY47D,0.0
+DeviceInfo = M4 SS4452 Build/LMY47V,0.0
+DeviceInfo = M4 SS4453 Build/MMB29M,0.0
+DeviceInfo = M4 SS4457 Build/MRA58K,0.0
+DeviceInfo = M4 SS4457-R Build/NRD90M,0.0
+DeviceInfo = M4 SS4458 Build/MMB29M,0.0
+DeviceInfo = MALC,0.0
+DeviceInfo = MAMI,0.0
+DeviceInfo = MDDRJS,0.0
+DeviceInfo = ME173X,0.0
+DeviceInfo = MHA-L09 Build/HUAWEIMHA-L09,0.0
+DeviceInfo = MHA-L29 Build/HUAWEIMHA-L29,0.0
+DeviceInfo = MI,0.0
+DeviceInfo = MI MAX 2 Build/NMF26F,0.0
+DeviceInfo = MOT-A6020l37 Build/LMY47V,0.0
+DeviceInfo = MTT,0.0
+DeviceInfo = MYA-L03 Build/HUAWEIMYA-L03,0.0
+DeviceInfo = MYA-L11,0.0
+DeviceInfo = MYA-L13 Build/HUAWEIMYA-L13,0.0
+DeviceInfo = MYA-L23,0.0
+DeviceInfo = Max,0.0
+DeviceInfo = Mi,0.0
+DeviceInfo = Mi A1 Build/N2G47H,0.0
+DeviceInfo = Mi A1 Build/OPR1.170623.026,0.0
+DeviceInfo = Microsoft,0.0
+DeviceInfo = Minion_Tab,0.0
+DeviceInfo = Mobiistar_LAI_Yuna_X,0.0
+DeviceInfo = Moto,0.0
+DeviceInfo = Moto C Build/NRD90M.046,0.0
+DeviceInfo = Moto C Build/NRD90M.050,0.0
+DeviceInfo = Moto C Build/NRD90M.054,0.0
+DeviceInfo = Moto C Build/NRD90M.057,0.0
+DeviceInfo = Moto C Build/NRD90M.063,0.0
+DeviceInfo = Moto C Build/NRD90M.070,0.0
+DeviceInfo = Moto C Plus Build/NRD90M.05.022,0.0
+DeviceInfo = Moto C Plus Build/NRD90M.05.034,0.0
+DeviceInfo = Moto E (4) Build/NCQ26.69-56,0.0
+DeviceInfo = Moto E (4) Build/NDQS26.69-23-2-3,0.0
+DeviceInfo = Moto E (4) Build/NDQS26.69-64-2,0.0
+DeviceInfo = Moto E (4) Build/NMA26.42-11-3,0.0
+DeviceInfo = Moto E (4) Plus Build/NMA26.42-11-3,0.0
+DeviceInfo = Moto E (4) Plus Build/NMA26.42-142,0.0
+DeviceInfo = Moto E (4) Plus Build/NMA26.42-152,0.0
+DeviceInfo = Moto E (4) Plus Build/NMA26.42-69,0.0
+DeviceInfo = Moto G (4) Build/NPJ25.93-14,0.0
+DeviceInfo = Moto G (4) Build/NPJ25.93-14.5,0.0
+DeviceInfo = Moto G (4) Build/NPJ25.93-14.7,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-10,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-13,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-15,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-18,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-8,0.0
+DeviceInfo = Moto G (4) Build/NPJS25.93-14-8.1-4,0.0
+DeviceInfo = Moto G (5) Build/NPP25.137-15,0.0
+DeviceInfo = Moto G (5) Build/NPP25.137-33,0.0
+DeviceInfo = Moto G (5) Build/NPP25.137-38,0.0
+DeviceInfo = Moto G (5) Build/NPP25.137-72,0.0
+DeviceInfo = Moto G (5) Build/NPP25.137-82,0.0
+DeviceInfo = Moto G (5) Build/NPPS25.137-15-11,0.0
+DeviceInfo = Moto G (5) Build/NPPS25.137-93-4,0.0
+DeviceInfo = Moto G (5) Build/NPPS25.137-93-8,0.0
+DeviceInfo = Moto G (5) Plus Build/NPN25.137-15,0.0
+DeviceInfo = Moto G (5) Plus Build/NPN25.137-72,0.0
+DeviceInfo = Moto G (5) Plus Build/NPN25.137-82,0.0
+DeviceInfo = Moto G (5) Plus Build/NPN25.137-83,0.0
+DeviceInfo = Moto G (5) Plus Build/NPN25.137-92,0.0
+DeviceInfo = Moto G (5) Plus Build/NPNS25.137-15-11,0.0
+DeviceInfo = Moto G (5) Plus Build/NPNS25.137-92-10,0.0
+DeviceInfo = Moto G (5) Plus Build/NPNS25.137-92-4,0.0
+DeviceInfo = Moto G (5) Plus Build/NPNS25.137-92-8,0.0
+DeviceInfo = Moto G (5) Plus Build/NPNS25.137-93-8,0.0
+DeviceInfo = Moto G (5S,0.0
+DeviceInfo = Moto G Play Build/MPIS24.241-15.3-26,0.0
+DeviceInfo = Moto G Play Build/MPIS24.241-15.3-7,0.0
+DeviceInfo = Moto G Play Build/NJH47F,0.0
+DeviceInfo = Moto G Play Build/NPI26.48-36,0.0
+DeviceInfo = Moto G Play Build/NPIS26.48-36-2,0.0
+DeviceInfo = Moto G Play Build/NPIS26.48-36-5,0.0
+DeviceInfo = Moto X Play Build/NPD26.48-24-1,0.0
+DeviceInfo = Moto Z2 Play Build/NPS26.118-19,0.0
+DeviceInfo = Moto Z2 Play Build/NPSS26.118-19-11,0.0
+DeviceInfo = Moto Z2 Play Build/NPSS26.118-19-14,0.0
+DeviceInfo = Moto Z2 Play Build/NPSS26.118-19-4,0.0
+DeviceInfo = Moto Z2 Play Build/NPSS26.118-19-6,0.0
+DeviceInfo = MotoE2 Build/LPCS23.13-56-5,0.0
+DeviceInfo = MotoE2(4G-LTE,0.0
+DeviceInfo = MotoG3,0.0
+DeviceInfo = MotoG3 Build/MPI24.65-25,0.0
+DeviceInfo = MotoG3 Build/MPI24.65-25.1,0.0
+DeviceInfo = MotoG3 Build/MPI24.65-33.1-2,0.0
+DeviceInfo = MotoG3 Build/MPIS24.107-55-2-17,0.0
+DeviceInfo = MotoG3 Build/MPIS24.65-25.1-19,0.0
+DeviceInfo = MotoG3 Build/MPIS24.65-33.1-2-16,0.0
+DeviceInfo = MotoG3-TE,0.0
+DeviceInfo = MotoG3-TE Build/MPD24.65-33,0.0
+DeviceInfo = MotoG3-TE Build/MPDS24.65-33-1-3,0.0
+DeviceInfo = MotoG3-TE Build/MPDS24.65-33-1-30,0.0
+DeviceInfo = N817,0.0
+DeviceInfo = N9136,0.0
+DeviceInfo = N9560 Build/NMF26F,0.0
+DeviceInfo = NEM-L51 Build/HONORNEM-L51,0.0
+DeviceInfo = NOKIA,0.0
+DeviceInfo = NX16A8116KP,0.0
+DeviceInfo = NX521J,0.0
+DeviceInfo = NX785QC8G,0.0
+DeviceInfo = NXA116QC164,0.0
+DeviceInfo = NYX_A1,0.0
+DeviceInfo = Neffos C5 Build/LMY47D,0.0
+DeviceInfo = Neffos X1 Max Build/NRD90M,0.0
+DeviceInfo = NetHelper70,0.0
+DeviceInfo = Nexus,0.0
+DeviceInfo = Nexus 5 Build/M4B30Z,0.0
+DeviceInfo = Nexus 5X Build/OPM3.171019.013,0.0
+DeviceInfo = Nexus 5X Build/OPR4.170623.006,0.0
+DeviceInfo = Nexus 6 Build/MOB30M,0.0
+DeviceInfo = Nexus 6 Build/N6F27M,0.0
+DeviceInfo = Nexus 6P Build/OPR5.170623.011,0.0
+DeviceInfo = Nexus 6P Build/OPR5.170623.014,0.0
+DeviceInfo = Northwell,0.0
+DeviceInfo = ONE,0.0
+DeviceInfo = ONE A2003 Build/MMB29M,0.0
+DeviceInfo = ONE A2005 Build/MMB29M,0.0
+DeviceInfo = ONE TOUCH 4016A Build/JDQ39,0.0
+DeviceInfo = ONE TOUCH 4033A Build/JDQ39,0.0
+DeviceInfo = ONEPLUS,0.0
+DeviceInfo = ONEPLUS A5000 Build/NMF26X,0.0
+DeviceInfo = ONEPLUS A5010 Build/OPM1.171019.011,0.0
+DeviceInfo = ORION,0.0
+DeviceInfo = Origins,0.0
+DeviceInfo = P008 Build/NRD90M,0.0
+DeviceInfo = P00A,0.0
+DeviceInfo = P00C,0.0
+DeviceInfo = P01M,0.0
+DeviceInfo = P027,0.0
+DeviceInfo = P4526A Build/NRD90M,0.0
+DeviceInfo = P5006A,0.0
+DeviceInfo = P5006A Build/NRD90M,0.0
+DeviceInfo = P5026A,0.0
+DeviceInfo = P5046A,0.0
+DeviceInfo = P5526A Build/NRD90M,0.0
+DeviceInfo = PE-TL10,0.0
+DeviceInfo = PH-1,0.0
+DeviceInfo = PLAYTAB,0.0
+DeviceInfo = PLE-701L,0.0
+DeviceInfo = PLK-L01 Build/HONORPLK-L01,0.0
+DeviceInfo = PLUS,0.0
+DeviceInfo = PMID7102DC,0.0
+DeviceInfo = PRA-LX1 Build/HUAWEIPRA-LX1,0.0
+DeviceInfo = PSPC550 Build/LMY47D,0.0
+DeviceInfo = PULP 4G Build/LMY47V,0.0
+DeviceInfo = Pixel,0.0
+DeviceInfo = Pixel 2 Build/OPM1.171019.011,0.0
+DeviceInfo = Pixel 2 Build/OPM1.171019.019,0.0
+DeviceInfo = Pixel 2 Build/OPM1.171019.021,0.0
+DeviceInfo = Pixel 2 Build/OPM2.171019.016,0.0
+DeviceInfo = Pixel 2 XL Build/OPM1.171019.011,0.0
+DeviceInfo = Pixel 2 XL Build/OPM1.171019.013,0.0
+DeviceInfo = Pixel 2 XL Build/OPM1.171019.021,0.0
+DeviceInfo = Pixel 2 XL Build/OPM2.171019.029,0.0
+DeviceInfo = Pixel 2 XL Build/OPM2.171019.029.B1,0.0
+DeviceInfo = Pixel Build/OPM1.171019.011,0.0
+DeviceInfo = Pixel Build/OPM1.171019.012,0.0
+DeviceInfo = Pixel Build/OPM1.171019.016,0.0
+DeviceInfo = Pixel Build/OPM2.171019.029,0.0
+DeviceInfo = Pixel Build/OPM4.171019.016.B1,0.0
+DeviceInfo = Pixel Build/OPR3.170623.013,0.0
+DeviceInfo = Pixel XL Build/OPM1.171019.011,0.0
+DeviceInfo = Pixel XL Build/OPM1.171019.016,0.0
+DeviceInfo = Pixel XL Build/OPM1.171019.021,0.0
+DeviceInfo = Pixel XL Build/OPM4.171019.016.B1,0.0
+DeviceInfo = QMV7A,0.0
+DeviceInfo = QTAIR7 Build/LMY47D,0.0
+DeviceInfo = QTAQZ3 Build/KOT49H,0.0
+DeviceInfo = QTAQZ3 Build/LMY47V,0.0
+DeviceInfo = QTASUN1,0.0
+DeviceInfo = QTASUN1 Build/NRD90M,0.0
+DeviceInfo = QwestIE8,0.0
+DeviceInfo = R1,0.0
+DeviceInfo = R2,0.0
+DeviceInfo = R8106,0.0
+DeviceInfo = R831L,0.0
+DeviceInfo = RCT6203W46 Build/KOT49H,0.0
+DeviceInfo = RCT6223W87,0.0
+DeviceInfo = RCT6303W87M7 Build/MRA58K,0.0
+DeviceInfo = RCT6773W22B,0.0
+DeviceInfo = RCT6K03W13,0.0
+DeviceInfo = RCT6S03W12,0.0
+DeviceInfo = REVVLPLUS,0.0
+DeviceInfo = REX,0.0
+DeviceInfo = RNE-L03 Build/HUAWEIRNE-L03,0.0
+DeviceInfo = RNE-L21 Build/HUAWEIRNE-L21,0.0
+DeviceInfo = RNE-L22 Build/HUAWEIRNE-L22,0.0
+DeviceInfo = RNE-L23 Build/HUAWEIRNE-L23,0.0
+DeviceInfo = RS988,0.0
+DeviceInfo = RS988 Build/MMB29M,0.0
+DeviceInfo = Redmi,0.0
+DeviceInfo = Redmi 3S Build/MMB29M,0.0
+DeviceInfo = Redmi 4A Build/MMB29M,0.0
+DeviceInfo = Redmi 4A Build/N2G47H,0.0
+DeviceInfo = Redmi 4X Build/N2G47H,0.0
+DeviceInfo = Redmi 5 Plus Build/N2G47H,0.0
+DeviceInfo = Redmi Note 3 Build/MMB29M,0.0
+DeviceInfo = Redmi Note 4 Build/MMB29M,0.0
+DeviceInfo = Redmi Note 4X Build/MRA58K,0.0
+DeviceInfo = Robin,0.0
+DeviceInfo = S.N.O.W.4,0.0
+DeviceInfo = S57 Build/KTU84P,0.0
+DeviceInfo = S60 Build/MMB29M,0.0
+DeviceInfo = S6000,0.0
+DeviceInfo = S70V,0.0
+DeviceInfo = SAMSUNG,0.0
+DeviceInfo = SAMSUNG SM-A300H Build/LRX22G,0.0
+DeviceInfo = SAMSUNG SM-A310F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A310F/A310FXXU4CRB1 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A320FL Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A320Y Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A510F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A510M Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-A510M Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A520F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A710M Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A720F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-A730F Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-G530H Build/LRX22G,0.0
+DeviceInfo = SAMSUNG SM-G530T Build/LMY47X,0.0
+DeviceInfo = SAMSUNG SM-G532M Build/MMB29T,0.0
+DeviceInfo = SAMSUNG SM-G550T1 Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G570M Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G570M Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G610M Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G610M Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G800F Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G850F/G850FXXS2CQD9 Build/LRX22G,0.0
+DeviceInfo = SAMSUNG SM-G890A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G891A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G892A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G892A Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G900A Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-G900F Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-G900I Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-G900M Build/LRX21T,0.0
+DeviceInfo = SAMSUNG SM-G900T Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-G903F Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G920A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G920F Build/LRX22G,0.0
+DeviceInfo = SAMSUNG SM-G920F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G920I Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G920P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G920T Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G925F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G925I Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G925P Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G925P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G925T Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G928G Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G930A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G930F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G930F/XXU2DRC1 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G930P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G930R4 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G935A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G935F Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-G935F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G935P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G935T Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G935W8 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G950F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G950F Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G950U Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G950U Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G950U1 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G950U1 Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G955F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G955F Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G955U Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-G955U Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G9600 Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G960U Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G9650 Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G965F Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-G965U1 Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-J111M Build/LMY47V,0.0
+DeviceInfo = SAMSUNG SM-J120H Build/LMY47V,0.0
+DeviceInfo = SAMSUNG SM-J250M Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-J320FN Build/LMY47V,0.0
+DeviceInfo = SAMSUNG SM-J320M Build/LMY47V,0.0
+DeviceInfo = SAMSUNG SM-J327A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J327AZ Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J327P Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-J327T Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J327T1 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J500FN Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-J500M Build/LMY48B,0.0
+DeviceInfo = SAMSUNG SM-J500M Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-J510MN Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-J530F Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J530GM Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J700M Build/LMY48B,0.0
+DeviceInfo = SAMSUNG SM-J700M Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-J700T Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-J700T1 Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-J701M Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J710MN Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-J710MN Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J727T1 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-J730GM Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-N900T Build/LRX21V,0.0
+DeviceInfo = SAMSUNG SM-N900W8 Build/LRX21V,0.0
+DeviceInfo = SAMSUNG SM-N910A Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-N920A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-N920P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-N920T Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-N920V Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-N950F Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-N950U Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-N950U Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-N950U1 Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-N950U1 Build/R16NW,0.0
+DeviceInfo = SAMSUNG SM-P580 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-S727VL Build/MMB29M,0.0
+DeviceInfo = SAMSUNG SM-T530NU Build/LRX22G,0.0
+DeviceInfo = SAMSUNG SM-T550 Build/NMF26X,0.0
+DeviceInfo = SAMSUNG SM-T580 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-T587P Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-T710 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG SM-T800 Build/MMB29K,0.0
+DeviceInfo = SAMSUNG SM-T810 Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SGH-I337,0.0
+DeviceInfo = SAMSUNG-SGH-I337 Build/KOT49H,0.0
+DeviceInfo = SAMSUNG-SGH-I497,0.0
+DeviceInfo = SAMSUNG-SGH-I537,0.0
+DeviceInfo = SAMSUNG-SM-G870A,0.0
+DeviceInfo = SAMSUNG-SM-G870A Build/MMB29M,0.0
+DeviceInfo = SAMSUNG-SM-G890A,0.0
+DeviceInfo = SAMSUNG-SM-G890A Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-G890A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G891A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G900A,0.0
+DeviceInfo = SAMSUNG-SM-G900A Build/KOT49H,0.0
+DeviceInfo = SAMSUNG-SM-G900A Build/LMY47X,0.0
+DeviceInfo = SAMSUNG-SM-G900A Build/LRX21T,0.0
+DeviceInfo = SAMSUNG-SM-G900A Build/MMB29M,0.0
+DeviceInfo = SAMSUNG-SM-G920A Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-G920A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G920AZ,0.0
+DeviceInfo = SAMSUNG-SM-G925A Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-G925A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G928A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G930A,0.0
+DeviceInfo = SAMSUNG-SM-G930A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-G935A,0.0
+DeviceInfo = SAMSUNG-SM-G935A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-J120A,0.0
+DeviceInfo = SAMSUNG-SM-J320A Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-J320A Build/NMF26X,0.0
+DeviceInfo = SAMSUNG-SM-J320AZ,0.0
+DeviceInfo = SAMSUNG-SM-J320AZ Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-J327A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-J327AZ,0.0
+DeviceInfo = SAMSUNG-SM-J727A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-J727AZ,0.0
+DeviceInfo = SAMSUNG-SM-N900A,0.0
+DeviceInfo = SAMSUNG-SM-N900A Build/LRX21V,0.0
+DeviceInfo = SAMSUNG-SM-N910A,0.0
+DeviceInfo = SAMSUNG-SM-N920A,0.0
+DeviceInfo = SAMSUNG-SM-N920A Build/NRD90M,0.0
+DeviceInfo = SAMSUNG-SM-T337A Build/LMY47X,0.0
+DeviceInfo = SAMSUNG-SM-T377A,0.0
+DeviceInfo = SAMSUNG-SM-T377A Build/MMB29K,0.0
+DeviceInfo = SAMSUNG-SM-T537A,0.0
+DeviceInfo = SAMSUNG-SM-T677A,0.0
+DeviceInfo = SAMSUNG-SM-T807A,0.0
+DeviceInfo = SAMSUNG-SM-T817A,0.0
+DeviceInfo = SC-02H,0.0
+DeviceInfo = SCH-I535,0.0
+DeviceInfo = SCH-I545 Build/LRX22C,0.0
+DeviceInfo = SENS,0.0
+DeviceInfo = SGH-I317M,0.0
+DeviceInfo = SGH-I337M,0.0
+DeviceInfo = SGH-I337M Build/LRX22C,0.0
+DeviceInfo = SGH-I747M,0.0
+DeviceInfo = SGH-M919 Build/KTU84P,0.0
+DeviceInfo = SGH-M919N,0.0
+DeviceInfo = SGH-M919V,0.0
+DeviceInfo = SGP511,0.0
+DeviceInfo = SGP521,0.0
+DeviceInfo = SGP611,0.0
+DeviceInfo = SGP621 Build/23.5.A.1.291,0.0
+DeviceInfo = SH-04F,0.0
+DeviceInfo = SKY_5.0LM,0.0
+DeviceInfo = SLA-L02,0.0
+DeviceInfo = SLA-L03 Build/HUAWEISLA-L03,0.0
+DeviceInfo = SLA-L23,0.0
+DeviceInfo = SLAY,0.0
+DeviceInfo = SM-A300FU Build/MMB29M,0.0
+DeviceInfo = SM-A300H,0.0
+card6 = Unknown,0.0
+DeviceInfo = SM-A300M,0.0
+R_emaildomain_sc.rr.com,0.0
+DeviceInfo = SM-A310F Build/MMB29K,0.0
+DeviceInfo = SM-A310F Build/NRD90M,0.0
+DeviceInfo = SM-A310M,0.0
+DeviceInfo = SM-A310M Build/LMY47X,0.0
+DeviceInfo = SM-A310M Build/NRD90M,0.0
+DeviceInfo = SM-A320FL Build/MMB29K,0.0
+DeviceInfo = SM-A320FL Build/NRD90M,0.0
+DeviceInfo = SM-A320Y,0.0
+DeviceInfo = SM-A320Y Build/NRD90M,0.0
+DeviceInfo = SM-A500FU,0.0
+DeviceInfo = SM-A500FU Build/MMB29M,0.0
+DeviceInfo = SM-A500H,0.0
+DeviceInfo = SM-A500M Build/KTU84P,0.0
+DeviceInfo = SM-A500M Build/LRX22G,0.0
+DeviceInfo = SM-A500W,0.0
+DeviceInfo = SM-A510F Build/MMB29K,0.0
+DeviceInfo = SM-A510F Build/NRD90M,0.0
+DeviceInfo = SM-A510M Build/LMY47X,0.0
+DeviceInfo = 1016S,0.0
+DeviceInfo = SM-A510M Build/NRD90M,0.0
+DeviceInfo = SM-A520F Build/MMB29K,0.0
+card4 = Unknown,0.0
+DeviceInfo = SM-A520F Build/R16NW,0.0
+DeviceInfo = SM-A520W,0.0
+DeviceInfo = SM-A520W Build/NRD90M,0.0
+DeviceInfo = SM-A530F Build/NMF26X,0.0
+DeviceInfo = SM-A710M,0.0
+DeviceInfo = SM-A710M Build/LMY47X,0.0
+DeviceInfo = SM-A710M Build/NRD90M,0.0
+DeviceInfo = SM-A720F Build/MMB29K,0.0
+DeviceInfo = SM-A720F Build/NRD90M,0.0
+DeviceInfo = SM-A730F Build/NMF26X,0.0
+DeviceInfo = SM-C900F,0.0
+DeviceInfo = SM-E500M,0.0
+DeviceInfo = SM-E500M Build/KTU84P,0.0
+DeviceInfo = SM-E700M,0.0
+DeviceInfo = SM-G318ML,0.0
+DeviceInfo = SM-G350M,0.0
+DeviceInfo = SM-G355M Build/KOT49H,0.0
+DeviceInfo = SM-G360F,0.0
+DeviceInfo = SM-G360M,0.0
+DeviceInfo = SM-G360T1 Build/LMY47X,0.0
+DeviceInfo = SM-G360V Build/LMY48B,0.0
+DeviceInfo = SM-G361F,0.0
+DeviceInfo = SM-G386T,0.0
+DeviceInfo = SM-G386W,0.0
+DeviceInfo = SM-G388F,0.0
+DeviceInfo = SM-G390F,0.0
+DeviceInfo = SM-G390W,0.0
+DeviceInfo = SM-G530FZ,0.0
+DeviceInfo = SM-G530H Build/KTU84P,0.0
+DeviceInfo = SM-G530H Build/LRX22G,0.0
+DeviceInfo = SM-G530M,0.0
+DeviceInfo = SM-G530P,0.0
+DeviceInfo = SM-G530T,0.0
+DeviceInfo = SM-G530T1,0.0
+DeviceInfo = SM-G530W,0.0
+R_emaildomain_scranton.edu,0.0
+R_emaildomain_servicios-ta.com,0.0
+DeviceInfo = SM-G550T Build/MMB29K,0.0
+DeviceInfo = SM-G550T1 Build/MMB29K,0.0
+DeviceInfo = SM-G550T2,0.0
+R_emaildomain_suddenlink.net,0.0
+DeviceInfo = SM-G570M Build/NRD90M,0.0
+DeviceInfo = SM-G610F,0.0
+DeviceInfo = SM-G610F Build/NRD90M,0.0
+DeviceInfo = SM-G610M Build/MMB29K,0.0
+DeviceInfo = SM-G610M Build/NRD90M,0.0
+DeviceInfo = SM-G615F,0.0
+DeviceInfo = SM-G720AX,0.0
+DeviceInfo = SM-G730W8 Build/KOT49H,0.0
+DeviceInfo = SM-G800F Build/KOT49H,0.0
+DeviceInfo = SM-G800F Build/MMB29K,0.0
+DeviceInfo = SM-G800M Build/KOT49H,0.0
+DeviceInfo = SM-G850M,0.0
+DeviceInfo = SM-G850M Build/LRX22G,0.0
+DeviceInfo = SM-G892A,0.0
+DeviceInfo = SM-G900F Build/KOT49H,0.0
+DeviceInfo = SM-G900F Build/LRX21T,0.0
+DeviceInfo = SM-G900F Build/MMB29M,0.0
+DeviceInfo = SM-G900FD,0.0
+DeviceInfo = SM-G900H Build/MMB29K,0.0
+DeviceInfo = SM-G900I,0.0
+DeviceInfo = SM-G900M Build/KOT49H,0.0
+DeviceInfo = SM-G900M Build/LRX21T,0.0
+DeviceInfo = SM-G900M Build/MMB29M,0.0
+DeviceInfo = SM-G900P,0.0
+DeviceInfo = SM-G900P Build/LRX21T,0.0
+DeviceInfo = SM-G900P Build/MMB29M,0.0
+DeviceInfo = SM-G900R4,0.0
+DeviceInfo = SM-G900T Build/MMB29M,0.0
+DeviceInfo = SM-G900T1,0.0
+DeviceInfo = SM-G900V,0.0
+DeviceInfo = SM-G900V Build/MMB29M,0.0
+DeviceInfo = SM-G900W8,0.0
+DeviceInfo = SM-G901F,0.0
+DeviceInfo = SM-G903F Build/MMB29K,0.0
+DeviceInfo = SM-G903M,0.0
+DeviceInfo = SM-G903W,0.0
+DeviceInfo = SM-G920F Build/MMB29K,0.0
+DeviceInfo = SM-G920F Build/NRD90M,0.0
+DeviceInfo = SM-G920I,0.0
+DeviceInfo = SM-G920I Build/NRD90M,0.0
+DeviceInfo = SM-G920P,0.0
+DeviceInfo = SM-G920P Build/NRD90M,0.0
+DeviceInfo = SM-G920R4,0.0
+DeviceInfo = SM-G920T,0.0
+DeviceInfo = SM-G920T Build/NRD90M,0.0
+DeviceInfo = SM-G920T1,0.0
+DeviceInfo = SM-G920V,0.0
+DeviceInfo = SM-G920V Build/MMB29K,0.0
+DeviceInfo = SM-G920V Build/NRD90M,0.0
+DeviceInfo = SM-G920W8,0.0
+DeviceInfo = SM-G925F Build/NRD90M,0.0
+DeviceInfo = SM-G925I,0.0
+DeviceInfo = SM-G925I Build/LMY47X,0.0
+DeviceInfo = SM-G925I Build/MMB29K,0.0
+DeviceInfo = SM-G925I Build/NRD90M,0.0
+DeviceInfo = SM-G925P Build/NRD90M,0.0
+DeviceInfo = SM-G925R4,0.0
+DeviceInfo = SM-G925T Build/LMY47X,0.0
+DeviceInfo = SM-G925T Build/NRD90M,0.0
+DeviceInfo = SM-G925V Build/NRD90M,0.0
+DeviceInfo = SM-G925W8,0.0
+DeviceInfo = SM-G928F,0.0
+DeviceInfo = SM-G928G Build/MMB29K,0.0
+DeviceInfo = SM-G928G Build/NRD90M,0.0
+DeviceInfo = SM-G928P,0.0
+DeviceInfo = SM-G928P Build/NRD90M,0.0
+DeviceInfo = SM-G928T Build/NRD90M,0.0
+DeviceInfo = SM-G928V,0.0
+DeviceInfo = SM-G928V Build/MMB29K,0.0
+DeviceInfo = SM-G928V Build/NRD90M,0.0
+DeviceInfo = SM-G930F Build/MMB29K,0.0
+DeviceInfo = SM-G930F Build/NRD90M,0.0
+DeviceInfo = SM-G930P,0.0
+DeviceInfo = SM-G930P Build/NRD90M,0.0
+DeviceInfo = SM-G930R4 Build/NRD90M,0.0
+DeviceInfo = SM-G930R7,0.0
+DeviceInfo = SM-G930T,0.0
+DeviceInfo = SM-G930T Build/NRD90M,0.0
+DeviceInfo = SM-G930T1,0.0
+DeviceInfo = SM-G930U Build/NRD90M,0.0
+DeviceInfo = SM-G930V Build/MMB29M,0.0
+R_emaildomain_twc.com,0.0
+DeviceInfo = SM-G930VL Build/NRD90M,0.0
+DeviceInfo = SM-G930W8 Build/NRD90M,0.0
+DeviceInfo = SM-G935F Build/MMB29K,0.0
+R_emaildomain_web.de,0.0
+DeviceInfo = SM-G935P Build/NRD90M,0.0
+DeviceInfo = SM-G935T,0.0
+DeviceInfo = SM-G935T Build/NRD90M,0.0
+DeviceInfo = SM-G935U,0.0
+DeviceInfo = SM-G935V,0.0
+R_emaildomain_windstream.net,0.0
+DeviceInfo = SM-G935W8,0.0
+DeviceInfo = SM-G950F Build/NRD90M,0.0
+DeviceInfo = SM-G950F Build/R16NW,0.0
+DeviceInfo = SM-G950U Build/NRD90M,0.0
+DeviceInfo = SM-G950U Build/R16NW,0.0
+DeviceInfo = SM-G950U1 Build/NRD90M,0.0
+DeviceInfo = SM-G950U1 Build/R16NW,0.0
+DeviceInfo = SM-G950W,0.0
+DeviceInfo = SM-G955F,0.0
+DeviceInfo = SM-G955F Build/NRD90M,0.0
+DeviceInfo = SM-G955F Build/R16NW,0.0
+DeviceInfo = SM-G955U Build/NRD90M,0.0
+DeviceInfo = SM-G955U Build/R16NW,0.0
+DeviceInfo = SM-G955U1 Build/NRD90M,0.0
+DeviceInfo = SM-G955U1 Build/R16NW,0.0
+DeviceInfo = SM-G955W,0.0
+DeviceInfo = SM-G9600 Build/R16NW,0.0
+DeviceInfo = SM-G960F Build/R16NW,0.0
+DeviceInfo = SM-G960U Build/R16NW,0.0
+DeviceInfo = SM-G9650 Build/R16NW,0.0
+DeviceInfo = SM-G965F Build/R16NW,0.0
+DeviceInfo = SM-G965U Build/R16NW,0.0
+DeviceInfo = SM-J100MU,0.0
+DeviceInfo = SM-J100VPP Build/LMY48B,0.0
+R_emaildomain_yahoo.co.jp,0.0
+DeviceInfo = SM-J110M Build/LMY48B,0.0
+DeviceInfo = SM-J111M Build/LMY47V,0.0
+DeviceInfo = SM-J120FN Build/LMY47X,0.0
+DeviceInfo = SM-J120H Build/LMY47V,0.0
+DeviceInfo = SM-J120M,0.0
+DeviceInfo = SM-J120W,0.0
+DeviceInfo = SM-J200H,0.0
+DeviceInfo = SM-J200M Build/LMY47X,0.0
+DeviceInfo = SM-J250M Build/NMF26X,0.0
+DeviceInfo = SM-J320FN Build/LMY47V,0.0
+DeviceInfo = SM-J320H,0.0
+R_emaildomain_yahoo.co.uk,0.0
+DeviceInfo = SM-J320P Build/LMY47X,0.0
+DeviceInfo = SM-J320V Build/MMB29M,0.0
+DeviceInfo = SM-J320V Build/NMF26X,0.0
+DeviceInfo = SM-J320W8,0.0
+DeviceInfo = SM-J327P Build/MMB29M,0.0
+DeviceInfo = SM-J327T Build/NRD90M,0.0
+DeviceInfo = SM-J327T1 Build/NRD90M,0.0
+DeviceInfo = SM-J327V Build/NRD90M,0.0
+DeviceInfo = SM-J327VPP Build/NRD90M,0.0
+DeviceInfo = SM-J330F,0.0
+DeviceInfo = SM-J330FN Build/NRD90M,0.0
+DeviceInfo = SM-J500FN,0.0
+DeviceInfo = SM-J500FN Build/MMB29M,0.0
+DeviceInfo = SM-J500G,0.0
+DeviceInfo = SM-J500H,0.0
+R_emaildomain_yahoo.com.mx,0.0
+DeviceInfo = SM-J500M Build/MMB29M,0.0
+DeviceInfo = SM-J510F,0.0
+DeviceInfo = SM-J510FN,0.0
+DeviceInfo = SM-J510FN Build/NMF26X,0.0
+DeviceInfo = SM-J510MN Build/MMB29M,0.0
+DeviceInfo = SM-J510MN Build/NMF26X,0.0
+DeviceInfo = SM-J530F Build/NRD90M,0.0
+DeviceInfo = SM-J530G,0.0
+DeviceInfo = SM-J530GM Build/NRD90M,0.0
+DeviceInfo = SM-J700F,0.0
+DeviceInfo = SM-J700H Build/MMB29K,0.0
+DeviceInfo = SM-J700M Build/LMY48B,0.0
+R_emaildomain_yahoo.de,0.0
+DeviceInfo = SM-J700P,0.0
+DeviceInfo = SM-J700T Build/MMB29K,0.0
+DeviceInfo = SM-J700T Build/NMF26X,0.0
+DeviceInfo = SM-J700T1,0.0
+DeviceInfo = SM-J700T1 Build/NMF26X,0.0
+DeviceInfo = SM-J701M Build/NRD90M,0.0
+DeviceInfo = SM-J7108,0.0
+DeviceInfo = SM-J710F Build/NRD90M,0.0
+DeviceInfo = SM-J710GN,0.0
+DeviceInfo = SM-J710GN Build/MMB29K,0.0
+R_emaildomain_yahoo.es,0.0
+DeviceInfo = SM-J710MN Build/NRD90M,0.0
+DeviceInfo = SM-J727P,0.0
+DeviceInfo = SM-J727T Build/NRD90M,0.0
+DeviceInfo = SM-J727T1 Build/NRD90M,0.0
+DeviceInfo = SM-J727U Build/NRD90M,0.0
+DeviceInfo = SM-J727V Build/NRD90M,0.0
+DeviceInfo = SM-J727VPP Build/NRD90M,0.0
+DeviceInfo = SM-J730F,0.0
+DeviceInfo = SM-J730G Build/NRD90M,0.0
+R_emaildomain_yahoo.fr,0.0
+DeviceInfo = SM-N9005 Build/LRX21V,0.0
+DeviceInfo = SM-N900P Build/LRX21V,0.0
+DeviceInfo = SM-N900T,0.0
+DeviceInfo = SM-N900T Build/LRX21V,0.0
+DeviceInfo = SM-N900V Build/LRX21V,0.0
+DeviceInfo = SM-N900W8 Build/LRX21V,0.0
+DeviceInfo = SM-N910C Build/MMB29K,0.0
+DeviceInfo = SM-N910F Build/MMB29M,0.0
+DeviceInfo = SM-N910H,0.0
+DeviceInfo = SM-N910P,0.0
+DeviceInfo = SM-N910T Build/LMY47X,0.0
+DeviceInfo = SM-N910T Build/MMB29M,0.0
+DeviceInfo = SM-N910T3,0.0
+DeviceInfo = SM-N910V Build/MMB29M,0.0
+DeviceInfo = SM-N915V,0.0
+R_emaildomain_ymail.com,0.0
+DeviceInfo = SM-N920C Build/NRD90M,0.0
+DeviceInfo = SM-N920G Build/NRD90M,0.0
+DeviceInfo = SM-N920P,0.0
+DeviceInfo = SM-N920P Build/NRD90M,0.0
+DeviceInfo = SM-N920R4,0.0
+DeviceInfo = SM-N920T,0.0
+DeviceInfo = SM-N920T Build/NRD90M,0.0
+DeviceInfo = SM-N920V,0.0
+DeviceInfo = SM-N920V Build/NRD90M,0.0
+DeviceInfo = SM-N9500,0.0
+DeviceInfo = SM-N950F Build/NMF26X,0.0
+DeviceInfo = SM-N950F Build/R16NW,0.0
+DeviceInfo = SM-N950U Build/NMF26X,0.0
+DeviceInfo = SM-N950U Build/R16NW,0.0
+DeviceInfo = SM-N950U1 Build/NMF26X,0.0
+DeviceInfo = SM-N950U1 Build/R16NW,0.0
+DeviceInfo = SM-N950W,0.0
+DeviceInfo = SM-P350 Build/MMB29M,0.0
+DeviceInfo = SM-P355M Build/MMB29M,0.0
+DeviceInfo = SM-P550 Build/MMB29M,0.0
+DeviceInfo = SM-P550 Build/NMF26X,0.0
+DeviceInfo = SM-P580 Build/NRD90M,0.0
+DeviceInfo = SM-P600,0.0
+DeviceInfo = SM-P600 Build/LMY47X,0.0
+DeviceInfo = SM-P605V,0.0
+DeviceInfo = SM-P607T,0.0
+DeviceInfo = SM-P900,0.0
+DeviceInfo = SM-S120VL,0.0
+DeviceInfo = SM-S320VL,0.0
+DeviceInfo = SM-S327VL,0.0
+DeviceInfo = SM-S550TL,0.0
+DeviceInfo = SM-S727VL Build/MMB29M,0.0
+DeviceInfo = SM-S820L,0.0
+DeviceInfo = SM-S902L,0.0
+DeviceInfo = SM-S903VL,0.0
+DeviceInfo = SM-S906L,0.0
+DeviceInfo = SM-S907VL,0.0
+DeviceInfo = SM-S920L,0.0
+DeviceInfo = SM-S975L,0.0
+DeviceInfo = SM-T110 Build/JDQ39,0.0
+DeviceInfo = SM-T113 Build/KTU84P,0.0
+DeviceInfo = SM-T113NU Build/KTU84P,0.0
+DeviceInfo = SM-T210,0.0
+DeviceInfo = SM-T217S Build/KOT49H,0.0
+DeviceInfo = SM-T230 Build/KOT49H,0.0
+DeviceInfo = SM-T230NU Build/KOT49H,0.0
+DeviceInfo = SM-T237P,0.0
+DeviceInfo = 2PQ93,0.0
+DeviceInfo = SM-T310 Build/KOT49H,0.0
+DeviceInfo = SM-T320 Build/KOT49H,0.0
+DeviceInfo = SM-T330NU Build/LMY47X,0.0
+DeviceInfo = SM-T337V,0.0
+DeviceInfo = SM-T350 Build/MMB29M,0.0
+DeviceInfo = SM-T350 Build/NMF26X,0.0
+DeviceInfo = SM-T377P,0.0
+DeviceInfo = SM-T377P Build/NMF26X,0.0
+DeviceInfo = SM-T377T,0.0
+DeviceInfo = SM-T377V,0.0
+DeviceInfo = SM-T377V Build/NMF26X,0.0
+DeviceInfo = SM-T377W,0.0
+DeviceInfo = SM-T380,0.0
+DeviceInfo = SM-T520,0.0
+DeviceInfo = SM-T530,0.0
+DeviceInfo = SM-T530 Build/LRX22G,0.0
+DeviceInfo = SM-T530NU Build/LRX22G,0.0
+DeviceInfo = SM-T550,0.0
+DeviceInfo = SM-T550 Build/NMF26X,0.0
+DeviceInfo = SM-T555,0.0
+DeviceInfo = SM-T560 Build/KTU84P,0.0
+DeviceInfo = SM-T560NU Build/MMB29M,0.0
+DeviceInfo = SM-T560NU Build/NMF26X,0.0
+DeviceInfo = SM-T580,0.0
+DeviceInfo = SM-T580 Build/NRD90M,0.0
+DeviceInfo = SM-T585,0.0
+DeviceInfo = SM-T670,0.0
+DeviceInfo = SM-T700 Build/MMB29K,0.0
+DeviceInfo = SM-T710 Build/NRD90M,0.0
+DeviceInfo = SM-T713 Build/NRD90M,0.0
+DeviceInfo = SM-T800,0.0
+DeviceInfo = SM-T800 Build/MMB29K,0.0
+DeviceInfo = SM-T807T,0.0
+DeviceInfo = SM-T807V,0.0
+DeviceInfo = SM-T810 Build/NRD90M,0.0
+DeviceInfo = SM-T813 Build/NRD90M,0.0
+DeviceInfo = SM-T817T,0.0
+DeviceInfo = SM-T817V Build/NRD90M,0.0
+DeviceInfo = SM-T818V,0.0
+DeviceInfo = SM-T820 Build/NRD90M,0.0
+DeviceInfo = SM-T825 Build/NRD90M,0.0
+DeviceInfo = SM-T827R4,0.0
+DeviceInfo = SM-T827V Build/NRD90M,0.0
+DeviceInfo = SMART,0.0
+DeviceInfo = SOV33 Build/35.0.D.2.25,0.0
+DeviceInfo = SP7731G,0.0
+DeviceInfo = SPH-L720,0.0
+DeviceInfo = SPH-L720T,0.0
+DeviceInfo = STELLAR,0.0
+DeviceInfo = STF-L09 Build/HUAWEISTF-L09,0.0
+DeviceInfo = STK_Sync_5e,0.0
+DeviceInfo = STUDIO_G_HD,0.0
+DeviceInfo = STV100-1,0.0
+DeviceInfo = STV100-2 Build/MMB29M,0.0
+DeviceInfo = STV100-3,0.0
+DeviceInfo = STV100-4 Build/LMY47V,0.0
+DeviceInfo = Shift Build/LMY47I,0.0
+DeviceInfo = Star,0.0
+DeviceInfo = Stellar,0.0
+DeviceInfo = Studio,0.0
+DeviceInfo = T08,0.0
+DeviceInfo = T1,0.0
+DeviceInfo = TA-1025,0.0
+DeviceInfo = TA-1025 Build/NMF26F,0.0
+DeviceInfo = TA-1025 Build/OPR1.170623.026,0.0
+DeviceInfo = TA-1027,0.0
+DeviceInfo = TA-1027 Build/N2G47H,0.0
+DeviceInfo = TA-1027 Build/OPR1.170623.026,0.0
+DeviceInfo = TA-1028 Build/NMF26O,0.0
+DeviceInfo = TA-1028 Build/NRD90M,0.0
+DeviceInfo = TA-1028 Build/O00623,0.0
+DeviceInfo = TA-1038,0.0
+DeviceInfo = 2PS64 Build/NRD90M,0.0
+DeviceInfo = TA-1038 Build/O00623,0.0
+DeviceInfo = TA-1039 Build/N2G47H,0.0
+DeviceInfo = 2PYB2,0.0
+DeviceInfo = TA-1044,0.0
+DeviceInfo = TA-1044 Build/NMF26F,0.0
+DeviceInfo = TA-1044 Build/OPR1.170623.026,0.0
+DeviceInfo = TA-1052,0.0
+DeviceInfo = TAB7,0.0
+DeviceInfo = TOMMY2,0.0
+DeviceInfo = TR10CS1 Build/JDQ39,0.0
+DeviceInfo = TREKKER-M1,0.0
+DeviceInfo = TREKKER-X3 Build/MMB29M,0.0
+DeviceInfo = TRT-L53 Build/HUAWEITRT-L53,0.0
+DeviceInfo = TRT-LX3,0.0
+DeviceInfo = Tab2A7-10F,0.0
+DeviceInfo = Techpad,0.0
+DeviceInfo = Tmovi Build/Vision,0.0
+DeviceInfo = Tornado,0.0
+DeviceInfo = Touch,0.0
+DeviceInfo = 2PZC5,0.0
+DeviceInfo = Turbo C5 Build/LMY47I,0.0
+DeviceInfo = U,0.0
+DeviceInfo = U FEEL LITE Build/MRA58K,0.0
+DeviceInfo = UL40,0.0
+DeviceInfo = 4009F,0.0
+DeviceInfo = V502015,0.0
+DeviceInfo = VFD,0.0
+DeviceInfo = VK700 Build/LRX22G,0.0
+DeviceInfo = VK810,0.0
+DeviceInfo = VK815,0.0
+DeviceInfo = VKY-L09 Build/HUAWEIVKY-L09,0.0
+DeviceInfo = VS425,0.0
+DeviceInfo = VS425PP Build/LMY47V,0.0
+DeviceInfo = VS500,0.0
+DeviceInfo = VS501 Build/NRD90U,0.0
+DeviceInfo = 4013M Build/KOT49H,0.0
+DeviceInfo = VS820,0.0
+DeviceInfo = VS835,0.0
+DeviceInfo = VS880,0.0
+DeviceInfo = VS980 4G Build/LRX22G,0.0
+DeviceInfo = VS985,0.0
+DeviceInfo = VS986 Build/MRA58K,0.0
+DeviceInfo = VS987 Build/NRD90U,0.0
+DeviceInfo = VS988 Build/NRD90U,0.0
+DeviceInfo = VS990 Build/MRA58K,0.0
+DeviceInfo = VS995 Build/NRD90M,0.0
+DeviceInfo = VS996,0.0
+DeviceInfo = VS996 Build/OPR1.170623.026,0.0
+DeviceInfo = VT0701A08,0.0
+DeviceInfo = VTR-AL00 Build/HUAWEIVTR-AL00,0.0
+DeviceInfo = VTR-L09 Build/HUAWEIVTR-L09,0.0
+DeviceInfo = VTR-L29,0.0
+DeviceInfo = Venue,0.0
+DeviceInfo = VerykoolS5030,0.0
+DeviceInfo = Vivo,0.0
+DeviceInfo = WAS-L03T Build/HUAWEIWAS-L03T,0.0
+DeviceInfo = WAS-LX1 Build/HUAWEIWAS-LX1,0.0
+DeviceInfo = WAS-LX1A Build/HUAWEIWAS-LX1A,0.0
+DeviceInfo = WAS-LX2J,0.0
+DeviceInfo = WAS-LX3 Build/HUAWEIWAS-LX3,0.0
+DeviceInfo = WAS-TL10 Build/HUAWEIWAS-TL10,0.0
+DeviceInfo = WOW64,0.0
+DeviceInfo = Wileyfox,0.0
+DeviceInfo = Win64,0.0
+DeviceInfo = 4027A Build/KOT49H,0.0
+DeviceInfo = Windows NT 6.1,0.0
+DeviceInfo = Windows NT 6.2,0.0
+DeviceInfo = X10,0.0
+DeviceInfo = X3402,0.0
+DeviceInfo = X78,0.0
+DeviceInfo = XT1003,0.0
+DeviceInfo = XT1008,0.0
+DeviceInfo = XT1008 Build/LPBS23.13-56-2,0.0
+DeviceInfo = 4034E,0.0
+DeviceInfo = XT1021 Build/KXC21.5-40,0.0
+DeviceInfo = XT1021 Build/LPCS23.13-34.8-3,0.0
+DeviceInfo = XT1030 Build/SU6-7.7,0.0
+DeviceInfo = XT1031,0.0
+DeviceInfo = XT1032,0.0
+DeviceInfo = XT1032 Build/KXB20.9-1.10-1.24-1.1,0.0
+DeviceInfo = XT1032 Build/KXB21.14-L1.40,0.0
+DeviceInfo = XT1032 Build/LPBS23.13-56-2,0.0
+DeviceInfo = XT1032 Build/LPBS23.13-57-2,0.0
+DeviceInfo = XT1033,0.0
+DeviceInfo = XT1040,0.0
+DeviceInfo = XT1053 Build/LPAS23.12-21.7-1,0.0
+DeviceInfo = XT1055,0.0
+DeviceInfo = XT1058,0.0
+DeviceInfo = XT1058 Build/LPAS23.12-21.7-1,0.0
+DeviceInfo = XT1060,0.0
+DeviceInfo = XT1063,0.0
+DeviceInfo = XT1063 Build/MPB24.65-34,0.0
+DeviceInfo = XT1063 Build/MPB24.65-34-3,0.0
+DeviceInfo = XT1064,0.0
+DeviceInfo = XT1064 Build/MPB24.65-34-3,0.0
+DeviceInfo = XT1068,0.0
+DeviceInfo = XT1080,0.0
+DeviceInfo = XT1080 Build/SU6-7.7,0.0
+DeviceInfo = XT1092,0.0
+DeviceInfo = XT1094,0.0
+DeviceInfo = XT1095,0.0
+DeviceInfo = XT1096,0.0
+DeviceInfo = XT1097,0.0
+DeviceInfo = XT1225,0.0
+DeviceInfo = XT1254,0.0
+DeviceInfo = XT1254 Build/MCG24.251-5-5,0.0
+DeviceInfo = XT1528,0.0
+DeviceInfo = XT1563,0.0
+DeviceInfo = XT1563 Build/MPD24.107-52,0.0
+DeviceInfo = XT1563 Build/MPD24.65-25,0.0
+DeviceInfo = XT1563 Build/MPDS24.107-52-5,0.0
+DeviceInfo = XT1565,0.0
+DeviceInfo = XT1572 Build/NPHS25.200-15-8,0.0
+DeviceInfo = XT1575,0.0
+DeviceInfo = XT1575 Build/NPHS25.200-23-1,0.0
+DeviceInfo = XT1580,0.0
+DeviceInfo = XT1580 Build/NPKS25.200-12-9,0.0
+DeviceInfo = XT1580 Build/NPKS25.200-17-8,0.0
+DeviceInfo = XT1585 Build/NCK25.118-10.5,0.0
+DeviceInfo = XT1609,0.0
+DeviceInfo = XT1609 Build/MPIS24.241-2.35-1-17,0.0
+DeviceInfo = XT1609 Build/NPIS26.48-38-3,0.0
+DeviceInfo = XT1635-01,0.0
+DeviceInfo = XT1635-01 Build/NDNS26.118-23-12-3,0.0
+DeviceInfo = XT1635-02,0.0
+DeviceInfo = XT1635-02 Build/NPN26.118-22-2,0.0
+DeviceInfo = XT1635-02 Build/OPN27.76-12-22,0.0
+DeviceInfo = XT1650,0.0
+DeviceInfo = XT1650 Build/NCLS26.118-23-13-3,0.0
+DeviceInfo = XT1650 Build/NCLS26.118-23-13-6-5,0.0
+DeviceInfo = XT1650 Build/NPLS26.118-20-5-11,0.0
+DeviceInfo = XT1650 Build/NPLS26.118-20-5-3,0.0
+DeviceInfo = XT1680,0.0
+DeviceInfo = XT1710-02,0.0
+DeviceInfo = XT1710-02 Build/NDSS26.118-23-15,0.0
+DeviceInfo = XT1710-02 Build/NDSS26.118-23-19-6,0.0
+DeviceInfo = XT890 Build/9.8.2I-50_SML-25,0.0
+DeviceInfo = Y550-L02,0.0
+DeviceInfo = Y635-L03 Build/HuaweiY635-L03,0.0
+DeviceInfo = YOGA,0.0
+DeviceInfo = YOLO,0.0
+DeviceInfo = Z,0.0
+DeviceInfo = Z410,0.0
+DeviceInfo = Z557BL,0.0
+DeviceInfo = Z798BL Build/MMB29M,0.0
+DeviceInfo = Z799VL,0.0
+DeviceInfo = Z812,0.0
+DeviceInfo = Z813 Build/LMY47O,0.0
+DeviceInfo = Z831,0.0
+DeviceInfo = Z832 Build/MMB29M,0.0
+DeviceInfo = Z833,0.0
+DeviceInfo = Z835 Build/NMF26V,0.0
+DeviceInfo = Z836BL,0.0
+DeviceInfo = Z837VL,0.0
+DeviceInfo = Z839,0.0
+DeviceInfo = Z9 PLUS Build/NRD90M,0.0
+DeviceInfo = Z955A,0.0
+DeviceInfo = Z956 Build/MMB29M,0.0
+DeviceInfo = Z959 Build/LMY47V,0.0
+DeviceInfo = Z963VL,0.0
+DeviceInfo = Z965 Build/NMF26V,0.0
+DeviceInfo = Z971,0.0
+DeviceInfo = Z981 Build/MMB29M,0.0
+DeviceInfo = Z982 Build/NMF26V,0.0
+DeviceInfo = Z983 Build/NMF26F,0.0
+DeviceInfo = ZA409,0.0
+DeviceInfo = ZA990,0.0
+DeviceInfo = ZEIA8,0.0
+DeviceInfo = ZTE,0.0
+DeviceInfo = ZTE A2017U Build/NRD90M,0.0
+DeviceInfo = ZTE BLADE A512 Build/MMB29M,0.0
+DeviceInfo = ZTE BLADE A6 Build/NMF26F,0.0
+DeviceInfo = ZTE BLADE V8 MINI Build/NRD90M,0.0
+DeviceInfo = ZTE Blade A511 Build/MRA58K,0.0
+DeviceInfo = ZTE Blade L5 Build/LMY47I,0.0
+DeviceInfo = ZTE-Z835,0.0
+DeviceInfo = ZTE-Z956,0.0
+DeviceInfo = ZUR70016,0.0
+DeviceInfo = ZUUM_ZEN_I Build/LRX21M,0.0
+DeviceInfo = en-gb,0.0
+DeviceInfo = en-us,0.0
+DeviceInfo = es-mx,0.0
+DeviceInfo = es-us,0.0
+DeviceInfo = gxq6580_weg_l Build/LMY47I,0.0
+DeviceInfo = 4034G,0.0
+DeviceInfo = hp2015,0.0
+DeviceInfo = 4047A Build/NRD90M,0.0
+DeviceInfo = iris 820 Build/MRA58K,0.0
+DeviceInfo = iris 870 Build/MRA58K,0.0
+DeviceInfo = iris50,0.0
+DeviceInfo = iris702,0.0
+DeviceInfo = iris80,0.0
+DeviceInfo = m3,0.0
+DeviceInfo = moto,0.0
+DeviceInfo = moto g(6) play Build/OPP27.61-14-4,0.0
+DeviceInfo = moto x4 Build/NPW26.83-18-2-0-4,0.0
+DeviceInfo = moto x4 Build/NPW26.83-42,0.0
+DeviceInfo = moto x4 Build/OPW27.57-40,0.0
+DeviceInfo = moto x4 Build/OPWS27.57-40-14,0.0
+DeviceInfo = moto x4 Build/OPWS27.57-40-6,0.0
+DeviceInfo = orbis,0.0
+DeviceInfo = 4047G Build/NRD90M,0.0
+DeviceInfo = rv:14.0,0.0
+DeviceInfo = rv:29.0,0.0
+DeviceInfo = rv:31.0,0.0
+DeviceInfo = rv:33.0,0.0
+DeviceInfo = rv:35.0,0.0
+DeviceInfo = rv:37.0,0.0
+DeviceInfo = rv:38.0,0.0
+DeviceInfo = rv:39.0,0.0
+DeviceInfo = rv:41.0,0.0
+DeviceInfo = rv:42.0,0.0
+DeviceInfo = rv:43.0,0.0
+DeviceInfo = rv:44.0,0.0
+DeviceInfo = rv:45.0,0.0
+DeviceInfo = rv:46.0,0.0
+DeviceInfo = rv:47.0,0.0
+DeviceInfo = rv:48.0,0.0
+DeviceInfo = rv:49.0,0.0
+DeviceInfo = rv:50.0,0.0
+DeviceInfo = 47418,0.0
+DeviceInfo = rv:52.0,0.0
+DeviceInfo = rv:52.9,0.0
+DeviceInfo = rv:53.0,0.0
+DeviceInfo = rv:54.0,0.0
+DeviceInfo = rv:55.0,0.0
+DeviceInfo = rv:56.0,0.0
+DeviceInfo = rv:57.0,0.0
+DeviceInfo = rv:58.0,0.0
+DeviceInfo = rv:59.0,0.0
+DeviceInfo = rv:60.0,0.0
+DeviceInfo = rv:61.0,0.0
+DeviceInfo = verykool,0.0
+DeviceInfo = verykoolS5005,0.0
+DeviceInfo = verykoolS5019,0.0
+DeviceInfo = verykoolS5524,0.0
+DeviceInfo = verykoolS5525,0.0
+DeviceInfo = verykoolS5530 Build/LMY47I,0.0
+DeviceInfo = verykools4009,0.0
+DeviceInfo = verykools5004,0.0
+DeviceInfo = verykools5034,0.0
+DeviceInfo = verykools5035,0.0
+DeviceInfo = vivo,0.0
+DeviceInfo = xs-Z47b7VqTMxs,0.0
+DeviceInfo = 5010G Build/MRA58K,0.0
+id_30_Android 4.4.2,0.0
+id_30_Android 5.0,0.0
+id_30_Android 5.0.2,0.0
+DeviceInfo = 5010S Build/MRA58K,0.0
+id_30_Android 6.0,0.0
+id_30_Android 6.0.1,0.0
+id_30_Android 7.0,0.0
+DeviceInfo = 5011A Build/NRD90M,0.0
+id_30_Android 7.1.2,0.0
+DeviceInfo = 5012G Build/MRA58K,0.0
+id_30_Android 8.1.0,0.0
+DeviceInfo = 5015A Build/LMY47I,0.0
+id_30_Mac,0.0
+id_30_Mac OS X 10.10,0.0
+id_30_Mac OS X 10.11,0.0
+id_30_Mac OS X 10.12,0.0
+id_30_Mac OS X 10.13,0.0
+id_30_Mac OS X 10.6,0.0
+id_30_Mac OS X 10.9,0.0
+DeviceInfo = 5017A,0.0
+id_30_Mac OS X 10_11_3,0.0
+id_30_Mac OS X 10_11_4,0.0
+id_30_Mac OS X 10_11_5,0.0
+DeviceInfo = 5025G Build/LMY47I,0.0
+id_30_Mac OS X 10_12,0.0
+id_30_Mac OS X 10_12_1,0.0
+id_30_Mac OS X 10_12_2,0.0
+DeviceInfo = 5042A,0.0
+id_30_Mac OS X 10_12_4,0.0
+id_30_Mac OS X 10_12_5,0.0
+DeviceInfo = 5045I,0.0
+id_30_Mac OS X 10_13_1,0.0
+DeviceInfo = 5049W Build/NRD90M,0.0
+DeviceInfo = 5051A Build/MMB29M,0.0
+DeviceInfo = 5054N,0.0
+id_30_Mac OS X 10_13_5,0.0
+id_30_Mac OS X 10_6_8,0.0
+id_30_Mac OS X 10_7_5,0.0
+id_30_Mac OS X 10_8_5,0.0
+id_30_Mac OS X 10_9_5,0.0
+DeviceInfo = 5054S Build/LMY47V,0.0
+id_30_Windows,0.0
+DeviceInfo = 5056A Build/MMB29M,0.0
+DeviceInfo = 5056N,0.0
+DeviceInfo = 5080A Build/MRA58K,0.0
+DeviceInfo = 5085B Build/MRA58K,0.0
+id_30_Windows Vista,0.0
+id_30_Windows XP,0.0
+id_30_func,0.0
+id_30_iOS,0.0
+id_30_iOS 10.0.2,0.0
+id_30_iOS 10.1.1,0.0
+id_30_iOS 10.2.0,0.0
+DeviceInfo = 5095I Build/MRA58K,0.0
+DeviceInfo = 6039A Build/LRX22G,0.0
+DeviceInfo = 6045I Build/LRX22G,0.0
+id_30_iOS 10.3.3,0.0
+id_30_iOS 11.0.0,0.0
+id_30_iOS 11.0.1,0.0
+id_30_iOS 11.0.2,0.0
+DeviceInfo = 6055B,0.0
+DeviceInfo = 7048A Build/LRX22G,0.0
+id_30_iOS 11.1.1,0.0
+DeviceInfo = 7055A Build/KVT49L,0.0
+id_30_iOS 11.2.0,0.0
+DeviceInfo = 7_Plus,0.0
+DeviceInfo = 8050G Build/LMY47I,0.0
+DeviceInfo = 8062 Build/MRA58K,0.0
+DeviceInfo = 8080 Build/LRX21M,0.0
+DeviceInfo = 831C,0.0
+id_30_iOS 11.3.1,0.0
+id_30_iOS 11.4.0,0.0
+id_30_iOS 11.4.1,0.0
+id_30_iOS 9.3.5,0.0
+DeviceInfo = 9002A,0.0
+id_31_BLU/Dash,0.0
+id_31_Cherry,0.0
+id_31_Generic/Android,0.0
+id_31_Generic/Android 7.0,0.0
+id_31_Inco/Minion,0.0
+id_31_LG/K-200,0.0
+id_31_Lanix/Ilium,0.0
+id_31_M4Tel/M4,0.0
+id_31_Microsoft/Windows,0.0
+DeviceInfo = XT1021,0.0
+id_31_Nokia/Lumia,0.0
+id_31_Samsung/SCH,0.0
+id_31_Samsung/SM-G531H,0.0
+DeviceInfo = 9003A Build/MRA58K,0.0
+DeviceInfo = 9008A Build/NRD90M,0.0
+id_31_ZTE/Blade,0.0
+DeviceInfo = 916,0.0
+id_31_android webview 4.0,0.0
+id_31_aol,0.0
+id_31_chrome,0.0
+id_31_chrome 43.0 for android,0.0
+id_31_chrome 46.0 for android,0.0
+id_31_chrome 49.0,0.0
+id_31_chrome 49.0 for android,0.0
+id_31_chrome 50.0 for android,0.0
+id_31_chrome 51.0,0.0
+id_31_chrome 51.0 for android,0.0
+DeviceInfo = 9203A Build/MRA58K,0.0
+id_31_chrome 53.0 for android,0.0
+id_31_chrome 54.0 for android,0.0
+id_31_chrome 55.0,0.0
+id_31_chrome 55.0 for android,0.0
+id_31_chrome 56.0,0.0
+id_31_chrome 56.0 for android,0.0
+id_31_chrome 57.0,0.0
+id_31_chrome 57.0 for android,0.0
+DeviceInfo = A0001,0.0
+id_31_chrome 58.0 for android,0.0
+id_31_chrome 59.0,0.0
+id_31_chrome 59.0 for android,0.0
+id_31_chrome 60.0,0.0
+id_31_chrome 60.0 for android,0.0
+DeviceInfo = A0001 Build/MHC19Q,0.0
+DeviceInfo = A1-850,0.0
+DeviceInfo = A1601 Build/LMY47I,0.0
+id_31_chrome 62.0 for android,0.0
+id_31_chrome 62.0 for ios,0.0
+DeviceInfo = A3_mini,0.0
+DeviceInfo = A463BG,0.0
+id_31_chrome 63.0 for ios,0.0
+DeviceInfo = A466BG,0.0
+DeviceInfo = A5002,0.0
+id_31_chrome 64.0 for ios,0.0
+DeviceInfo = A50C+,0.0
+DeviceInfo = A574BL Build/NMF26F,0.0
+id_31_chrome 65.0 for ios,0.0
+DeviceInfo = A577VL,0.0
+DeviceInfo = A9,0.0
+id_31_chrome 66.0 for ios,0.0
+id_31_chrome 67.0,0.0
+id_31_chrome 67.0 for android,0.0
+id_31_chrome 69.0,0.0
+DeviceInfo = A952,0.0
+id_31_chrome generic for android,0.0
+id_31_chromium,0.0
+DeviceInfo = A96 Build/LMY47I,0.0
+id_31_cyberfox,0.0
+id_31_edge,0.0
+id_31_edge 13.0,0.0
+id_31_edge 14.0,0.0
+DeviceInfo = A97,0.0
+DeviceInfo = AERIAL,0.0
+id_31_edge 17.0,0.0
+id_31_facebook,0.0
+DeviceInfo = AERIAL Build/NRD90M,0.0
+id_31_firefox 47.0,0.0
+id_31_firefox 48.0,0.0
+id_31_firefox 52.0,0.0
+id_31_firefox 55.0,0.0
+id_31_firefox 56.0,0.0
+DeviceInfo = AKUS,0.0
+id_31_firefox 58.0,0.0
+DeviceInfo = ALCATEL,0.0
+id_31_firefox 60.0,0.0
+DeviceInfo = ALCATEL ONE TOUCH 5036A Build/JDQ39,0.0
+id_31_firefox mobile 61.0,0.0
+id_31_google,0.0
+id_31_google search application 48.0,0.0
+id_31_google search application 49.0,0.0
+id_31_icedragon,0.0
+id_31_ie,0.0
+DeviceInfo = ALCATEL ONE TOUCH 7040A Build/JDQ39,0.0
+DeviceInfo = ALCATEL ONE TOUCH 7042A Build/JDQ39,0.0
+id_31_line,0.0
+id_31_maxthon,0.0
+DeviceInfo = ALCATEL ONE TOUCH 7047A Build/JDQ39,0.0
+DeviceInfo = ALE-L21 Build/HuaweiALE-L21,0.0
+DeviceInfo = ALE-L23 Build/HuaweiALE-L23,0.0
+id_31_mobile safari 8.0,0.0
+DeviceInfo = ALP-L09 Build/HUAWEIALP-L09,0.0
+DeviceInfo = ALP-L09 Build/HUAWEIALP-L09S,0.0
+id_31_mobile safari uiwebview,0.0
+DeviceInfo = ALTER,0.0
+id_31_opera 49.0,0.0
+id_31_opera 51.0,0.0
+id_31_opera 52.0,0.0
+id_31_opera 53.0,0.0
+DeviceInfo = ALUMINI,0.0
+id_31_other,0.0
+id_31_palemoon,0.0
+id_31_puffin,0.0
+id_31_safari,0.0
+DeviceInfo = AM508,0.0
+id_31_safari 11.0,0.0
+id_31_safari 9.0,0.0
+DeviceInfo = ANE-LX3 Build/HUAWEIANE-LX3,0.0
+id_31_samsung,0.0
+id_31_samsung browser 3.3,0.0
+id_31_samsung browser 4.0,0.0
+id_31_samsung browser 4.2,0.0
+id_31_samsung browser 5.2,0.0
+id_31_samsung browser 5.4,0.0
+id_31_samsung browser 6.2,0.0
+DeviceInfo = AOC_U706G,0.0
+id_31_samsung browser 7.0,0.0
+id_31_samsung browser generic,0.0
+id_31_seamonkey,0.0
+id_31_silk,0.0
+id_31_waterfox,0.0
+DeviceInfo = ASTRO,0.0
+DeviceInfo = ASUS,0.0
+DeviceInfo = ASUS_A001,0.0
+DeviceInfo = ASUS_P00J,0.0
+DeviceInfo = ASUS_X008D Build/NRD90M,0.0
+DeviceInfo = ASUS_X008DC Build/NRD90M,0.0
+P_emaildomain_cableone.net,0.0
+P_emaildomain_centurylink.net,0.0
+P_emaildomain_cfl.rr.com,0.0
+DeviceInfo = ASUS_X00DD,0.0
+DeviceInfo = ASUS_X00DDA,0.0
+DeviceInfo = ASUS_X00HD Build/NMF26F,0.0
+DeviceInfo = ASUS_X00ID,0.0
+DeviceInfo = ASUS_X015D Build/NRD90M,0.0
+P_emaildomain_frontier.com,0.0
+P_emaildomain_frontiernet.net,0.0
+P_emaildomain_gmail,0.0
+DeviceInfo = ASUS_X018D,0.0
+P_emaildomain_gmx.de,0.0
+P_emaildomain_hotmail.co.uk,0.0
+DeviceInfo = ASUS_Z00AD Build/LRX21V,0.0
+P_emaildomain_hotmail.de,0.0
+DeviceInfo = ASUS_Z00ED,0.0
+P_emaildomain_hotmail.fr,0.0
+DeviceInfo = ASUS_Z00UD,0.0
+P_emaildomain_juno.com,0.0
+DeviceInfo = ASUS_Z017D,0.0
+P_emaildomain_live.com.mx,0.0
+P_emaildomain_live.fr,0.0
+P_emaildomain_mac.com,0.0
+DeviceInfo = ASUS_Z017DA,0.0
+P_emaildomain_me.com,0.0
+DeviceInfo = ASUS_Z01BDA,0.0
+DeviceInfo = ASUS_Z01BDC,0.0
+P_emaildomain_netzero.net,0.0
+DeviceInfo = ASUS_Z01KD,0.0
+DeviceInfo = ATT-IE11,0.0
+DeviceInfo = AX1060,0.0
+DeviceInfo = AX1070,0.0
+DeviceInfo = AX705,0.0
+P_emaildomain_ptd.net,0.0
+P_emaildomain_q.com,0.0
+P_emaildomain_roadrunner.com,0.0
+DeviceInfo = AX820 Build/MRA58K,0.0
+DeviceInfo = AX821 Build/MRA58K,0.0
+P_emaildomain_sc.rr.com,0.0
+P_emaildomain_servicios-ta.com,0.0
+DeviceInfo = AX920,0.0
+P_emaildomain_twc.com,0.0
+DeviceInfo = AX921 Build/MRA58K,0.0
+DeviceInfo = Advance,0.0
+DeviceInfo = Alcatel_4060A,0.0
+P_emaildomain_yahoo.co.jp,0.0
+P_emaildomain_yahoo.co.uk,0.0
+DeviceInfo = Alcatel_4060O Build/MMB29M,0.0
+DeviceInfo = Alcatel_5044R Build/NRD90M,0.0
+P_emaildomain_yahoo.de,0.0
+P_emaildomain_yahoo.es,0.0
+P_emaildomain_yahoo.fr,0.0
+DeviceInfo = Alcatel_5054O,0.0
+DeviceInfo = Alcatel_5056O,0.0
+R_emaildomain_aim.com,0.0
+DeviceInfo = Alcatel_5098O Build/MMB29M,0.0
+R_emaildomain_aol.com,0.0
+DeviceInfo = Alumini3 Build/MRA58K,0.0
+DeviceInfo = Alumini3Plus,0.0
+R_emaildomain_cableone.net,0.0
+R_emaildomain_centurylink.net,0.0
+R_emaildomain_cfl.rr.com,0.0
+R_emaildomain_charter.net,0.0
+DeviceInfo = Android,0.0
+R_emaildomain_cox.net,0.0
+R_emaildomain_earthlink.net,0.0
+R_emaildomain_embarqmail.com,0.0
+R_emaildomain_frontier.com,0.0
+R_emaildomain_frontiernet.net,0.0
+R_emaildomain_gmail,0.0
+DeviceInfo = Android 4.4.2,0.0
+R_emaildomain_gmx.de,0.0
+R_emaildomain_hotmail.co.uk,0.0
+DeviceInfo = Android 5.1,0.0
+R_emaildomain_hotmail.de,0.0
+R_emaildomain_hotmail.es,0.0
+R_emaildomain_hotmail.fr,0.0
+DeviceInfo = Android 5.1.1,0.0
+R_emaildomain_juno.com,0.0
+R_emaildomain_live.com,0.0
+DeviceInfo = Android 6.0,0.0
+R_emaildomain_live.fr,0.0
+R_emaildomain_mac.com,0.0
+DeviceInfo = Android 6.0.1,0.0
+DeviceInfo = Android 7.0,0.0
+DeviceInfo = Android 7.1.2,0.0
+R_emaildomain_netzero.com,0.0
+R_emaildomain_netzero.net,0.0
+R_emaildomain_optonline.net,0.0
+DeviceInfo = Aquaris,0.0
+R_emaildomain_outlook.es,0.0
+R_emaildomain_prodigy.net.mx,0.0
+DeviceInfo = Aquaris U Plus Build/NMF26F,0.0
+R_emaildomain_ptd.net,0.0
+R_emaildomain_q.com,0.0
+R_emaildomain_roadrunner.com,0.0
+DeviceInfo = Aquaris V Build/N2G47H,0.0
+R_emaildomain_sbcglobal.net,0.0
+DeviceInfo = Aquaris X Build/NMF26F,0.0
+DeviceInfo = Aquaris X5 Plus Build/NMF26F,0.0
+DeviceInfo = Aquaris_A4.5,0.0
+DeviceInfo = Archos,0.0
+DeviceInfo = Azumi_KINZO_A5_QL,0.0
+DeviceInfo = B1-750,0.0
+DeviceInfo = B1-790,0.0
+DeviceInfo = B1-810,0.0
+is_late_night,0.0
+DeviceInfo = B3-A20,0.0
+DeviceInfo = B3-A40,0.0
+DeviceInfo = BAC-L03 Build/HUAWEIBAC-L03,0.0
+DeviceInfo = BAH-L09 Build/HUAWEIBAH-L09,0.0
+DeviceInfo = BBA100-1,0.0
+DeviceInfo = BBB100-1,0.0
+DeviceInfo = BBB100-2,0.0
+card6 = charge card,0.0
+DeviceInfo = BBB100-3,0.0
+DeviceInfo = BG2-W09,0.0
+card6 = debit or credit,0.0
+DeviceInfo = BLA-L09 Build/HUAWEIBLA-L09,0.0
+DeviceInfo = BLA-L29 Build/HUAWEIBLA-L29,0.0
+DeviceInfo = BLADE A520 Build/NRD90M,0.0
+DeviceInfo = BLADE A602 Build/MRA58K,0.0
+DeviceInfo = BLADE L7 Build/MRA58K,0.0
+DeviceInfo = BLADE V7 Build/MRA58K,0.0
+DeviceInfo = BLADE V8 Build/NRD90M,0.0
+DeviceInfo = BLADE V8 SE Build/NRD90M,0.0
+DeviceInfo = 0PAJ5,0.0
+DeviceInfo = 0PJA2,0.0
+DeviceInfo = 0PM92,0.0
+id_31_Mozilla/Firefox,0.0

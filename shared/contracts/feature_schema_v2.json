@@ -1,0 +1,104 @@
+{
+  "contract_id": "foresight.transaction_risk_features",
+  "schema_version": "2.0.0",
+  "schema_hash": "8247fec4969d83e8bf42cfa2ee2979292ad344d8fa7d0e4b63c05e270328c410",
+  "transformer_version": "2.0.0",
+  "device_fingerprint_version": "v1",
+  "aliases": {
+    "new_device": "device_change_flag",
+    "is_trusted_contact": "trusted_contact"
+  },
+  "location_policy": {
+    "version": "v1",
+    "lookback_days": 90,
+    "minimum_observations": 3,
+    "maximum_accuracy_m": 1000.0,
+    "anomaly_threshold_km": 50.0,
+    "earth_radius_km": 6371.0088
+  },
+  "features": [
+    {
+      "name": "trusted_contact",
+      "version": "2.0.0",
+      "type": "integer",
+      "storage_type": "int8",
+      "required": true,
+      "encoding": {"kind": "binary", "false": 0, "true": 1},
+      "default": 0,
+      "validation": {"allowed_values": [0, 1]}
+    },
+    {
+      "name": "trusted_contact_age",
+      "version": "2.0.0",
+      "type": "number",
+      "storage_type": "float32",
+      "required": true,
+      "encoding": {"kind": "continuous", "unit": "days"},
+      "default": 0.0,
+      "validation": {"minimum": 0.0, "finite": true}
+    },
+    {
+      "name": "device_change_flag",
+      "version": "2.0.0",
+      "type": "integer",
+      "storage_type": "int8",
+      "required": true,
+      "encoding": {"kind": "binary", "false": 0, "true": 1, "wire_alias": "new_device"},
+      "default": 0,
+      "validation": {"allowed_values": [0, 1]}
+    },
+    {
+      "name": "location_anomaly",
+      "version": "2.0.0",
+      "type": "integer",
+      "storage_type": "int8",
+      "required": true,
+      "encoding": {"kind": "binary", "false": 0, "true": 1},
+      "default": 0,
+      "validation": {"allowed_values": [0, 1]}
+    },
+    {
+      "name": "location_distance",
+      "version": "2.0.0",
+      "type": "number",
+      "storage_type": "float32",
+      "required": true,
+      "encoding": {"kind": "continuous", "unit": "kilometres", "unavailable_sentinel": -1.0},
+      "default": -1.0,
+      "validation": {"minimum": -1.0, "finite": true}
+    },
+    {
+      "name": "known_device",
+      "version": "2.0.0",
+      "type": "integer",
+      "storage_type": "int8",
+      "required": true,
+      "encoding": {"kind": "binary", "false": 0, "true": 1},
+      "default": 0,
+      "validation": {"allowed_values": [0, 1]}
+    }
+  ],
+  "cross_field_rules": [
+    {
+      "if_feature": "trusted_contact",
+      "if_equals": 0,
+      "then_feature": "trusted_contact_age",
+      "then_equals": 0.0,
+      "message": "trusted_contact_age must be 0.0 when trusted_contact is 0."
+    },
+    {
+      "if_feature": "known_device",
+      "if_equals": 1,
+      "then_feature": "device_change_flag",
+      "then_equals": 0,
+      "message": "device_change_flag must be 0 when known_device is 1."
+    },
+    {
+      "if_feature": "location_distance",
+      "if_equals": -1.0,
+      "then_feature": "location_anomaly",
+      "then_equals": 0,
+      "message": "location_anomaly must be 0 when location_distance is unavailable."
+    }
+  ]
+}
