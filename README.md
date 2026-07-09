@@ -266,7 +266,14 @@ The app includes one-tap demo scenarios for live presentation:
 > **Primary metric is Recall** — missing a fraud is worse than a false alarm.
 
 ---
+## 📦 Dataset
 
+The processed dataset used for training the FORESIGHT AI Risk Engine is available on Kaggle.
+
+**Source:** IEEE-CIS Fraud Detection — 590K+ transactions, 3.5% fraud rate  
+**Kaggle:** [FORESIGHT — IEEE-CIS Fraud Dataset](https://www.kaggle.com/datasets/zaidbharde/foresight-processed-ieee-cis-fraud-dataset)
+
+---
 ## 🎯 Why FORESIGHT Beats the RBI Approach
 
 | Feature | RBI 1-Hour Delay | FORESIGHT |
