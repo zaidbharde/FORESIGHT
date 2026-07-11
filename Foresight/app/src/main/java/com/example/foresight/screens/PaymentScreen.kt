@@ -33,6 +33,7 @@ private val TextSecondary = Color(0xFF9CA6BA)
 fun PaymentScreen(
     userViewModel: UserViewModel,
     contactName: String,
+    contactPhone: String,
     initial: String,
     colorValue: Int,
     onBackClick: () -> Unit,
@@ -93,7 +94,7 @@ fun PaymentScreen(
                 fontWeight = FontWeight.SemiBold
             )
             Text(
-                text = "+91 98765 43210",
+                text = contactPhone,
                 color = TextSecondary,
                 fontSize = 14.sp
             )

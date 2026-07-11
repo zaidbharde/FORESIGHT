@@ -232,9 +232,13 @@ fun Navigation() {
                 val name = backStackEntry.arguments?.getString("contactName") ?: ""
                 val initial = backStackEntry.arguments?.getString("initial") ?: ""
                 val colorValue = backStackEntry.arguments?.getInt("color") ?: 0xFF7C4DFF.toInt()
+                val contacts by viewModel.contacts.collectAsState()
+                val contact = contacts.find { it.name == name }
+                val phone = contact?.phone ?: ""
                 PaymentScreen(
                     userViewModel = userViewModel,
                     contactName = name,
+                    contactPhone = phone,
                     initial = initial,
                     colorValue = colorValue,
                     onBackClick = { navController.popBackStack() },
@@ -279,6 +283,7 @@ fun Navigation() {
                 
                 ReviewPaymentScreen(
                     contactName = name,
+                    contactPhone = phone,
                     amount = amount,
                     note = note,
                     primaryBank = primaryBank,

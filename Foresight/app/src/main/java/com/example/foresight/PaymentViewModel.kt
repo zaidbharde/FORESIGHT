@@ -166,21 +166,21 @@ class PaymentViewModel(application: Application) : AndroidViewModel(application)
                 _contacts.value = parsedContacts
             } else {
                 _contacts.value = listOf(
-                    ForesightContact(name = "Aamir", phone = "9876543211", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "aamir@upi"),
-                    ForesightContact(name = "Tabish", phone = "9876543212", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "tabish@upi"),
-                    ForesightContact(name = "Kaif", phone = "9876543213", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "kaif@upi"),
-                    ForesightContact(name = "Nimra", phone = "9876543214", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "nimra@upi"),
-                    ForesightContact(name = "Abdul", phone = "9876543215", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "abdul@upi")
+                    ForesightContact(name = "Rahul Patil", phone = "+91 9987654321", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "rahul@okaxis"),
+                    ForesightContact(name = "Priya Mehta", phone = "+91 9876543210", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "priya@oksbi"),
+                    ForesightContact(name = "Aarav Sharma", phone = "+91 9123456789", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "aarav@okhdfcbank"),
+                    ForesightContact(name = "Sneha Kapoor", phone = "+91 9876543211", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "sneha@okicici"),
+                    ForesightContact(name = "Vikram Singh", phone = "+91 9988776655", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "vikram@okhdfcbank")
                 )
             }
         } else {
             // Default common contacts for the demo
             val defaults = listOf(
-                ForesightContact(name = "Aamir", phone = "9876543211", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "aamir@upi"),
-                ForesightContact(name = "Tabish", phone = "9876543212", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "tabish@upi"),
-                ForesightContact(name = "Kaif", phone = "9876543213", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "kaif@upi"),
-                ForesightContact(name = "Nimra", phone = "9876543214", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "nimra@upi"),
-                ForesightContact(name = "Abdul", phone = "9876543215", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "abdul@upi")
+                ForesightContact(name = "Rahul Patil", phone = "+91 9987654321", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "rahul@okaxis"),
+                ForesightContact(name = "Priya Mehta", phone = "+91 9876543210", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "priya@oksbi"),
+                ForesightContact(name = "Aarav Sharma", phone = "+91 9123456789", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "aarav@okhdfcbank"),
+                ForesightContact(name = "Sneha Kapoor", phone = "+91 9876543211", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "sneha@okicici"),
+                ForesightContact(name = "Vikram Singh", phone = "+91 9988776655", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "vikram@okhdfcbank")
             )
             _contacts.value = defaults
             // Don't save defaults to prefs, keep them as transient fallback
@@ -270,11 +270,11 @@ class PaymentViewModel(application: Application) : AndroidViewModel(application)
         if (newList.isEmpty()) {
             // If no real contacts, fall back to demo
             val defaults = listOf(
-                ForesightContact(name = "Aamir", phone = "9876543211", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "aamir@upi"),
-                ForesightContact(name = "Tabish", phone = "9876543212", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "tabish@upi"),
-                ForesightContact(name = "Kaif", phone = "9876543213", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "kaif@upi"),
-                ForesightContact(name = "Nimra", phone = "9876543214", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "nimra@upi"),
-                ForesightContact(name = "Abdul", phone = "9876543215", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "abdul@upi")
+                ForesightContact(name = "Rahul Patil", phone = "+91 9987654321", color = Color(0xFFFF6D6D), isTrusted = true, isDemo = true, upiId = "rahul@okaxis"),
+                ForesightContact(name = "Priya Mehta", phone = "+91 9876543210", color = Color(0xFF7C4DFF), isTrusted = true, isDemo = true, upiId = "priya@oksbi"),
+                ForesightContact(name = "Aarav Sharma", phone = "+91 9123456789", color = Color(0xFF6D8DFF), isTrusted = false, isDemo = true, upiId = "aarav@okhdfcbank"),
+                ForesightContact(name = "Sneha Kapoor", phone = "+91 9876543211", color = Color(0xFFFF5C8A), isTrusted = false, isDemo = true, upiId = "sneha@okicici"),
+                ForesightContact(name = "Vikram Singh", phone = "+91 9988776655", color = Color(0xFF20E3B2), isTrusted = false, isDemo = true, upiId = "vikram@okhdfcbank")
             )
             _contacts.value = defaults
         } else {

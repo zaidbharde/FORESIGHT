@@ -27,6 +27,7 @@ private val TextSecondary = Color(0xFF9CA6BA)
 @Composable
 fun ReviewPaymentScreen(
     contactName: String,
+    contactPhone: String,
     amount: String,
     note: String,
     primaryBank: BankAccount,
@@ -79,7 +80,7 @@ fun ReviewPaymentScreen(
                     }
                     Spacer(modifier = Modifier.height(16.dp))
                     Text(contactName, color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    Text("+91 98765 43210", color = TextSecondary, fontSize = 14.sp)
+                    Text(contactPhone, color = TextSecondary, fontSize = 14.sp)
                     
                     Spacer(modifier = Modifier.height(32.dp))
                     
