@@ -7,13 +7,13 @@ import android.content.pm.PackageManager
 import android.provider.ContactsContract
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Contacts
@@ -31,17 +31,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.foresight.ForesightContact
 import com.example.foresight.PaymentViewModel
+import com.example.foresight.ui.components.FSCard
+import com.example.foresight.ui.components.FSPrimaryButton
+import com.example.foresight.ui.theme.ExtendedTheme
+import com.example.foresight.ui.theme.Motion
+import com.example.foresight.ui.theme.ShapeRow
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-
-private val DarkBg = Color(0xFF070913)
-private val CardBg = Color(0xFF111520)
-private val TextSecondary = Color(0xFF9CA6BA)
-private val AccentPurple = Color(0xFF7C4DFF)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,10 +60,9 @@ fun ContactsScreen(
     }
 
     val permissionLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        permissionGranted = isGranted
-    }
+        contract = ActivityResultContracts.RequestPermission(),
+        onResult = { granted -> permissionGranted = granted }
+    )
 
     LaunchedEffect(permissionGranted) {
         if (permissionGranted && (allContacts.isEmpty() || allContacts.any { it.isDemo })) {
@@ -90,25 +88,28 @@ fun ContactsScreen(
         )
     }
 
+    var startAnimation by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { startAnimation = true }
+
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Select Contact", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold) },
+                title = { Text("Select Contact", style = MaterialTheme.typography.titleMedium) },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkBg)
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)
             )
         },
-        containerColor = DarkBg
+        containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
             if (!permissionGranted) {
                 PermissionRequestUI { permissionLauncher.launch(Manifest.permission.READ_CONTACTS) }
             } else if (isLoading) {
-                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center), color = AccentPurple)
+                CircularProgressIndicator(modifier = Modifier.align(Alignment.Center), color = MaterialTheme.colorScheme.primary)
             } else if (allContacts.isEmpty() && !isLoading) {
                 EmptyContactsUI()
             } else {
@@ -117,77 +118,83 @@ fun ContactsScreen(
                         value = searchQuery,
                         onValueChange = { searchQuery = it },
                         modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
-                        placeholder = { Text("Search by name or number", color = TextSecondary) },
-                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = TextSecondary) },
-                        shape = RoundedCornerShape(16.dp),
+                        placeholder = { Text("Search by name or number", style = MaterialTheme.typography.bodyMedium) },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant) },
+                        shape = ShapeRow,
                         colors = TextFieldDefaults.colors(
-                            focusedContainerColor = CardBg,
-                            unfocusedContainerColor = CardBg,
+                            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f),
                             focusedIndicatorColor = Color.Transparent,
                             unfocusedIndicatorColor = Color.Transparent,
-                            cursorColor = AccentPurple,
-                            focusedTextColor = Color.White,
-                            unfocusedTextColor = Color.White
+                            cursorColor = MaterialTheme.colorScheme.primary,
+                            focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                            unfocusedTextColor = MaterialTheme.colorScheme.onSurface
                         ),
                         singleLine = true
                     )
 
-                    LazyColumn(
-                        verticalArrangement = Arrangement.spacedBy(16.dp),
-                        modifier = Modifier.fillMaxSize()
+                    AnimatedVisibility(
+                        visible = startAnimation,
+                        enter = fadeIn(Motion.medium()) + slideInVertically(Motion.medium()) { it / 4 }
                     ) {
-                        val trusted = filteredContacts.filter { it.isTrusted }
-                        val others = filteredContacts.filter { !it.isTrusted }
+                        LazyColumn(
+                            verticalArrangement = Arrangement.spacedBy(12.dp),
+                            modifier = Modifier.fillMaxSize()
+                        ) {
+                            val trusted = filteredContacts.filter { it.isTrusted }
+                            val others = filteredContacts.filter { !it.isTrusted }
 
-                        if (trusted.isNotEmpty() && searchQuery.isEmpty()) {
-                            item {
-                                Text(
-                                    "Trusted Contacts",
-                                    color = Color(0xFF20E3B2),
-                                    fontSize = 14.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
+                            if (trusted.isNotEmpty() && searchQuery.isEmpty()) {
+                                item {
+                                    Text(
+                                        text = "Trusted Contacts",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = ExtendedTheme.colors.riskSafe,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.padding(vertical = 8.dp)
+                                    )
+                                }
+                                items(trusted) { contact ->
+                                    ContactCard(
+                                        contact = contact,
+                                        onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
+                                        onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
+                                    )
+                                }
+                                item { Spacer(modifier = Modifier.height(8.dp)) }
                             }
-                            items(trusted) { contact ->
-                                ContactRow(
-                                    contact = contact,
-                                    onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
-                                    onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
-                                )
-                            }
-                            item { HorizontalDivider(color = Color.White.copy(alpha = 0.05f), modifier = Modifier.padding(vertical = 8.dp)) }
-                        }
 
-                        if (others.isNotEmpty()) {
-                            item {
-                                Text(
-                                    if (trusted.isNotEmpty() && searchQuery.isEmpty()) "Other Contacts" else "Contacts",
-                                    color = TextSecondary,
-                                    fontSize = 14.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
+                            if (others.isNotEmpty()) {
+                                item {
+                                    Text(
+                                        text = if (trusted.isNotEmpty() && searchQuery.isEmpty()) "Other Contacts" else "Contacts",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.padding(vertical = 8.dp)
+                                    )
+                                }
+                                items(others) { contact ->
+                                    ContactCard(
+                                        contact = contact,
+                                        onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
+                                        onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
+                                    )
+                                }
+                            } else if (filteredContacts.isEmpty()) {
+                                item {
+                                    Text(
+                                        "No contacts found",
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        modifier = Modifier.fillMaxWidth().padding(top = 40.dp),
+                                        textAlign = TextAlign.Center
+                                    )
+                                }
                             }
-                            items(others) { contact ->
-                                ContactRow(
-                                    contact = contact,
-                                    onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
-                                    onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
-                                )
-                            }
-                        } else if (filteredContacts.isEmpty()) {
-                            item {
-                                Text(
-                                    "No contacts found",
-                                    color = TextSecondary,
-                                    modifier = Modifier.fillMaxWidth().padding(top = 40.dp),
-                                    textAlign = TextAlign.Center
-                                )
-                            }
+                            
+                            item { Spacer(modifier = Modifier.height(24.dp)) }
                         }
-                        
-                        item { Spacer(modifier = Modifier.height(20.dp)) }
                     }
                 }
             }
@@ -203,29 +210,30 @@ private fun PermissionRequestUI(onAllowClick: () -> Unit) {
         verticalArrangement = Arrangement.Center
     ) {
         Box(
-            modifier = Modifier.size(80.dp).clip(CircleShape).background(AccentPurple.copy(alpha = 0.1f)),
+            modifier = Modifier.size(80.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
             contentAlignment = Alignment.Center
         ) {
-            Icon(Icons.Default.Contacts, contentDescription = null, tint = AccentPurple, modifier = Modifier.size(40.dp))
+            Icon(Icons.Default.Contacts, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(40.dp))
         }
         Spacer(modifier = Modifier.height(24.dp))
-        Text("Access Contacts", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+        Text(
+            text = "Access Contacts",
+            style = MaterialTheme.typography.headlineSmall,
+            color = MaterialTheme.colorScheme.onBackground
+        )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            "Foresight needs contact access to help you make payments to your friends and family securely.",
-            color = TextSecondary,
+            text = "Foresight needs contact access to help you make payments to your friends and family securely.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
-            lineHeight = 20.sp
+            lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
         )
         Spacer(modifier = Modifier.height(40.dp))
-        Button(
-            onClick = onAllowClick,
-            modifier = Modifier.fillMaxWidth().height(56.dp),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = AccentPurple)
-        ) {
-            Text("Allow Contacts", fontWeight = FontWeight.Bold)
-        }
+        FSPrimaryButton(
+            text = "Allow Contacts",
+            onClick = onAllowClick
+        )
     }
 }
 
@@ -236,64 +244,85 @@ private fun EmptyContactsUI() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("No contacts found", color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Medium)
-        Text("Please check your contact permissions", color = TextSecondary, fontSize = 14.sp)
+        Text(
+            text = "No contacts found",
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        Text(
+            text = "Please check your contact permissions",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
     }
 }
 
 @Composable
-private fun ContactRow(
+private fun ContactCard(
     contact: ForesightContact, 
     onContactClick: () -> Unit,
     onToggleTrusted: () -> Unit
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onContactClick)
-            .padding(vertical = 4.dp),
-        verticalAlignment = Alignment.CenterVertically
+    FSCard(
+        modifier = Modifier.clickable(onClick = onContactClick),
+        contentPadding = PaddingValues(12.dp)
     ) {
-        Box(
-            modifier = Modifier
-                .size(52.dp)
-                .clip(CircleShape)
-                .background(contact.color.copy(alpha = 0.15f)),
-            contentAlignment = Alignment.Center
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = contact.name.take(1).uppercase(),
-                color = contact.color,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold
-            )
-        }
-        Spacer(modifier = Modifier.width(16.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                modifier = Modifier
+                    .size(48.dp)
+                    .clip(CircleShape)
+                    .background(contact.color.copy(alpha = 0.15f)),
+                contentAlignment = Alignment.Center
+            ) {
                 Text(
-                    text = contact.name,
-                    color = Color.White,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.SemiBold
+                    text = contact.name.take(1).uppercase(),
+                    color = contact.color,
+                    style = MaterialTheme.typography.titleLarge,
+                    fontWeight = FontWeight.Bold
                 )
-                if (contact.isTrusted) {
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Icon(Icons.Default.Star, contentDescription = "Trusted", tint = Color(0xFF20E3B2), modifier = Modifier.size(14.dp))
+            }
+            Spacer(modifier = Modifier.width(16.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = contact.name,
+                        style = MaterialTheme.typography.titleSmall,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    if (contact.isTrusted) {
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "Trusted",
+                            tint = ExtendedTheme.colors.riskSafe,
+                            modifier = Modifier.size(14.dp)
+                        )
+                    }
+                }
+                Text(
+                    text = contact.phone,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                if (contact.upiId.isNotBlank()) {
+                    Text(
+                        text = contact.upiId,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f)
+                    )
                 }
             }
-            Text(
-                text = contact.phone,
-                color = TextSecondary,
-                fontSize = 13.sp
-            )
-        }
-        IconButton(onClick = onToggleTrusted) {
-            Icon(
-                imageVector = if (contact.isTrusted) Icons.Default.Star else Icons.Default.StarBorder,
-                contentDescription = "Toggle Trusted",
-                tint = if (contact.isTrusted) Color(0xFF20E3B2) else TextSecondary.copy(alpha = 0.5f)
-            )
+            IconButton(onClick = onToggleTrusted) {
+                Icon(
+                    imageVector = if (contact.isTrusted) Icons.Default.Star else Icons.Default.StarBorder,
+                    contentDescription = "Toggle Trusted",
+                    tint = if (contact.isTrusted) ExtendedTheme.colors.riskSafe else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f)
+                )
+            }
         }
     }
 }

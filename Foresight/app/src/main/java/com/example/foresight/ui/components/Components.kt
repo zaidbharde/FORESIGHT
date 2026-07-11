@@ -5,24 +5,9 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -35,29 +20,28 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.foresight.ui.theme.ExtendedTheme
-import com.example.foresight.ui.theme.Motion
-import com.example.foresight.ui.theme.ShapeCard
-import com.example.foresight.ui.theme.ShapeChip
-import com.example.foresight.ui.theme.ShapeHero
+import com.example.foresight.ui.theme.*
 
 @Composable
 fun FSCard(
     modifier: Modifier = Modifier,
     shape: androidx.compose.ui.graphics.Shape = ShapeCard,
+    containerColor: Color = MaterialTheme.colorScheme.surface,
+    border: BorderStroke? = BorderStroke(1.dp, ExtendedTheme.colors.cardBorder),
     contentPadding: PaddingValues = PaddingValues(20.dp),
-    content: @Composable () -> Unit
+    content: @Composable ColumnScope.() -> Unit
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = shape,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        colors = CardDefaults.cardColors(containerColor = containerColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-        border = BorderStroke(1.dp, ExtendedTheme.colors.cardBorder)
+        border = border
     ) {
-        Box(modifier = Modifier.padding(contentPadding)) {
-            androidx.compose.foundation.layout.Column { content() }
-        }
+        Column(
+            modifier = Modifier.padding(contentPadding),
+            content = content
+        )
     }
 }
 
@@ -65,8 +49,13 @@ fun FSCard(
 fun FSHeroCard(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(24.dp),
-    content: @Composable () -> Unit
-) = FSCard(modifier = modifier, shape = ShapeHero, contentPadding = contentPadding, content = content)
+    content: @Composable ColumnScope.() -> Unit
+) = FSCard(
+    modifier = modifier,
+    shape = ShapeHero,
+    contentPadding = contentPadding,
+    content = content
+)
 
 @Composable
 fun FSPrimaryButton(
@@ -113,7 +102,7 @@ fun FSPrimaryButton(
                 Icon(icon, contentDescription = null, tint = contentColor, modifier = Modifier.size(20.dp))
                 Spacer(modifier = Modifier.width(8.dp))
             }
-            Text(text, fontSize = MaterialTheme.typography.labelLarge.fontSize, fontWeight = FontWeight.Bold)
+            Text(text, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold)
         }
     }
 }
@@ -132,7 +121,7 @@ fun FSSecondaryButton(
         border = BorderStroke(1.dp, borderColor),
         colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurface)
     ) {
-        Text(text, fontWeight = FontWeight.SemiBold)
+        Text(text, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.SemiBold)
     }
 }
 
@@ -189,7 +178,7 @@ fun MetricTile(
     modifier: Modifier = Modifier,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start
 ) {
-    androidx.compose.foundation.layout.Column(modifier = modifier, horizontalAlignment = horizontalAlignment) {
+    Column(modifier = modifier, horizontalAlignment = horizontalAlignment) {
         Text(
             text = label,
             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f),

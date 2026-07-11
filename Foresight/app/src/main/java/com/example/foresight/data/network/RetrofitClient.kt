@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
 
-    private var baseUrl = BuildConfig.API_BASE_URL
+    private var baseUrl = "https://foresight-api-etw1.onrender.com/"
 
     fun updateBaseUrl(newUrl: String) {
         val normalized = if (newUrl.endsWith("/")) newUrl else "$newUrl/"

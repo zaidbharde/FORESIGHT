@@ -4,26 +4,27 @@ import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.util.Log
 import android.view.ViewGroup
 import android.widget.Toast
-import android.os.Vibrator
-import android.os.VibrationEffect
-import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
+import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -33,24 +34,21 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
-import com.google.mlkit.vision.barcode.BarcodeScanner
+import com.example.foresight.ui.components.FSPrimaryButton
+import com.example.foresight.ui.theme.ExtendedTheme
+import com.example.foresight.ui.theme.Motion
+import com.example.foresight.ui.theme.ShapeCard
 import com.google.mlkit.vision.barcode.BarcodeScanning
-import com.google.mlkit.vision.barcode.common.Barcode
+import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.google.mlkit.vision.common.InputImage
 import java.util.concurrent.Executors
-
-private val DarkBg = Color(0xFF070913)
-private val SurfaceVariant = Color(0xFF171C2A)
-private val AccentPurple = Color(0xFF7C4DFF)
-private val AccentMint = Color(0xFF20E3B2)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -100,13 +98,16 @@ fun QRScannerScreen(
         finishedListener = { if (it == 1f) showSuccessPulse = false }
     )
 
+    var startAnimation by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { startAnimation = true }
+
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Scan any UPI QR", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold) },
+                title = { Text("Scan any UPI QR", style = MaterialTheme.typography.titleMedium, color = Color.White) },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = Color.White)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
                     }
                 },
                 actions = {
@@ -197,18 +198,23 @@ fun QRScannerScreen(
             )
 
             // Bottom Actions
-            Row(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .fillMaxWidth()
-                    .padding(bottom = 60.dp, start = 32.dp, end = 32.dp),
-                horizontalArrangement = Arrangement.SpaceAround
+            AnimatedVisibility(
+                visible = startAnimation,
+                enter = fadeIn(Motion.medium()) + slideInVertically(Motion.medium()) { it },
+                modifier = Modifier.align(Alignment.BottomCenter)
             ) {
-                ScannerAction("Upload QR", Icons.Default.Image) {
-                    galleryLauncher.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
-                }
-                ScannerAction("My QR", Icons.Default.QrCode) {
-                    // Dummy
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 64.dp, start = 32.dp, end = 32.dp),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    ScannerAction("Upload QR", Icons.Default.Image) {
+                        galleryLauncher.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                    }
+                    ScannerAction("My QR", Icons.Default.QrCode) {
+                        // Show user's UPI QR in next update
+                    }
                 }
             }
         }
@@ -239,6 +245,9 @@ private fun ScannerOverlay(
         label = "scan_line"
     )
 
+    val primaryColor = MaterialTheme.colorScheme.primary
+    val successColor = ExtendedTheme.colors.riskSafe
+
     Box(modifier = modifier) {
         // Scrim
         Canvas(modifier = Modifier.fillMaxSize()) {
@@ -264,9 +273,9 @@ private fun ScannerOverlay(
             drawPath(path, Color.Black.copy(alpha = 0.6f), style = androidx.compose.ui.graphics.drawscope.Fill)
             
             // Frame corners
-            val cornerLength = 30.dp.toPx()
+            val cornerLength = 32.dp.toPx()
             val strokeWidth = 4.dp.toPx()
-            val frameColor = if (successAlpha > 0) AccentMint.copy(alpha = successAlpha) else AccentPurple
+            val frameColor = if (successAlpha > 0) successColor.copy(alpha = successAlpha) else primaryColor
             
             // Top Left
             drawLine(frameColor, offset(left, top + cornerLength), offset(left, top), strokeWidth)
@@ -289,19 +298,19 @@ private fun ScannerOverlay(
                 val lineY = top + (bottom - top) * scanLineY
                 drawLine(
                     brush = Brush.verticalGradient(
-                        colors = listOf(AccentPurple.copy(alpha = 0f), AccentPurple, AccentPurple.copy(alpha = 0f))
+                        colors = listOf(primaryColor.copy(alpha = 0f), primaryColor, primaryColor.copy(alpha = 0f))
                     ),
-                    start = offset(left + 10.dp.toPx(), lineY),
-                    end = offset(right - 10.dp.toPx(), lineY),
+                    start = offset(left + 8.dp.toPx(), lineY),
+                    end = offset(right - 8.dp.toPx(), lineY),
                     strokeWidth = 2.dp.toPx()
                 )
             }
         }
         
         Text(
-            "Align QR code within the frame to scan",
+            text = "Scan any UPI QR to pay",
+            style = MaterialTheme.typography.bodyMedium,
             color = Color.White.copy(alpha = 0.8f),
-            fontSize = 14.sp,
             modifier = Modifier
                 .align(Alignment.Center)
                 .padding(top = 320.dp)
@@ -316,28 +325,35 @@ private fun PermissionDeniedUI(onRetry: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(DarkBg)
+            .background(MaterialTheme.colorScheme.background)
             .padding(32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Icon(Icons.Default.Camera, contentDescription = null, tint = AccentPurple, modifier = Modifier.size(64.dp))
+        Box(
+            modifier = Modifier.size(80.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(Icons.Default.CameraAlt, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(40.dp))
+        }
         Spacer(modifier = Modifier.height(24.dp))
-        Text("Camera Permission Needed", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "Camera Access Required",
+            style = MaterialTheme.typography.headlineSmall,
+            color = MaterialTheme.colorScheme.onBackground
+        )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            "Camera access is required to scan UPI QR codes and make payments quickly.",
-            color = Color.White.copy(alpha = 0.6f),
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
+            "Foresight needs camera access to scan UPI codes and secure your transactions.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(32.dp))
-        Button(
-            onClick = onRetry,
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = AccentPurple)
-        ) {
-            Text("Grant Permission", fontWeight = FontWeight.Bold)
-        }
+        Spacer(modifier = Modifier.height(40.dp))
+        FSPrimaryButton(
+            text = "Grant Permission",
+            onClick = onRetry
+        )
     }
 }
 
@@ -346,15 +362,20 @@ private fun ScannerAction(label: String, icon: androidx.compose.ui.graphics.vect
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.clickable(onClick = onClick)) {
         Box(
             modifier = Modifier
-                .size(56.dp)
-                .clip(RoundedCornerShape(16.dp))
-                .background(SurfaceVariant.copy(alpha = 0.8f)),
+                .size(60.dp)
+                .clip(CircleShape)
+                .background(Color.White.copy(alpha = 0.15f)),
             contentAlignment = Alignment.Center
         ) {
-            Icon(icon, contentDescription = null, tint = Color.White)
+            Icon(icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(28.dp))
         }
-        Spacer(modifier = Modifier.height(8.dp))
-        Text(label, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+        Spacer(modifier = Modifier.height(10.dp))
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            color = Color.White,
+            fontWeight = FontWeight.SemiBold
+        )
     }
 }
 

@@ -39,7 +39,6 @@ node_modules/
 dist/
 
 # ML/data artifacts
-*.pkl
 *.joblib
 *.h5
 *.onnx
