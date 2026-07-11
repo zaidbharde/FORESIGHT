@@ -1,12 +1,13 @@
 package com.example.foresight.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,14 +15,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.foresight.BankAccount
-
-private val DarkBg = Color(0xFF070913)
-private val CardBg = Color(0xFF111520)
-private val AccentPurple = Color(0xFF7C4DFF)
-private val TextSecondary = Color(0xFF9CA6BA)
+import com.example.foresight.ui.components.FSPrimaryButton
+import com.example.foresight.ui.components.FSHeroCard
+import com.example.foresight.ui.theme.ExtendedTheme
+import com.example.foresight.ui.theme.Motion
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,16 +37,16 @@ fun ReviewPaymentScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Review Payment", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold) },
+                title = { Text("Review Payment", style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.onBackground) },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = MaterialTheme.colorScheme.onBackground)
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = DarkBg)
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background)
             )
         },
-        containerColor = DarkBg
+        containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -54,92 +54,94 @@ fun ReviewPaymentScreen(
                 .padding(innerPadding)
                 .padding(24.dp)
         ) {
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(24.dp),
-                colors = CardDefaults.cardColors(containerColor = CardBg),
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+            AnimatedVisibility(
+                visible = true,
+                enter = fadeIn(animationSpec = Motion.medium()) + slideInVertically(
+                    animationSpec = Motion.medium(),
+                    initialOffsetY = { -it / 4 }
+                )
             ) {
-                Column(
-                    modifier = Modifier.padding(24.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(64.dp)
-                            .clip(CircleShape)
-                            .background(AccentPurple.copy(alpha = 0.2f)),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = contactName.take(1),
-                            color = AccentPurple,
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-                    Spacer(modifier = Modifier.height(16.dp))
-                    Text(contactName, color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    Text(contactPhone, color = TextSecondary, fontSize = 14.sp)
-                    
-                    Spacer(modifier = Modifier.height(32.dp))
-                    
-                    HorizontalDivider(color = Color.White.copy(alpha = 0.05f))
-                    
-                    Spacer(modifier = Modifier.height(24.dp))
-                    
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text("Amount", color = TextSecondary)
-                        Text("₹ $amount", color = Color.White, fontWeight = FontWeight.Bold)
-                    }
-                    
-                    Spacer(modifier = Modifier.height(12.dp))
-                    
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text("Note", color = TextSecondary)
-                        Text(note.ifEmpty { "Payment" }, color = Color.White)
-                    }
-                    
-                    Spacer(modifier = Modifier.height(12.dp))
-                    
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text("From", color = TextSecondary)
-                        Column(horizontalAlignment = Alignment.End) {
-                            Text(primaryBank.bankName + " " + primaryBank.accountNumber, color = Color.White)
-                            Text(primaryBank.upiId, color = TextSecondary, fontSize = 12.sp)
+                FSHeroCard {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Box(
+                            modifier = Modifier
+                                .size(64.dp)
+                                .clip(CircleShape)
+                                .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = contactName.take(1),
+                                color = MaterialTheme.colorScheme.primary,
+                                style = MaterialTheme.typography.headlineMedium,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(contactName, style = MaterialTheme.typography.titleLarge, color = MaterialTheme.colorScheme.onSurface)
+                        Text(contactPhone, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+
+                        Spacer(modifier = Modifier.height(32.dp))
+
+                        HorizontalDivider(color = ExtendedTheme.colors.cardBorder)
+
+                        Spacer(modifier = Modifier.height(24.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text("Amount", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
+                            Text("₹ $amount", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text("Note", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
+                            Text(note.ifEmpty { "Payment" }, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodyMedium)
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            Text("From", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
+                            Column(horizontalAlignment = Alignment.End) {
+                                Text(
+                                    primaryBank.bankName + " " + primaryBank.accountNumber,
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                                Text(
+                                    primaryBank.upiId,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            }
                         }
                     }
                 }
             }
-            
+
             Spacer(modifier = Modifier.weight(1f))
-            
-            Button(
-                onClick = onPayClick,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(56.dp),
-                shape = RoundedCornerShape(16.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = AccentPurple)
-            ) {
-                Text("Pay ₹ $amount", fontSize = 16.sp, fontWeight = FontWeight.Bold)
-            }
+
+            FSPrimaryButton(
+                text = "Pay ₹ $amount",
+                onClick = onPayClick
+            )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 "Secured by Foresight AI",
                 modifier = Modifier.fillMaxWidth(),
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                color = Color(0xFF20E3B2),
-                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                color = ExtendedTheme.colors.riskSafe,
+                style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Medium
             )
         }

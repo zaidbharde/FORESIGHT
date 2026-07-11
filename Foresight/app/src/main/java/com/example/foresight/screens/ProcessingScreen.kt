@@ -4,7 +4,6 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ErrorOutline
@@ -20,11 +19,11 @@ import androidx.compose.ui.unit.sp
 import com.example.foresight.PaymentViewModel
 import com.example.foresight.RiskState
 import com.example.foresight.data.network.PredictionResponse
+import com.example.foresight.ui.components.FSPrimaryButton
+import com.example.foresight.ui.components.FSSecondaryButton
+import com.example.foresight.ui.theme.ExtendedTheme
+import com.example.foresight.ui.theme.Motion
 import kotlinx.coroutines.delay
-
-private val DarkBg = Color(0xFF070913)
-private val AccentPurple = Color(0xFF7C4DFF)
-private val AccentMint = Color(0xFF20E3B2)
 
 @Composable
 fun ProcessingScreen(
@@ -37,11 +36,11 @@ fun ProcessingScreen(
 ) {
     val riskState by viewModel.riskState.collectAsState()
     val contacts by viewModel.contacts.collectAsState()
-    
+
     val isTrusted = remember(contacts, contactPhone) {
-        val found = contacts.find { 
-            it.phone.trim().filter { c -> c.isDigit() }.takeLast(10) == 
-            contactPhone.trim().filter { c -> c.isDigit() }.takeLast(10)
+        val found = contacts.find {
+            it.phone.trim().filter { c -> c.isDigit() }.takeLast(10) ==
+                    contactPhone.trim().filter { c -> c.isDigit() }.takeLast(10)
         }
         found?.isTrusted ?: false
     }
@@ -53,7 +52,7 @@ fun ProcessingScreen(
         "Checking behavioral signals",
         "Running AI Risk Engine"
     )
-    
+
     var visibleItems by remember { mutableStateOf(0) }
 
     LaunchedEffect(Unit) {
@@ -66,7 +65,6 @@ fun ProcessingScreen(
 
     LaunchedEffect(riskState) {
         if (riskState is RiskState.Success) {
-            // Give a small delay to finish the animation if it was too fast
             kotlinx.coroutines.delay(500)
             onProcessingFinished((riskState as RiskState.Success).response)
         }
@@ -75,7 +73,7 @@ fun ProcessingScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(DarkBg)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             modifier = Modifier
@@ -92,20 +90,19 @@ fun ProcessingScreen(
                 )
             } else {
                 CircularProgressIndicator(
-                    color = AccentPurple,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(64.dp),
                     strokeWidth = 6.dp
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 Text(
                     "Analyzing transaction with AI...",
-                    color = Color.White,
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onBackground,
+                    style = MaterialTheme.typography.headlineSmall,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(32.dp))
-                
+
                 Column(
                     modifier = Modifier.fillMaxWidth(0.8f),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -114,13 +111,13 @@ fun ProcessingScreen(
                         AnimatedChecklistItem(text = item, isVisible = index < visibleItems)
                     }
                 }
-                
+
                 Spacer(modifier = Modifier.height(64.dp))
-                
+
                 Text(
                     "FORESIGHT AI PROTECTION",
-                    color = AccentMint,
-                    fontSize = 12.sp,
+                    color = ExtendedTheme.colors.riskSafe,
+                    style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Black,
                     letterSpacing = 2.sp
                 )
@@ -139,37 +136,33 @@ private fun ErrorDisplay(
         Icon(
             imageVector = Icons.Default.ErrorOutline,
             contentDescription = null,
-            tint = Color(0xFFFF6B6B),
+            tint = ExtendedTheme.colors.error,
             modifier = Modifier.size(64.dp)
         )
         Spacer(modifier = Modifier.height(24.dp))
         Text(
             text = "Unable to connect to the AI Risk Engine.",
-            color = Color.White,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground,
+            style = MaterialTheme.typography.titleLarge,
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = message,
-            color = Color.White.copy(alpha = 0.6f),
-            fontSize = 14.sp,
+            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+            style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(48.dp))
-        Button(
-            onClick = onRetry,
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = AccentPurple)
-        ) {
-            Text("Retry", fontWeight = FontWeight.Bold)
-        }
+        FSPrimaryButton(
+            text = "Retry",
+            onClick = onRetry
+        )
         Spacer(modifier = Modifier.height(12.dp))
-        TextButton(onClick = onCancel) {
-            Text("Cancel", color = Color.White.copy(alpha = 0.6f))
-        }
+        FSSecondaryButton(
+            text = "Cancel",
+            onClick = onCancel
+        )
     }
 }
 
@@ -187,19 +180,18 @@ private fun AnimatedChecklistItem(text: String, isVisible: Boolean) {
             Icon(
                 imageVector = Icons.Default.CheckCircle,
                 contentDescription = null,
-                tint = AccentMint,
+                tint = ExtendedTheme.colors.riskSafe,
                 modifier = Modifier.size(20.dp)
             )
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                 text = text,
-                color = Color.White,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Medium
+                color = MaterialTheme.colorScheme.onSurface,
+                style = MaterialTheme.typography.bodyMedium
             )
         }
     }
-    
+
     if (!isVisible) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -209,9 +201,8 @@ private fun AnimatedChecklistItem(text: String, isVisible: Boolean) {
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                 text = text,
-                color = Color.White.copy(alpha = 0.2f),
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Normal
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f),
+                style = MaterialTheme.typography.bodyMedium
             )
         }
     }

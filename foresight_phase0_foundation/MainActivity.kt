@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.*
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.foresight.Navigation
 import com.example.foresight.ui.theme.ForesightTheme
 
 class MainActivity : ComponentActivity() {
