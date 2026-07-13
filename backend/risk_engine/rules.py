@@ -160,6 +160,143 @@ class ManyTransactionsRule(BusinessRule):
                 raise ValueError(f"many_transactions {name} must be a positive integer.")
 
 
+class AccountHistoryRule(BusinessRule):
+    """Reduce risk for accounts with long established history."""
+
+    rule_id = "account_history"
+    rule_name = "Long Account History"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        threshold = int(self.parameters["minimum_days"])
+        return context.account_history_days >= threshold
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=False)
+        if set(self.parameters) != {"minimum_days"}:
+            raise ValueError("account_history requires minimum_days.")
+
+
+class FirstTimeBeneficiaryRule(BusinessRule):
+    """Increase risk when paying a beneficiary for the first time."""
+
+    rule_id = "first_time_beneficiary"
+    rule_name = "First-time Beneficiary"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return context.first_time_beneficiary
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=True)
+        self.require_no_parameters()
+
+
+class DeviceChangeRule(BusinessRule):
+    """Increase risk when a device change is detected."""
+
+    rule_id = "device_change"
+    rule_name = "Device Change"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return not context.known_device
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=True)
+        self.require_no_parameters()
+
+
+class ActiveCallRule(BusinessRule):
+    """Significantly increase risk if an active call is detected during payment."""
+
+    rule_id = "active_call"
+    rule_name = "Active Call During Payment"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return context.active_call
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=True)
+        self.require_no_parameters()
+
+
+class SimChangeRule(BusinessRule):
+    """Increase risk if the SIM card was recently changed."""
+
+    rule_id = "sim_change"
+    rule_name = "SIM Recently Changed"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return context.sim_recently_changed
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=True)
+        self.require_no_parameters()
+
+
+class DeviceAnomalyRule(BusinessRule):
+    """Increase risk if device integrity anomalies are detected."""
+
+    rule_id = "device_anomaly"
+    rule_name = "Device Anomaly"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return context.device_anomaly
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=True)
+        self.require_no_parameters()
+
+
+class SmallAmountRule(BusinessRule):
+    """Reduce risk for small, everyday transactions."""
+
+    rule_id = "small_amount"
+    rule_name = "Small Amount"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        threshold = float(self.parameters["maximum_amount"])
+        return context.amount < threshold
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=False)
+        if set(self.parameters) != {"maximum_amount"}:
+            raise ValueError("small_amount requires maximum_amount.")
+
+
+class NormalLocationRule(BusinessRule):
+    """Reduce risk when the location is confirmed as normal."""
+
+    rule_id = "normal_location"
+    rule_name = "Normal Location"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        return not context.location_anomaly
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=False)
+        self.require_no_parameters()
+
+
+class NormalFrequencyRule(BusinessRule):
+    """Reduce risk when transaction frequency is within normal bounds."""
+
+    rule_id = "normal_frequency"
+    rule_name = "Normal Frequency"
+
+    def matches(self, context: RiskRuleContext) -> bool:
+        hourly = int(self.parameters["last_hour_threshold"])
+        daily = int(self.parameters["last_24h_threshold"])
+        return (
+            context.transactions_last_hour < hourly
+            and context.transactions_last_24h < daily
+        )
+
+    def validate_configuration(self) -> None:
+        self.require_adjustment_direction(positive=False)
+        required = {"last_hour_threshold", "last_24h_threshold"}
+        if set(self.parameters) != required:
+            raise ValueError("normal_frequency requires hourly and daily thresholds.")
+
+
 RULE_TYPES: dict[str, type[BusinessRule]] = {
     rule.rule_id: rule
     for rule in (
@@ -169,5 +306,14 @@ RULE_TYPES: dict[str, type[BusinessRule]] = {
         LargeAmountRule,
         LateNightRule,
         ManyTransactionsRule,
+        AccountHistoryRule,
+        FirstTimeBeneficiaryRule,
+        DeviceChangeRule,
+        ActiveCallRule,
+        SimChangeRule,
+        DeviceAnomalyRule,
+        SmallAmountRule,
+        NormalLocationRule,
+        NormalFrequencyRule,
     )
 }

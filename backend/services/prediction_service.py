@@ -66,6 +66,11 @@ class PredictionService:
                 status_code=400,
                 detail="transactions_last_24h must be greater than or equal to 0.",
             )
+        if payload.account_history_days < 0:
+            raise HTTPException(
+                status_code=400,
+                detail="account_history_days must be greater than or equal to 0.",
+            )
 
     def predict(self, payload: PredictionRequest) -> PredictionResponse:
         if self.model is None:
@@ -91,6 +96,11 @@ class PredictionService:
                     hour=int(payload.hour),
                     transactions_last_hour=int(payload.transactions_last_hour),
                     transactions_last_24h=int(payload.transactions_last_24h),
+                    sim_recently_changed=payload.sim_recently_changed,
+                    active_call=payload.active_call,
+                    device_anomaly=payload.device_anomaly,
+                    account_history_days=payload.account_history_days,
+                    first_time_beneficiary=payload.first_time_beneficiary,
                 ),
             )
             prediction_time_ms = max(0, int((perf_counter() - start_time) * 1000))
@@ -197,25 +207,33 @@ class PredictionService:
     ) -> list[str]:
         reasons: list[str] = []
 
-        if payload.amount >= 1000:
-            reasons.append("Large transaction amount.")
+        if payload.amount >= 10000:
+            reasons.append("High-value transaction amount.")
         if payload.new_device:
             reasons.append("New device detected.")
         if payload.location_anomaly:
             reasons.append("Location anomaly detected.")
-        if not payload.trusted_contact:
-            reasons.append("Trusted contact not confirmed.")
+
+        if payload.trusted_contact:
+            reasons.append("Payment to verified trusted contact.")
         else:
-            reasons.append("Trusted contact present.")
-        if payload.hour >= 22 or payload.hour <= 5:
-            reasons.append("Late-night transaction.")
+            reasons.append("Payment to unverified beneficiary.")
+
+        if payload.active_call:
+            reasons.append("Active call during payment.")
+        if payload.sim_recently_changed:
+            reasons.append("Recent SIM card change detected.")
+        if payload.device_anomaly:
+            reasons.append("Device security anomaly.")
+
+        if payload.hour >= 23 or payload.hour <= 5:
+            reasons.append("Late-night transaction time.")
+
         if payload.transactions_last_hour >= 3:
-            reasons.append("Frequent recent payments.")
-        if payload.transactions_last_24h >= 10:
-            reasons.append("High transaction volume in the last 24 hours.")
+            reasons.append("Frequent recent payments (Velocity alert).")
 
         if confidence >= 80:
-            reasons.append("Model confidence is high.")
+            reasons.append("High model confidence.")
         elif confidence >= 60:
             reasons.append("Model confidence is moderate.")
         elif confidence >= 30:

@@ -291,7 +291,7 @@ class PaymentViewModel(application: Application) : AndroidViewModel(application)
         saveContacts(updated)
     }
 
-    fun analyzeRisk(amount: String, isTrusted: Boolean) {
+    fun analyzeRisk(amount: String, isTrusted: Boolean, contactPhone: String = "") {
         val parsedAmount = amount.toFloatOrNull()
         if (parsedAmount == null || !parsedAmount.isFinite() || parsedAmount <= 0f || parsedAmount > MAX_ALLOWED_AMOUNT) {
             _riskState.value = RiskState.Error("Invalid amount for risk analysis.")
@@ -303,9 +303,17 @@ class PaymentViewModel(application: Application) : AndroidViewModel(application)
             val calendar = Calendar.getInstance()
             val hour = calendar.get(Calendar.HOUR_OF_DAY)
             
-            // Dummy logic for session data for now
+            // Derive contextual data for the hybrid engine
             val transactionsLastHour = _transactions.value.count { it.timestamp > System.currentTimeMillis() - 3600000 }
             val transactionsLast24h = _transactions.value.count { it.timestamp > System.currentTimeMillis() - 86400000 }
+            
+            val contact = if (contactPhone.isNotEmpty()) {
+                val comp = normalizeForComparison(contactPhone)
+                _contacts.value.find { normalizeForComparison(it.phone) == comp }
+            } else null
+            
+            val isFirstTime = contact?.lastInteraction == 0L
+            val accountHistoryDays = if (contact?.isDemo == true) 365 else 10 // Demo accounts are "old"
             
             val request = PredictionRequest(
                 amount = parsedAmount,
@@ -314,7 +322,12 @@ class PaymentViewModel(application: Application) : AndroidViewModel(application)
                 locationAnomaly = false,
                 hour = hour,
                 transactionsLastHour = transactionsLastHour,
-                transactionsLast24h = transactionsLast24h
+                transactionsLast24h = transactionsLast24h,
+                simRecentlyChanged = false,
+                activeCall = false,
+                deviceAnomaly = false,
+                accountHistoryDays = accountHistoryDays,
+                firstTimeBeneficiary = isFirstTime
             )
 
             val result = repository.getRiskPrediction(request)

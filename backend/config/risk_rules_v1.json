@@ -1,5 +1,5 @@
 {
-  "config_version": "1.0.0",
+  "config_version": "1.3.0",
   "minimum_score": 0.0,
   "maximum_score": 100.0,
   "risk_thresholds": {
@@ -17,44 +17,122 @@
     {
       "rule_id": "trusted_contact",
       "enabled": true,
-      "adjustment": -10.0,
+      "adjustment": -50.0,
       "parameters": {},
-      "explanation": "Recipient is a trusted contact, which slightly lowers contextual risk."
+      "explanation": "Verified Trusted Contact: This signal heavily reduces risk for established relationships."
     },
     {
       "rule_id": "known_device",
       "enabled": true,
-      "adjustment": -5.0,
+      "adjustment": -20.0,
       "parameters": {},
-      "explanation": "Payment uses a known device, which slightly lowers contextual risk."
+      "explanation": "Transaction from a known secure device."
     },
     {
-      "rule_id": "location_anomaly",
+      "rule_id": "normal_location",
       "enabled": true,
-      "adjustment": 20.0,
+      "adjustment": -10.0,
       "parameters": {},
-      "explanation": "Payment location differs from established history, increasing contextual risk."
+      "explanation": "Location consistent with user history."
+    },
+    {
+      "rule_id": "account_history",
+      "enabled": true,
+      "adjustment": -20.0,
+      "parameters": {
+        "minimum_days": 180
+      },
+      "explanation": "Established account age verifies long-term legitimacy."
+    },
+    {
+      "rule_id": "small_amount",
+      "enabled": true,
+      "adjustment": -15.0,
+      "parameters": {
+        "maximum_amount": 5000.0
+      },
+      "explanation": "Low-value transaction consistent with everyday behavior."
+    },
+    {
+      "rule_id": "normal_frequency",
+      "enabled": true,
+      "adjustment": -10.0,
+      "parameters": {
+        "last_hour_threshold": 3,
+        "last_24h_threshold": 10
+      },
+      "explanation": "Transaction frequency is within safe limits."
     },
     {
       "rule_id": "large_amount",
       "enabled": true,
+      "adjustment": 20.0,
+      "parameters": {
+        "minimum_amount": 10000.0
+      },
+      "explanation": "Transaction amount meets high-value threshold."
+    },
+    {
+      "rule_id": "first_time_beneficiary",
+      "enabled": true,
       "adjustment": 15.0,
-      "parameters": {"minimum_amount": 10000.0},
-      "explanation": "Transaction amount meets the configured high-value threshold."
+      "parameters": {},
+      "explanation": "New beneficiary detected for this account."
+    },
+    {
+      "rule_id": "location_anomaly",
+      "enabled": true,
+      "adjustment": 30.0,
+      "parameters": {},
+      "explanation": "Unusual location detected."
+    },
+    {
+      "rule_id": "active_call",
+      "enabled": true,
+      "adjustment": 50.0,
+      "parameters": {},
+      "explanation": "CRITICAL: Active call detected during payment attempt."
+    },
+    {
+      "rule_id": "sim_change",
+      "enabled": true,
+      "adjustment": 40.0,
+      "parameters": {},
+      "explanation": "Recent SIM swap detected."
+    },
+    {
+      "rule_id": "device_change",
+      "enabled": true,
+      "adjustment": 30.0,
+      "parameters": {},
+      "explanation": "New device detected."
+    },
+    {
+      "rule_id": "device_anomaly",
+      "enabled": true,
+      "adjustment": 30.0,
+      "parameters": {},
+      "explanation": "Device security anomaly detected."
     },
     {
       "rule_id": "late_night",
       "enabled": true,
-      "adjustment": 8.0,
-      "parameters": {"start_hour": 22, "end_hour": 5},
-      "explanation": "Payment occurs during configured late-night hours."
+      "adjustment": 10.0,
+      "parameters": {
+        "start_hour": 23,
+        "end_hour": 5
+      },
+      "explanation": "High-risk transaction time window."
     },
     {
       "rule_id": "many_transactions",
       "enabled": true,
-      "adjustment": 12.0,
-      "parameters": {"last_hour_threshold": 3, "last_24h_threshold": 10},
-      "explanation": "Recent transaction frequency meets a configured velocity threshold."
+      "adjustment": 20.0,
+      "parameters": {
+        "last_hour_threshold": 3,
+        "last_24h_threshold": 10
+      },
+      "explanation": "High transaction velocity detected."
     }
   ]
 }

@@ -56,7 +56,7 @@ fun ProcessingScreen(
     var visibleItems by remember { mutableStateOf(0) }
 
     LaunchedEffect(Unit) {
-        viewModel.analyzeRisk(amount, isTrusted)
+        viewModel.analyzeRisk(amount, isTrusted, contactPhone)
         for (i in 1..checklist.size) {
             delay(400)
             visibleItems = i
@@ -85,7 +85,7 @@ fun ProcessingScreen(
             if (riskState is RiskState.Error) {
                 ErrorDisplay(
                     message = (riskState as RiskState.Error).message,
-                    onRetry = { viewModel.analyzeRisk(amount, isTrusted) },
+                    onRetry = { viewModel.analyzeRisk(amount, isTrusted, contactPhone) },
                     onCancel = onBackClick
                 )
             } else {

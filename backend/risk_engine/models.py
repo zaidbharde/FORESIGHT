@@ -19,6 +19,11 @@ class RiskRuleContext(RiskEngineModel):
     hour: int = Field(ge=0, le=23)
     transactions_last_hour: int = Field(ge=0)
     transactions_last_24h: int = Field(ge=0)
+    sim_recently_changed: bool
+    active_call: bool
+    device_anomaly: bool
+    account_history_days: int = Field(ge=0)
+    first_time_beneficiary: bool
 
 
 class RuleEvaluation(RiskEngineModel):

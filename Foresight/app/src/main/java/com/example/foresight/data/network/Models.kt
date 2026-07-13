@@ -9,7 +9,12 @@ data class PredictionRequest(
     @SerializedName("location_anomaly") val locationAnomaly: Boolean,
     @SerializedName("hour") val hour: Int,
     @SerializedName("transactions_last_hour") val transactionsLastHour: Int,
-    @SerializedName("transactions_last_24h") val transactionsLast24h: Int
+    @SerializedName("transactions_last_24h") val transactionsLast24h: Int,
+    @SerializedName("sim_recently_changed") val simRecentlyChanged: Boolean = false,
+    @SerializedName("active_call") val activeCall: Boolean = false,
+    @SerializedName("device_anomaly") val deviceAnomaly: Boolean = false,
+    @SerializedName("account_history_days") val accountHistoryDays: Int = 0,
+    @SerializedName("first_time_beneficiary") val firstTimeBeneficiary: Boolean = false
 )
 
 data class PredictionResponse(

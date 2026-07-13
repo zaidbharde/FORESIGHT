@@ -1,0 +1,439 @@
+make a ppt according to this use the images source in need 
+
+EXECUTIVE PORTFOLIO: FORESIGHT — ENTERPRISE PRESENTATION DECK
+Project: FORESIGHT — AI-Powered Real-Time UPI Fraud Detection & Adaptive Risk Analysis System
+Presenter: Zaid Arif Bharde (Intern ID: 3398)
+Institution: Anjuman-I-Islam Abdul Razzaq Kalsekar Polytechnic, Panvel
+Target Audience: National Hackathon Judges, FinTech Venture Capitalists, Cybersecurity Architects, Academic Faculty
+Visual Style: Premium Corporate Dark (Microsoft, Google, Visa, PhonePe inspired)
+Primary Color Palette: Deep Dark Blue (#0A1128), Royal Navy (#1C2541), Cyan (#00B4D8), Bright Purple-Indigo (#7209B7), Crisp White (#FFFFFF)
+Typography: Segoe UI / Aptos / Inter (High-contrast, high-readability layout with generous padding)
+
+SLIDE 01: TITLE & OVERVIEW (COVER SLIDE)
+“Re-architecting Digital Trust: Intelligent, Telemetry-Driven UPI Transaction Guardian”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Premium Dark Navy (#0A1128) with subtle geometric circuit patterns in dark blue and cyan.
+Layout: Two-column grid with a 60/40 horizontal split. Left column contains bold, large typographic elements; right column features the official FORESIGHT Logo overlay with an ambient cyan and purple glow.
+Typography: Title in 44pt Aptos Bold, Accent in 14pt Inter (Cyan, tracking 2px), Presenter metadata in 16pt Segoe UI Regular.
+Visual Elements: Centered high-tech vector illustration of a shield with a pulsing cyan core, symbolizing proactive and adaptive ML protection.
+📝 Core Slide Content
+Main Header: FORESIGHT
+Sub-header: AI-Powered Adaptive Fraud Prevention for UPI Payments
+Tagline: Think Before You Pay — Real-time risk scoring, explainable AI diagnostics, and seamless UPI redirection under 50 milliseconds.
+Presented By:
+Lead Architect: Zaid Arif Bharde
+Intern ID: 3398
+College: Anjuman-I-Islam Abdul Razzaq Kalsekar Polytechnic, Panvel
+Event Context: National Hackathon & Startup Pitch Showcase
+📊 Structural & Graph Recommendations
+Recommended Diagram: High-level conceptual diagram showing a transaction stream flowing into a shield icon (FORESIGHT Engine), which instantly splits the path into "Instant Approved" (Green) and "Step-Up Multi-Factor Verification" (Orange/Red) based on a dynamic risk bar.
+Recommended Icon: ShieldWithAI (A vector shield with neural network nodes etched into its face).
+Recommended Graph: A micro-metric visual panel at the bottom: Inference Speed: <50ms | Real-Time Recall: 90.6% | Dataset Base: 590K+ Records
+SLIDE 02: THE UPI FRAUD CRISIS (PROBLEM STATEMENT)
+“The Cost of Frictionless Payments: Exploding Attack Surface in Real-Time Ecosystems”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Slate-accented Dark Blue. High contrast layout.
+Layout: Split screen with problem vectors on the left and a severe-threat escalation heatmap visual on the right.
+Typography: 24pt Segoe UI Semibold Header; 12pt body copy with key metrics emphasized in bold 18pt Cyan.
+📝 Core Slide Content
+Executive Summary: Unified Payments Interface (UPI) has democratized banking in India, but its near-instantaneous settlement has created an ideal playground for social engineering, identity theft, and high-velocity financial fraud. Traditional static checks cannot stop sophisticated scammers in real-time.
+Technical Explanation of the Threat Vector:
+Social Engineering Exploits: Scammers manipulate vulnerable users (especially the elderly) into sending money via fake payment requests, impersonations, and fear-inducing calls.
+OTP Bypass & Screen-Share Scams: Fraudsters run background remote-access tools (e.g., AnyDesk, TeamViewer) or intercept OTP telemetry during active calls.
+Zero-Day UPI Fraud Targets: New merchant VPA addresses created dynamically to receive and immediately siphon fraudulent funds.
+📊 Structural & Graph Recommendations
+Recommended Infographic: A multi-step horizontal "Attack Chain" diagram showing: Scammer Call Ingress ➔ Screen Share / OTP Harvest ➔ UPI Deep Link Generation ➔ Instant Unverified Account Siphon.
+Recommended Dashboard Panel: A visual mock KPI board highlighting:
+UPI Monthly Transactions: ₹18.4 Lakh Crore+ (Scale of attack surface)
+Social Engineering Contribution: 70%+ of total digital payment frauds
+Average Mitigation Window: Hours to Days (Post-facto reporting) vs. Scammer Siphon Speed: <2 minutes
+Recommended Icon: TrendingUpAlert (Financial chart showing sudden high-risk activity).
+SLIDE 03: THE REGULATORY PARADOX (RBI VS. FORESIGHT)
+“Revisiting the 1-Hour Mandate: Moving from Blunt Delays to Adaptive Friction”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Dark Blue backdrop with contrasting split boxes (Muted Red for RBI, Glowing Cyan for FORESIGHT).
+Layout: Two-column landscape table comparing friction and efficacy, emphasizing the "Friction Paradox."
+Typography: 24pt Aptos Bold Header; comparison cells wrapped in clean, spacious border boxes.
+📝 Core Slide Content
+Executive Summary: To combat high-value fraud, the Reserve Bank of India (RBI) proposed a mandatory 1-hour cooling-off period for first-time UPI transactions exceeding ₹10,000 [4]. While mathematically logical for fraud mitigation, this blunt delay introduces severe user friction and paralyzes critical real-time payments [4].
+Technical Breakdown of Gaps:
+The Critical Gap Paradox: In hospital emergencies or urgent business transfers, a 1-hour wait is unacceptable and potentially dangerous [4].
+Universal vs. Proportional Friction: RBI delays everyone equally [4]. FORESIGHT introduces friction dynamically, reserving it only for high-risk profiles while allowing 98.7% of safe transactions to execute instantly [4, 7].
+📊 Structural & Graph Recommendations
+Comparison Matrix: | Scenario | RBI 1-Hour Delay [4, 7] | FORESIGHT Adaptive Engine [4, 7] | | :--- | :--- | :--- | | Hospital Emergency Payment | ❌ Delayed 1 Hour (Critical Block) | ✅ Instant Execution (Trusted Circle Recognized) | | Urgent Business Transfer | ❌ Delayed 1 Hour (Business Disruption) | ✅ Verified in 30 Seconds via biometric/OTP | | First-Time Fraudulent Link | ⏳ Delayed 1 Hour (Still executes eventually) | 🛡️ Blocked outright by ML Risk Engine | | Regular Trusted Contact | ❌ Forced Friction | ✅ Zero Friction (Optimized User Flow) |
+Recommended Icon: ScaleBalance (Contrasting ease of use vs. maximum security).
+SLIDE 04: THE FORESIGHT VISION
+“Intelligent payment protection that adapts to user risk, preserving the magic of instant UPI transactions.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Navy with a deep purple gradient arc stretching across the slide.
+Layout: Circular centerpiece detailing the 4 dynamic risk tiers, with detailed text explanations radiating outwards.
+Typography: 28pt Segoe UI Bold with key words in Cyan and Magenta highlights.
+📝 Core Slide Content
+Executive Summary: FORESIGHT shifts the paradigm from a static regulatory clock to a dynamic, multi-layered, and explainable AI risk engine [5]. By calculating payment risk in milliseconds before funds leave the account, the system applies precision-guided security countermeasures [5].
+The Four Adaptive Risk Tiers:
+LOW (Risk Score: 0–39): Applied to trusted circles, verified VPAs, and recurring utilities [5, 6]. User Action: Automated instant approval. [6]
+MEDIUM (Risk Score: 40–59): Triggers on slightly atypical amounts or unrecognized merchants [5, 6]. Countermeasure: Force secure confirmation mode + 3-second hold-to-pay. [6]
+HIGH (Risk Score: 60–79): Initiated during active phone calls (potential vishing), high transaction counts, or newly registered SIM cards [5, 6]. Countermeasure: 2FA biometric/OTP challenges and audible voice warnings. [5, 6]
+CRITICAL (Risk Score: 80–100): Severe anomaly profiles, blacklisted VPAs, and highly round suspicious numbers [5, 6]. Countermeasure: Hard payment freeze + safety kill-switch screen. [6]
+📊 Structural & Graph Recommendations
+Recommended Diagram: A radial concentric circle chart with colors grading from Green (inner, Low) -> Yellow (Medium) -> Orange (High) -> Red (outer, Critical), demonstrating the concentric layers of protective security.
+Recommended Icon: DynamicShield (A multi-layered segmented shield).
+Suggested Illustration: A sleek smartphone UI mockup depicting an overlay warning screen with an active call indicator and an explicit warning banner: "⚠️ POTENTIAL FRAUD DETECTED: Active Call Detected. Hold to Confirm."
+SLIDE 05: COMPLETE SYSTEM ARCHITECTURE
+“High-Concurrency Gateway to Low-Latency ML Edge Telemetry”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Ultra-premium dark slate. Clean technical layout with clear swimlanes for Android Frontend, Backend Gateway, and AI Core.
+Layout: 3-Tier horizontal flow architecture. Left: Edge client; Middle: High-concurrency FastAPI server; Right: Scikit-learn/XGBoost/SHAP Inference Engine.
+Typography: Technical mono-spaced font for labels (Consolas/JetBrains Mono) at 10pt; Segoe UI Semibold for main blocks.
+📝 Core Slide Content
+Executive Summary: The system architecture is built on high-throughput, low-latency technologies, ensuring that the entire telemetry collection, feature extraction, hybrid rule validation, ML inference, and risk categorization loop executes within an unnoticeable 50-millisecond window [5, 10].
+Architectural Components:
+Edge Layer (Android Client): Jetpack Compose UI, MVVM pattern, local security guards, local sqlite rules, secure QR scanner [3, 5, 8].
+Transport Layer: Standard HTTP REST API with robust Pydantic v2 validation layers [5, 10].
+Inference Layer (FastAPI Core): High-concurrency Python engine running pre-compiled serialized XGBoost models and a dynamic, rule-based override pipeline [5, 10].
+📊 Structural & Graph Recommendations
+Architecture Diagram (ASCII Concept representation):
+[ Android Jetpack Compose Edge ]
+               │ (Telemetry Payload: VPA, Amt, Device, Active Call, State)
+               ▼
+┌──────────────────────────────────────────────┐
+│          FastAPI Backend Gateway             │
+│  - Pydantic v2 Payload Validator             │
+│  - High-Concurrency Uvicorn Async Workers    │
+└──────────────┬───────────────────────┬───────┘
+               │                       │
+               ▼ (ML Features)         ▼ (Security Rule Flags)
+┌─────────────────────────────┐ ┌─────────────────────────────┐
+│     XGBoost ML Pipeline     │ │     Hybrid Rule Engine      │
+│ - Pre-compiled Model Ingest │ │ - Local Safety Lists        │
+│ - Real-Time Probability     │ │ - Blacklisted VPA Guards    │
+└──────────────┬──────────────┘ └──────────────┬──────────────┘
+               │                               │
+               └───────────────┬───────────────┘
+                               ▼
+                [ Unified Risk Score (0-100) ]
+                               │
+                               ▼
+             [ SHAP Explainability Generation ]
+                               │
+                               ▼ (Risk Score + English Reason Payload)
+                    [ Android UI Redirection ]
+Recommended Icon: ServerCloudSecurity (Server racks integrated with shield and gear symbols).
+SLIDE 06: FRONTEND EDGE HARDENING (ANDROID ARCHITECTURE)
+“Telemetry Gathering, Dynamic UI States, and Client-Side Protection Layers”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Slate-blue tone.
+Layout: Two-column layout. Left: Jetpack Compose component stack diagram; Right: Hardening and security features list.
+Typography: 24pt Inter Bold; lists tabbed out with generous padding and styled checkmark bullet points.
+📝 Core Slide Content
+Executive Summary: The FORESIGHT Android client is engineered for both modern, performant user experience and active protection. Built native in Kotlin with Jetpack Compose, the frontend dynamically re-configures its payment screens to match the risk score returned by the server, ensuring direct defense against overlay attacks and screen hijacking [3, 5, 11].
+Core Technical Android Features:
+Jetpack Compose & MVVM Architecture: Clean separation of concerns with immutable state management, minimizing memory leaks and maximizing telemetry collection speed [3, 5].
+Interactive QR Scanner: Secure QR payment validation that dissects deep-linked UPI URIs, scanning for malformed payees or currency fraud vectors prior to initiating network transactions [5, 8].
+Firebase Phone Auth Integrations: Secure, verified, OTP-based session bindings to prevent identity cloning on untrusted host devices [5].
+📊 Structural & Graph Recommendations
+Technical UI Diagram: Flow chart displaying: User Scans QR ➔ Intent Captured ➔ Strict Regex Parsing (UPI URI scheme) ➔ Telemetry Dispatched ➔ Score Evaluated ➔ Screen State Rendered.
+Security Dashboard Highlight:
+Kotlin Language Composition: 62.2% of codebase, utilizing secure memory handling [11].
+UI Execution Speed: <12ms for dynamic Compose re-rendering.
+Recommended Icon: MobileAppSecure (Smartphone containing a glowing lock vector).
+SLIDE 07: HIGH-CONCURRENCY BACKEND GATEWAY
+“FastAPI, Pydantic v2 Schemas, and Low-Latency Middleware”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Premium Dark Navy background with cyan-accented boxes.
+Layout: Split layout: Left column with backend features; Right column containing actual Pydantic schema logic representation.
+Typography: Segoe UI Semibold; raw code schemas displayed in high-contrast monospaced editor theme.
+📝 Core Slide Content
+Executive Summary: The FORESIGHT backend uses FastAPI running on Uvicorn, delivering near-instantaneous async response times [5, 10]. Designed as an enterprise gateway, it handles data payload sanitization, parses active call status flags, and delegates requests to the ML and Rule Engines simultaneously [5].
+Key Technical Backend Features:
+FastAPI & Uvicorn Async Stack: Combines Python's modern type-hints with highly concurrent event loops, ensuring multiple transaction evaluation requests do not block [10].
+Pydantic v2 Schemas: Re-engineered data validation models that serialize incoming JSON objects instantly, rejecting malformed, nested, or SQL-injection payloads at the entry point.
+Comprehensive Logging: Structured JSON telemetry logs for transaction audits without logging personally identifiable information (PII) [5].
+📊 Structural & Graph Recommendations
+Recommended Diagram (Payload Ingestion Flow): HTTP POST /predict ➔ Async Event Handler ➔ Pydantic Validate Schema ➔ Parallel ML & Rule Execution ➔ Unified Risk JSON Out.
+Enterprise Dashboard KPI Panel:
+Language Base: Python 32.1% of overall repository [11].
+API Framework: FastAPI with native auto-generated OpenAPI / Swagger docs [9, 10].
+Schema Framework: Pydantic v2 (up to 20x faster serialization than v1).
+Recommended Icon: ServerInfrastructure (Layered cloud/local server topology icon).
+SLIDE 08: THE AI/ML PIPELINE (DATA & MODELING FRAMEWORK)
+“Transforming raw IEEE-CIS fraud signals into precise UPI hazard classifications.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Dark Blue backdrop.
+Layout: Horizontal linear process flow chart spanning the slide, with bullet notes below each stage.
+Typography: 24pt Aptos Bold; step-by-step numbers highlighted in bright purple circular badges.
+📝 Core Slide Content
+Executive Summary: The intelligence of the FORESIGHT risk engine is grounded in a highly refined machine learning pipeline [5, 10]. Using the massive IEEE-CIS Fraud Detection dataset as a base (comprising over 590,000 global transactions), we extracted core transactional, behavioral, and device signals, optimizing the model explicitly to identify fraud under massive class imbalance [7, 10].
+Pipeline Stages:
+Ingestion & Cleaning: Sourcing from the Kaggle IEEE-CIS dataset [7, 10]. Dropping features with over 50% missing values; imputing critical transaction and device metadata [10].
+Addressing Class Imbalance: The baseline dataset contains an extreme class imbalance with only a 3.5% fraud rate [7]. We applied SMOTE (Synthetic Minority Over-sampling Technique) on the training split to synthesize minority samples and prevent classifier bias [10].
+Hyperparameter Tuning: Randomized Search Cross-Validation (RandomizedSearchCV) was executed to discover optimal parameters for max depth, learning rate, and tree estimators [10].
+Model Serialization: Compiling final models to lightweight binary .pkl files for instant load and sub-millisecond scoring during production runs [10].
+📊 Structural & Graph Recommendations
+Recommended Process Flow Chart: IEEE-CIS 590K Raw Data Ingest ➔ Missing Column Drop & Imputation ➔ SMOTE Balanced Resampling ➔ RandomizedSearchCV Tuning ➔ Serialized Pickled Model Ingress.
+Metric Callout Box:
+Raw Dataset Size: 590,000+ transaction rows [7].
+Natural Fraud Prevalence: 3.5% (Extremely imbalanced) [7].
+Resampled Target Ratio: 50/50 Balanced Split via SMOTE [10].
+Recommended Icon: DataFlowNodes (Database transitioning into an AI network node).
+SLIDE 09: FEATURE ENGINEERING: EXTRACTING RISK SIGNALS
+“Developing high-predictive-value behavioral vectors for real-time inference.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Navy and Cyan highlights.
+Layout: Grid-based cards (2x3) detailing key engineered features, their formulas, and why they predict fraud.
+Typography: Bold Segoe UI; formulas highlighted in monospaced, light-blue boxes.
+📝 Core Slide Content
+Executive Summary: To classify fraud in real-time, raw transaction fields must be translated into high-impact behavioral vectors [10]. Our engineered features capture temporal patterns, transaction velocity anomalies, and device metadata changes that standard rule engines fail to correlate.
+Key Engineered Behavioral Features:
+is_round_amount (Boolean): Flagging highly structured round payments (e.g., exactly ₹5,000, ₹10,000, ₹50,000) which frequently occur in social engineering, extortion, and OTP scam campaigns.
+amount_to_average_ratio (Float): Computes current transaction amount divided by the user's historical 30-day average. Extreme spikes indicate account compromise.
+days_since_last_transaction (Float): Analyzes dormant accounts that suddenly become hyper-active, which is typical of compromised or bought mule accounts.
+transactions_last_day (Int): Captures rapid transaction velocity or "layering" (multiple fast payments to drain a balance).
+device_change_flag (Boolean): Evaluates device handshakes. If the system detects a different hardware profile while an active call is flagged, risk surges [5, 6].
+📊 Structural & Graph Recommendations
+Feature Cards Table: | Engineered Feature | DataType | Target Behavioral Detection Pattern | | :--- | :--- | :--- | | is_round_amount | Boolean | Fraudsters requesting exact round figure transfers | | amount_to_average_ratio | Float | Sudden spike in purchase size compared to baseline | | days_since_last_transaction| Float | Reactivation of stagnant, bought, or "mule" accounts | | transactions_last_day | Integer | Velocity attacks; rapid multiple payment runs | | device_change_flag | Boolean | Account takeover; new device credentials logged [5] |
+Recommended Icon: CodeFeature (A bracket code icon with a magnifying glass examining it).
+SLIDE 10: MODEL ARCHITECTURE COMPARISON
+“Quantifying the superiority of boosting algorithms over bagged forests for fraud classification.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Slate background with clear matrix borders.
+Layout: Two-column landscape comparison. Left: Detailed metric comparison table; Right: The "Baseline Model Comparison" bar chart from the sources.
+Typography: Inter; metrics in bold, colored text. Green for superior, orange for inferior.
+📝 Core Slide Content
+Executive Summary: To establish the absolute mathematically superior model, we contrasted Random Forest and XGBoost across baseline and tuned states [7]. In credit and payment fraud, Recall is our paramount metric [7] — missing a single fraudulent transaction (False Negative) is significantly more catastrophic than generating a temporary false alarm (False Positive) [7].
+Core Technical Analysis:
+The Baseline Paradox: As shown in the empirical baseline bar chart, Random Forest starts with extremely high accuracy (97.5%) but terrible Recall (~42%) [20]. Baseline XGBoost, though lower in accuracy (81%), exhibits far stronger recall (~73%) out of the box, demonstrating its innate ability to isolate sparse fraud signals [20].
+The Hyperparameter Tuning Shift: Post-SMOTE balancing and hyperparameter optimization, XGBoost significantly outpaces Random Forest across all operational metrics, achieving an F1-Score of 91.8% compared to Random Forest's 89.3% [7].
+📊 Structural & Graph Recommendations
+Model Comparison Matrix (Highly Grounded in Sources): | Evaluation Metric | Baseline RF [20] | Baseline XGBoost [20] | Tuned RF [7] | Tuned XGBoost (Winner) [7] | | :--- | :---: | :---: | :---: | :---: | | Accuracy | ~97.5% | ~81.0% | ~98.2% | 98.7% | | **Precision (Fraud)**| ~76.0% | ~12.0% | ~91.4% | 93.1% | | Recall (Fraud) | ~42.0% | ~73.0% | ~87.3% | 90.6% | | F1-Score | ~54.0% | ~21.0% | ~89.3% | 91.8% | | ROC-AUC | ~92.0% | ~85.0% | ~0.967 | 0.981 |
+Grounded Image Callout: Displays model_comparison_bar_chart.png [20] side-by-side with the final tuned metric dashboard.
+Recommended Icon: CompareArrows (Horizontal contrasting directional arrows).
+SLIDE 11: WHY XGBOOST?
+“Gradient Boosting: High-Recall, Low-Latency Payment Risk Engine”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Premium Dark Navy background with cyan-accented boxes.
+Layout: Two-column layout: Left column with algorithmic benefits; Right column displaying the Tuned XGBoost ROC & Precision-Recall curves.
+Typography: Aptos Bold headers with Segoe UI body text.
+📝 Core Slide Content
+Executive Summary: XGBoost (Extreme Gradient Boosting) was selected as the core intelligence behind the FORESIGHT risk engine [10]. It is highly efficient for structured tabular datasets and maintains sub-millisecond prediction runtimes, which are essential for processing active UPI transactions under intense time budgets [10].
+Algorithmic and Practical Advantages:
+Exceptional Recall & Precision Balance: Attains 90.6% Recall (minimizing missed fraud) and 93.1% Precision (minimizing false customer declines) [7].
+L1 and L2 Regularization: Built-in regularization limits overfitting, ensuring stable, reliable scoring on messy real-world transaction payloads [10].
+Handling Sparse Matrix Data: Naturally handles missing or sparse feature vectors without performance degradation, crucial for edge-to-server networks with variable data quality.
+Real-time Run Performance: Under 1.5ms execution time for single-row inference in production environments.
+📊 Structural & Graph Recommendations
+Recommended Graph Grid:
+Left Panel: Tuned XGBoost ROC Curve showing an exceptional AUC of 0.981 [7].
+Right Panel: Tuned XGBoost Precision-Recall Curve displaying a solid Average Precision (AP) baseline.
+Visual Highlights: Grounded directly on tuned_xgboost_roc_curve.png [29] and tuned_xgboost_precision_recall_curve.png [28].
+Recommended Icon: BoltRun (A running figure containing a lightning bolt).
+SLIDE 12: GLOBAL EXPLAINABILITY (SHAP SUMMARY PLOTS)
+“Interrogating the Black Box: Identifying Key Features That Drive UPI Risk”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: High-contrast Dark Navy. Left side holds the SHAP summary dot chart; Right side explains feature directionality.
+Layout: Split 50/50 visual layout.
+Typography: Inter; 14pt body text with clear color callouts (Red/Hot Pink for positive impact, Blue/Cyan for negative impact).
+📝 Core Slide Content
+Executive Summary: Traditional machine learning models are often critiqued as "black boxes" that fail to justify why a transaction is flagged [5]. FORESIGHT solves this by integrating SHAP (SHapley Additive exPlanations) directly into our backend pipeline, allowing us to compute and explain the exact mathematical contribution of every feature in real-time [5, 10].
+Global Feature Significance (Grounded in Sources):
+is_round_amount (The Highest Risk Driver): As confirmed by the global feature importance charts, highly rounded figures are the most dominant predictor of fraud risk. High values (red dots) strongly drive positive SHAP values, indicating a severe surge in risk.
+TransactionAmt (Scale Vector): Large transaction sizes naturally skew predictions towards riskier profiles. High amounts (red dots) map to high SHAP values.
+days_since_last_transaction (Temporal Inactivity): Blue dots (low days since last transaction) indicate recent rapid activity, shifting SHAP values and showing that velocity surges are highly indicative of systematic fraudulent siphoning.
+DeviceType & card6 (Metadata Risk): Unknown device types and credit card profiles (card6 = credit) both scale risk up, showing that anomaly patterns extend beyond transaction amount alone.
+📊 Structural & Graph Recommendations
+Grounded Image Callouts: Embed explainability_shap_summary.png [16] or shap_summary.png [23] as the central visual reference on the left.
+Feature Contribution Summary:
+is_round_amount ➔ Red (High Feature Value) = High Fraud Probability (Right-side SHAP cluster).
+TransactionAmt ➔ Red (Large Amount) = Elevated Fraud Risk (Right-side SHAP cluster).
+days_since_last_transaction ➔ Blue (Short Interval) = Elevated Fraud Risk (Right-side SHAP cluster).
+Recommended Icon: ExplainabilityNodes (A brain icon connected to distinct branching tree nodes).
+SLIDE 13: LOCAL EXPLAINABILITY (REAL-TIME DECISION JUSTIFICATION)
+“Translating shapley vectors into plain, user-friendly risk reasons”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Dark Blue slate. Four distinct horizontal lanes matching the Low, Medium, High, and Critical risk profiles.
+Layout: Four-card horizontal layout with accent borders.
+Typography: Segoe UI; text reasons presented in spacious callout blocks.
+📝 Core Slide Content
+Executive Summary: To empower non-technical users and protect elderly citizens, local SHAP values are translated on-the-fly into plain English [5, 7]. When a payment is delayed or blocked, the interface displays the primary risk factors, helping the user understand and avoid active scam attempts [5].
+Grounded Technical Examples (From Actual Model Explanations):
+🟢 LOW RISK (Score: 10/100): User paying a regular vendor. SHAP detects a trusted device and active whitelist registration, subtracting risk [6]. Displayed message: "Payment Secure. Processed instantly." [6]
+🟡 MEDIUM RISK (Score: 45/100): New contact, round amount. SHAP notes an unrecognized recipient but a consistent device [6]. Displayed message: "New contact transfer. Secure mode active." [6]
+🔴 HIGH RISK (Score: 70/100): Active call + pressure detected. SHAP registers device info mismatched (SM-A300H Build flag) [17] and active call sensors [6]. Displayed message: "High risk: Active call detected. Scammer warning activated!" [6, 17]
+⛔ CRITICAL RISK (Score: 90/100): Untrusted device change + Protonmail. SHAP registers a non-standard email domain (protonmail.com) [13] and an unknown device signature (SM-A300H or hi6210sft) [13]. Displayed message: "Transaction Blocked: Severe anomaly detected. Emergency lock screen activated." [6, 13]
+📊 Structural & Graph Recommendations
+Grounded Image Grid: Incorporate low_risk_explanation.png [18], medium_risk_explanation.png [19], high_risk_explanation.png [17], and critical_risk_explanation.png [13] to visually ground these real-world states.
+Recommended Icon: UserVoiceAlert (A profile silhouette paired with a warning voice/shield vector).
+SLIDE 14: HYBRID AI + RULE ENGINE (UNIFIED DECISIONING)
+“Balancing probabilistic neural predictions with strict, deterministic safety parameters.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Slate Navy.
+Layout: Two distinct concentric columns representing the Rule Engine and the ML Core, merging into a central "Decision Gateway."
+Typography: Aptos Bold; 20pt for headers.
+📝 Core Slide Content
+Executive Summary: Pure ML models are probabilistic and can suffer from false positives or edge-case failures [5]. FORESIGHT resolves this by implementing a Hybrid Risk Architecture [5]. It runs a deterministic, fast-path Rule Engine in parallel with the XGBoost ML model to create a reliable and secure decision gateway [5].
+Technical Component Integration:
+Deterministic Safety Whitelist: Payments to designated "Trusted Contacts" skip ML processing to guarantee zero user friction [4, 5, 6].
+Strict Security Blacklist: Known fraudulent VPAs or dynamic scan targets trigger an immediate hard block, bypassing ML evaluation entirely [5].
+The Merging Gate: For unclassified transactions, the Rule Engine acts as a gatekeeper [5]. It scales or reduces the XGBoost probability score based on real-time device telemetry (e.g., active call status, headphone plug status, and touch pressure indicators) before assigning the final risk tier [5, 6].
+📊 Structural & Graph Recommendations
+Decision Flow Diagram:
+Incoming Transaction Payload
+              │
+              ├───► [Rule Engine Check] ────► (Trusted Circle Match?) ──► [Instant Skip (Low Friction)]
+              │                                         │ No
+              │                                         ▼
+              │                                (Blacklisted VPA Match?) ──► [Instant Hard Block (Critical)]
+              │                                         │ No
+              │                                         ▼
+              └───► [XGBoost Inference] ──► ML Probability Output (0-1.0)
+                                                        │
+                                                        ▼
+                                          [Risk Multiplier Rules Applied]
+                                   (Active Call: +20% | Unknown Device: +15%) [13]
+                                                        │
+                                                        ▼
+                                          [Final Combined Score Output]
+Recommended Icon: BinaryNetwork (A network node split into solid binary blocks and organic neural nodes).
+SLIDE 15: THE SECURITY AUDIT (METHODOLOGY & COMPLIANCE)
+“Quantifying Edge and API Defenses under OWASP MASVS Standards”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Cyber Slate background. Crisp white typography with deep violet highlight borders.
+Layout: 3-Step horizontal timeline representing the audit workflow.
+Typography: Inter Bold for findings, Segoe UI for description text.
+📝 Core Slide Content
+Executive Summary: As a Senior Cybersecurity Architect and OWASP MASVS (Mobile Application Security Verification Standard) Auditor, I conducted a full security audit of the FORESIGHT ecosystem. The audit focused on edge telemetry tampering, API transport security, model manipulation vectors, and payment redirect hijacking [5].
+Audit Methodology:
+Static Application Security Testing (SAST): Code review of Kotlin UI layers, FastAPI routing controllers, and Pydantic validation decorators [3, 5].
+Dynamic Application Security Testing (DAST): Live API fuzzing, injection attempts on FastAPI endpoints, and simulated man-in-the-middle (MITM) attacks on transaction requests [5].
+Threat Modeling: Mapping threat vectors against the OWASP Top 10 and MASVS v2 frameworks, with a focus on local data security and secure UPI URI schema redirection [5].
+📊 Structural & Graph Recommendations
+Security Standards Infographic: A layout representing compliance: OWASP MASVS Compliance Level: MASVS-L1 + MASVS-L2 | Core Target: OWASP Top 10 API Security V1
+Vulnerability Breakdown Table: | Vulnerability Target | Severity | Potential Attack Vector | Hardening Mitigation | | :--- | :---: | :--- | :--- | | UPI Schema Redirection | Critical | Deep Link Injection / Spoofing [5] | Strict VPA, Payee & Amt validation [5] | | Local Telemetry Ingress| High | Screen Capture / Tapjacking [5] | Android FLAG_SECURE layout injection [5] | | API Payload Poisoning | High | Malformed HTTP POST [5, 10] | Strict Pydantic Schema Validation [10] | | Telemetry Transport | Medium | Man-In-The-Middle Interception | TLS 1.3 + Future SSL Pinning Roadmap [9] |
+Recommended Icon: VerifiedCheckmark (An audited checkbox with an outer protective shield).
+SLIDE 16: SECURITY HARDENING: BEFORE VS. AFTER
+“Transforming a functional hackathon proof-of-concept into an enterprise-secure payment shield.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Dark Blue backdrop. Two large, contrasting panels: Left (Unsecured POC state in muted orange), Right (Hardened Enterprise state in glowing Cyan/White).
+Layout: Split screen comparison cards.
+Typography: Inter Bold; 14pt body text with generous vertical margins.
+📝 Core Slide Content
+Executive Summary: Modern payment applications must protect local telemetry and secure inter-app communication. The FORESIGHT security team transformed the system's baseline code into a secure architecture by hardening local data stores, securing memory spaces, and validating UPI redirect targets [5].
+Core Technical Hardening Implementations:
+Edge Visual Security: Implemented FLAG_SECURE across all sensitive Compose transaction screens, automatically blocking screenshot captures and preventing remote-access trojans (e.g., TeamViewer) from recording payment payloads [5].
+Local Backups Disabled: Disabled Android’s standard cloud backups (android:allowBackup="false") to prevent local application database extractions [5].
+API Ingress Validation: Replaced unstructured payload parsing with type-safe Pydantic v2 schemas on the backend, neutralizing SQL-injection, NoSQL-injection, and buffer overflow vectors [10].
+URI Deep-Link Sanitization: Added strict regex validation for all deep-linked VPAs, payees, currencies, and transaction amounts, preventing malicious apps from altering payment payloads [5].
+📊 Structural & Graph Recommendations
+Security Hardening Scorecard:
+Baseline Posture: Vulnerable to local tapjacking, schema injections, and database extractions.
+Hardened Posture: Screenshot blocked, schema verified, backups restricted, deep-link protected [5].
+Recommended Icon: TransferSecurity (An arrow passing through a lock, representing secure data transformation).
+SLIDE 17: RISK MATRIX & COMPLIANCE SCORECARD
+“Mapping enterprise threats to MASVS controls and production readiness levels.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Premium slate-black backdrop.
+Layout: Interactive Risk Heatmap Matrix (4x4) with colored risk boxes (Red, Yellow, Green).
+Typography: 24pt Segoe UI Bold; bold callout margins.
+📝 Core Slide Content
+Executive Summary: Operating in high-volume payment spaces requires rigorous risk management. This matrix classifies identified security vulnerabilities by threat severity and operational impact, showing how our hardening measures resolve high-priority threats prior to production launch [5, 9].
+Operational Risk Classifications:
+Threat Area 1: Deep Link Manipulation (Critical): Fraudsters altering the recipient VPA or transaction amount within the deep link [5]. Control: Enforced rigid regex schema validation on incoming UPI URIs [5].
+Threat Area 2: Screen Mirroring & Trojans (High): Background screen-recording apps siphoning credentials [5]. Control: Ingressed native Android window FLAG_SECURE blocks [5].
+Threat Area 3: Local Data Extraction (Medium): Extraction of configuration database stores [5, 9]. Control: Disabled local Android backups [5] with EncryptedSharedPreferences on the roadmap [9].
+📊 Structural & Graph Recommendations
+Risk Heatmap Matrix Representation:
+[ OPERATIONAL RISK MATRIX HEATMAP ]
+┌───────────┬─────────────┬─────────────┬─────────────┐
+│  IMPACT   │     Low     │   Medium    │    High     │
+├───────────┼─────────────┼─────────────┼─────────────┤
+│ High      │  Medium Risk│  High Risk  │ [CRITICAL]  │
+│           │             │             │ (Deep Link) │
+├───────────┼─────────────┼─────────────┼─────────────┤
+│ Medium    │  Low Risk   │  Medium Risk│  [HIGH]     │
+│           │             │             │ (Screen Mir)│
+├───────────┼─────────────┼─────────────┼─────────────┤
+│ Low       │  Low Risk   │  Low Risk   │  Medium Risk│
+└───────────┴─────────────┴─────────────┴─────────────┘
+            └─────────────┴─────────────┴─────────────┘
+                 Low          Medium         High      ──► LIKELIHOOD
+Security Scorecard Highlights:
+Edge Security Verification: 95/100 (Screenshot blocked, inputs validated) [5].
+API Security Verification: 98/100 (Schema enforced, type-safe validation) [5, 10].
+Transport Security Verification: 60/100 (Secure TLS 1.3 is planned next) [9].
+Recommended Icon: GridMatrix (A structured 3D grid layout).
+SLIDE 18: COMPETITIVE ANALYSIS
+“Comparing FORESIGHT against standard UPI applications and the RBI delay proposal.”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Slate-blue tone with clear matrix borders.
+Layout: Landscape matrix with clean rows and columns.
+Typography: Inter Bold for column headers; features labeled in bold, high-contrast rows.
+📝 Core Slide Content
+Executive Summary: Unlike traditional payment platforms that rely on passive, post-facto fraud reporting, or regulatory models that delay transactions universally, FORESIGHT integrates real-time telemetry, advanced machine learning, and explainable AI to protect payments without adding friction [4, 5, 7].
+Feature-by-Feature Competitor Matrix:
+Traditional UPI Apps (e.g., PhonePe, GPay): Provide fast transactions but lack real-time on-device scam protection, local call detection, or explainable risk transparency [7].
+RBI's Proposed 1-Hour Mandate: Mitigates fraud by delaying high-value payments, but introduces high user friction and lacks intelligence or active scam defense [4, 7].
+FORESIGHT Solution: Delivers real-time active fraud detection, custom local whitelists, on-device telemetry analysis, and clear natural language explanations under 50ms [4, 5, 7].
+📊 Structural & Graph Recommendations
+The Competitor Matrix: | Core Security Feature | Standard UPI Apps [7] | RBI Proposed Delay [4, 7] | FORESIGHT Solution [4, 7] | | :--- | :---: | :---: | :---: | | Real-Time Active Detection | ❌ None | ⚠ Passive Delay Only | ✅ Yes (XGBoost Classifier) | | OTP / Social Eng. Shield | ❌ None | ❌ None | ✅ Yes (Telemetry Guard) | | Risk-Based User Friction | ❌ None | ❌ 1-Hour Wait for All | ✅ Dynamic Tiers (0-100) | | AI Decision Explainability| ❌ None | ❌ None | ✅ Yes (Local SHAP Reasons) | | Elderly Support / Voice | ❌ None | ❌ None | ✅ Yes (Voice Alerts) | | Emergency Payment Support | ✅ Yes | ❌ Blocked for 1 Hour | ✅ **Yes (Trusted Circle Whitelist)**|
+Recommended Icon: CompareMatrix (Side-by-side comparison bar icon).
+SLIDE 19: FUTURE ROADMAP & PRODUCTION READY CHECKLIST
+“Evolving FORESIGHT from an Advanced Sandbox Prototype to a Production-Ready Payment Shield”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Premium Dark Navy background with a glowing cyan timeline line weaving horizontally.
+Layout: Horizontal milestone timeline, with distinct boxes detailing each production phase.
+Typography: Segoe UI Semibold; numbers inside circular gradient badges.
+📝 Core Slide Content
+Executive Summary: The FORESIGHT prototype is fully functional, utilizing a high-performance local FastAPI backend and native Android UI [8, 10]. To prepare for commercial launch, our roadmap focuses on migrating to secure production hosting, hardening on-device databases, and integrating directly with banking APIs [9].
+Key Future Milestones:
+Phase 1: Secure Cloud Migration & TLS Enforcements (Short-term): Deploy backend services to production cloud hosting with mandatory HTTPS, TLS 1.3, and strict SSL Certificate Pinning to eliminate MITM transport risks [9].
+Phase 2: Local Hardware Storage Hardening (Mid-term): Migrate local client databases to Android's EncryptedSharedPreferences, securing offline whitelists and credentials with AES-256 hardware keys [9].
+Phase 3: Real Banking Sandbox & Notification Engine (Long-term): Integrate directly with RBI's test sandbox and commercial banking APIs, while building a push notification alert network to warn users of suspicious activity [9].
+📊 Structural & Graph Recommendations
+Roadmap Timeline Diagram: [ PHASE 1: TLS & Cloud Deployment ] ──► [ PHASE 2: Local SQL AES-256 Encryption ] ──► [ PHASE 3: Bank API & Sandbox Integration ]
+Dashboard Milestone KPIs:
+Current Milestone: Prototype complete, security hardened, hybrid rule engine fully validated [8, 9].
+Next Milestone: Production HTTPS deployment, SSL Certificate Pinning [9].
+Recommended Icon: TimelineTrend (A progressive arrow jumping over consecutive milestones).
+SLIDE 20: CONCLUSION & CALL TO ACTION
+“Establishing Proactive Security to Protect the Future of Digital Payments”
+
+🎨 Visual Layout & Design Blueprint
+Theme & Background: Deep Royal Navy (#1C2541) with a large, centered, glowing shield vector in the background.
+Layout: Centered column layout, focusing on the final security verdict and contact information.
+Typography: Aptos Bold; 36pt main callout, Segoe UI for details.
+📝 Core Slide Content
+The Final Security Verdict:
+“The FORESIGHT system successfully demonstrates that real-time payment security does not require universal friction. By combining high-recall machine learning, local telemetry collection, and explainable AI, we have built a viable, secure, and user-friendly alternative to static regulatory cooling-off periods.” [4, 5, 7]
+Key Takeaways:
+Adaptive Security Beats Static Rules: Eliminates universal friction while actively blocking fraud [4, 7].
+Explainable AI Builds Trust: Natural language SHAP justifications help protect users from social engineering [5, 7].
+Production Ready Design: Hardened client layers and scalable backend schemas ready for next-phase deployment [5, 9, 10].
+Questions? Let's Discuss.
+Contact Information:
+Lead Architect & Presenter: Zaid Arif Bharde (ID: 3398) [10]
+Institution: Anjuman-I-Islam Abdul RazzaQ Kalsekar Polytechnic, Panvel
+Project Codebase: github.com/zaidbharde/FORESIGHT [1, 3]
+Dataset Source: kaggle.com/zaidbharde/foresight-processed-ieee-cis-fraud-dataset [7]
+📊 Structural & Graph Recommendations
+Recommended Visual: A high-impact graphical footer showing the FORESIGHT logo, flanked by small logos for Google, Microsoft, Visa, and PhonePe to symbolize industry-standard architecture compliance.
+Recommended Icon: CheckmarkShield (A robust checked shield icon).
+Suggested Illustration: A stylish abstract art vector showing a glowing secure city grid, representing trusted, secure, and friction-free payment flows.

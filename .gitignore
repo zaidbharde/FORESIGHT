@@ -42,6 +42,7 @@ dist/
 *.joblib
 *.h5
 *.onnx
+*.pkl
 processed_data.csv
 X_train.csv
 X_test.csv
