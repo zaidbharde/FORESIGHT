@@ -25,7 +25,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
-import java.util.UUID
 
 enum class UpiResult {
     SUCCESS, FAILED, CANCELLED, UNKNOWN
@@ -192,20 +191,21 @@ object UpiManager {
             "Invalid payment amount."
         }
 
-        val timestamp = System.currentTimeMillis()
-        val randomPart = UUID.randomUUID().toString().substring(0, 8)
-        val transactionId = "FS-$timestamp-$randomPart"
         val formattedAmount = String.format(java.util.Locale.US, "%.2f", amountValue)
+        
+        // NPCI Compliance: Max 80 chars, alphanumeric + spaces only to avoid intent parsing errors
+        val safeNote = transactionNote.filter { it.isLetterOrDigit() || it == ' ' }
+            .take(80)
+            .ifEmpty { "Payment" }
 
         return Uri.Builder()
             .scheme("upi")
             .authority("pay")
             .appendQueryParameter("pa", sanitizedVpa)
             .appendQueryParameter("pn", sanitizedName)
-            .appendQueryParameter("tn", transactionNote.ifEmpty { "Payment via Foresight" })
             .appendQueryParameter("am", formattedAmount)
             .appendQueryParameter("cu", "INR")
-            .appendQueryParameter("tr", transactionId)
+            .appendQueryParameter("tn", safeNote)
             .build()
     }
 
