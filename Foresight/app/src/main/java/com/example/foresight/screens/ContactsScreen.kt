@@ -158,7 +158,6 @@ fun ContactsScreen(
                                     ContactCard(
                                         contact = contact,
                                         onContactClick = { 
-                                            android.util.Log.d("UpiDebug", "ContactsScreen: Selected ${contact.name}, VPA: ${contact.upiId}")
                                             onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) 
                                         },
                                         onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
@@ -181,7 +180,6 @@ fun ContactsScreen(
                                     ContactCard(
                                         contact = contact,
                                         onContactClick = { 
-                                            android.util.Log.d("UpiDebug", "ContactsScreen: Selected ${contact.name}, VPA: ${contact.upiId}")
                                             onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) 
                                         },
                                         onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
@@ -392,9 +390,4 @@ private suspend fun fetchContacts(context: Context): List<ForesightContact> = wi
     contactMap.values.sortedBy { it.name }.toList()
 }
 
-private fun Color.toArgb(): Int {
-    return (this.alpha * 255.0f + 0.5f).toInt() shl 24 or
-            ((this.red * 255.0f + 0.5f).toInt() shl 16) or
-            ((this.green * 255.0f + 0.5f).toInt() shl 8) or
-            (this.blue * 255.0f + 0.5f).toInt()
-}
+

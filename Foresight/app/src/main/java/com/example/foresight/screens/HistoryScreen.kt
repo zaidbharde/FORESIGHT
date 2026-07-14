@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.sp
 import com.example.foresight.PaymentViewModel
 import com.example.foresight.Transaction
 import com.example.foresight.TransactionType
-import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

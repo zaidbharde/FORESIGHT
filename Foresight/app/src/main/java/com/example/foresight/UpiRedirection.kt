@@ -236,7 +236,6 @@ object UpiManager {
         mam?.let { builder.appendQueryParameter("mam", it) }
 
         val uri = builder.build()
-        android.util.Log.d("UpiDebug", "Generated UPI URI: $uri")
         return uri
     }
 
@@ -262,17 +261,14 @@ object UpiManager {
     }
 
     fun parseUpiUri(uriStr: String): UpiDetails? {
-        android.util.Log.d("UpiDebug", "Parsing QR URI: $uriStr")
         return try {
             val uri = Uri.parse(uriStr)
             if (uri.scheme != "upi" || uri.host != "pay") {
-                android.util.Log.e("UpiDebug", "Invalid URI Scheme/Host: ${uri.scheme}://${uri.host}")
                 return null
             }
             // Removing .lowercase() to preserve case sensitivity if any
             val pa = uri.getQueryParameter("pa")?.trim() ?: return null
             if (!VPA_REGEX.matches(pa)) {
-                android.util.Log.e("UpiDebug", "Invalid VPA format: $pa")
                 return null
             }
 
@@ -280,14 +276,12 @@ object UpiManager {
             if (!am.isNullOrEmpty()) {
                 val amountValue = am.toDoubleOrNull()
                 if (amountValue == null || !amountValue.isFinite() || amountValue <= 0.0 || amountValue > MAX_UPI_AMOUNT) {
-                    android.util.Log.e("UpiDebug", "Invalid Amount in QR: $am")
                     return null
                 }
             }
 
             val currency = uri.getQueryParameter("cu")?.trim()
             if (!currency.isNullOrEmpty() && currency.uppercase() != "INR") {
-                android.util.Log.e("UpiDebug", "Invalid Currency in QR: $currency")
                 return null
             }
 
@@ -307,10 +301,8 @@ object UpiManager {
                 purpose = uri.getQueryParameter("purpose"),
                 mam = uri.getQueryParameter("mam")
             )
-            android.util.Log.d("UpiDebug", "Parsed QR Details: $details")
             details
         } catch (e: Exception) {
-            android.util.Log.e("UpiDebug", "Parse Error", e)
             null
         }
     }
@@ -350,10 +342,6 @@ object UpiManager {
                 mam
             )
             
-            android.util.Log.d("UpiDebug", "--- UPI Intent Launch ---")
-            android.util.Log.d("UpiDebug", "URI: $uri")
-            android.util.Log.d("UpiDebug", "App: ${app.name} (${app.packageName})")
-            
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                 setPackage(app.packageName)
             }
@@ -364,10 +352,8 @@ object UpiManager {
                 android.widget.Toast.makeText(context, "This UPI application is unavailable.", android.widget.Toast.LENGTH_SHORT).show()
             }
         } catch (e: IllegalArgumentException) {
-            android.util.Log.e("UpiDebug", "Validation Error: ${e.message}")
             android.widget.Toast.makeText(context, e.message ?: "Invalid UPI payment details.", android.widget.Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
-            android.util.Log.e("UpiDebug", "Launch Error", e)
             android.widget.Toast.makeText(context, "Could not launch ${app.name}", android.widget.Toast.LENGTH_SHORT).show()
         }
     }

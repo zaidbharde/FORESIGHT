@@ -191,7 +191,6 @@ fun PaymentScreen(
             FSPrimaryButton(
                 text = "Proceed to Pay",
                 onClick = {
-                    android.util.Log.d("UpiDebug", "PaymentScreen: Clicked Continue. Name: $contactName, Phone: $contactPhone, Amount: $amount")
                     val amt = amount.toDoubleOrNull() ?: 0.0
                     if (amt > balance) {
                         showError = true

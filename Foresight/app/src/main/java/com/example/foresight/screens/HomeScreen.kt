@@ -1,6 +1,5 @@
 package com.example.foresight.screens
 
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -474,11 +473,4 @@ private fun TransactionItem(transaction: Transaction) {
             fontWeight = FontWeight.Bold
         )
     }
-}
-
-private fun Color.toArgb(): Int {
-    return (this.alpha * 255.0f + 0.5f).toInt() shl 24 or
-            ((this.red * 255.0f + 0.5f).toInt() shl 16) or
-            ((this.green * 255.0f + 0.5f).toInt() shl 8) or
-            (this.blue * 255.0f + 0.5f).toInt()
 }

@@ -154,7 +154,6 @@ fun QRScannerScreen(
                                         if (isScanningActive) {
                                             processImageProxy(barcodeScanner, imageProxy) { result ->
                                                 if (isScanningActive) {
-                                                    android.util.Log.d("UpiDebug", "QR Scanned: $result")
                                                     isScanningActive = false
                                                     showSuccessPulse = true
                                                     vibrate(ctx)
@@ -178,7 +177,7 @@ fun QRScannerScreen(
                                     imageAnalysis
                                 )
                             } catch (e: Exception) {
-                                Log.e("QRScanner", "Use case binding failed", e)
+                                // Camera binding failed
                             }
                         }, ContextCompat.getMainExecutor(ctx))
 

@@ -134,7 +134,6 @@ fun ReviewPaymentScreen(
             FSPrimaryButton(
                 text = "Pay ₹ $amount",
                 onClick = {
-                    android.util.Log.d("UpiDebug", "ReviewPaymentScreen: Clicked Pay. Name: $contactName, Amount: $amount, Note: $note")
                     onPayClick()
                 }
             )
