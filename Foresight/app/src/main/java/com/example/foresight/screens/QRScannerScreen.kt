@@ -154,6 +154,7 @@ fun QRScannerScreen(
                                         if (isScanningActive) {
                                             processImageProxy(barcodeScanner, imageProxy) { result ->
                                                 if (isScanningActive) {
+                                                    android.util.Log.d("UpiDebug", "QR Scanned: $result")
                                                     isScanningActive = false
                                                     showSuccessPulse = true
                                                     vibrate(ctx)

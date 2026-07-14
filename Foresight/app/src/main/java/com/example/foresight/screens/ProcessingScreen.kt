@@ -56,6 +56,7 @@ fun ProcessingScreen(
     var visibleItems by remember { mutableStateOf(0) }
 
     LaunchedEffect(Unit) {
+        android.util.Log.d("UpiDebug", "Processing: $contactName, $contactPhone, $amount")
         viewModel.analyzeRisk(amount, isTrusted, contactPhone)
         for (i in 1..checklist.size) {
             delay(400)

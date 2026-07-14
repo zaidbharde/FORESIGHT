@@ -41,7 +41,16 @@ fun RiskResultScreen(
     onPaymentSuccess: () -> Unit,
     onCancelClick: () -> Unit,
     payeeVpa: String,
-    transactionNote: String
+    transactionNote: String,
+    mc: String? = null,
+    tr: String? = null,
+    tid: String? = null,
+    mode: String? = null,
+    orgid: String? = null,
+    sign: String? = null,
+    url: String? = null,
+    purpose: String? = null,
+    mam: String? = null
 ) {
     val context = LocalContext.current
     val finalScore = prediction.adjustedScore ?: prediction.riskScore
@@ -277,7 +286,16 @@ fun RiskResultScreen(
                     payeeName = contactName,
                     amount = amount,
                     transactionNote = transactionNote,
-                    launcher = upiLauncher
+                    launcher = upiLauncher,
+                    merchantCode = mc,
+                    transactionRef = tr,
+                    transactionId = tid,
+                    mode = mode,
+                    orgid = orgid,
+                    sign = sign,
+                    url = url,
+                    purpose = purpose,
+                    mam = mam
                 )
             },
             onDismiss = { showAppSheet = false }

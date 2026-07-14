@@ -41,7 +41,16 @@ data class UpiDetails(
     val pn: String?, // Name
     val am: String?, // Amount
     val tn: String?, // Note
-    val cu: String?  // Currency
+    val cu: String?, // Currency
+    val mc: String? = null, // Merchant Code
+    val tr: String? = null, // Transaction Ref
+    val tid: String? = null, // Transaction ID
+    val mode: String? = null, // Mode
+    val orgid: String? = null, // Org ID
+    val sign: String? = null, // Signature
+    val url: String? = null, // Reference URL
+    val purpose: String? = null, // Purpose code
+    val mam: String? = null // Minimum amount
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -179,13 +188,23 @@ object UpiManager {
         payeeVpa: String,
         payeeName: String,
         amount: String,
-        transactionNote: String = "Payment"
+        transactionNote: String = "Payment",
+        merchantCode: String? = null,
+        transactionRef: String? = null,
+        transactionId: String? = null,
+        mode: String? = null,
+        orgid: String? = null,
+        sign: String? = null,
+        url: String? = null,
+        purpose: String? = null,
+        mam: String? = null
     ): Uri {
-        val sanitizedVpa = payeeVpa.trim().lowercase()
+        // Preserving original casing as per requirements
+        val sanitizedVpa = payeeVpa.trim()
         val sanitizedName = payeeName.trim()
         val amountValue = amount.toDoubleOrNull()
 
-        require(VPA_REGEX.matches(sanitizedVpa)) { "Invalid UPI ID." }
+        require(VPA_REGEX.matches(sanitizedVpa)) { "Invalid UPI ID format." }
         require(sanitizedName.isNotEmpty()) { "Payee name is required." }
         require(amountValue != null && amountValue.isFinite() && amountValue > 0.0 && amountValue <= MAX_UPI_AMOUNT) {
             "Invalid payment amount."
@@ -193,12 +212,11 @@ object UpiManager {
 
         val formattedAmount = String.format(java.util.Locale.US, "%.2f", amountValue)
         
-        // NPCI Compliance: Max 80 chars, alphanumeric + spaces only to avoid intent parsing errors
         val safeNote = transactionNote.filter { it.isLetterOrDigit() || it == ' ' }
             .take(80)
             .ifEmpty { "Payment" }
 
-        return Uri.Builder()
+        val builder = Uri.Builder()
             .scheme("upi")
             .authority("pay")
             .appendQueryParameter("pa", sanitizedVpa)
@@ -206,7 +224,20 @@ object UpiManager {
             .appendQueryParameter("am", formattedAmount)
             .appendQueryParameter("cu", "INR")
             .appendQueryParameter("tn", safeNote)
-            .build()
+            
+        merchantCode?.let { builder.appendQueryParameter("mc", it) }
+        transactionRef?.let { builder.appendQueryParameter("tr", it) }
+        transactionId?.let { builder.appendQueryParameter("tid", it) }
+        mode?.let { builder.appendQueryParameter("mode", it) }
+        orgid?.let { builder.appendQueryParameter("orgid", it) }
+        sign?.let { builder.appendQueryParameter("sign", it) }
+        url?.let { builder.appendQueryParameter("url", it) }
+        purpose?.let { builder.appendQueryParameter("purpose", it) }
+        mam?.let { builder.appendQueryParameter("mam", it) }
+
+        val uri = builder.build()
+        android.util.Log.d("UpiDebug", "Generated UPI URI: $uri")
+        return uri
     }
 
     fun parseUpiResponse(data: String?): UpiResult {
@@ -231,25 +262,55 @@ object UpiManager {
     }
 
     fun parseUpiUri(uriStr: String): UpiDetails? {
+        android.util.Log.d("UpiDebug", "Parsing QR URI: $uriStr")
         return try {
             val uri = Uri.parse(uriStr)
-            if (uri.scheme != "upi" || uri.host != "pay") return null
-            val pa = uri.getQueryParameter("pa")?.trim()?.lowercase() ?: return null
-            if (!VPA_REGEX.matches(pa)) return null
+            if (uri.scheme != "upi" || uri.host != "pay") {
+                android.util.Log.e("UpiDebug", "Invalid URI Scheme/Host: ${uri.scheme}://${uri.host}")
+                return null
+            }
+            // Removing .lowercase() to preserve case sensitivity if any
+            val pa = uri.getQueryParameter("pa")?.trim() ?: return null
+            if (!VPA_REGEX.matches(pa)) {
+                android.util.Log.e("UpiDebug", "Invalid VPA format: $pa")
+                return null
+            }
 
             val am = uri.getQueryParameter("am")?.trim()
             if (!am.isNullOrEmpty()) {
                 val amountValue = am.toDoubleOrNull()
                 if (amountValue == null || !amountValue.isFinite() || amountValue <= 0.0 || amountValue > MAX_UPI_AMOUNT) {
+                    android.util.Log.e("UpiDebug", "Invalid Amount in QR: $am")
                     return null
                 }
             }
 
             val currency = uri.getQueryParameter("cu")?.trim()
-            if (!currency.isNullOrEmpty() && currency.uppercase() != "INR") return null
+            if (!currency.isNullOrEmpty() && currency.uppercase() != "INR") {
+                android.util.Log.e("UpiDebug", "Invalid Currency in QR: $currency")
+                return null
+            }
 
-            UpiDetails(pa = pa, pn = uri.getQueryParameter("pn"), am = am, tn = uri.getQueryParameter("tn"), cu = currency)
+            val details = UpiDetails(
+                pa = pa, 
+                pn = uri.getQueryParameter("pn"), 
+                am = am, 
+                tn = uri.getQueryParameter("tn"), 
+                cu = currency,
+                mc = uri.getQueryParameter("mc"),
+                tr = uri.getQueryParameter("tr"),
+                tid = uri.getQueryParameter("tid"),
+                mode = uri.getQueryParameter("mode"),
+                orgid = uri.getQueryParameter("orgid"),
+                sign = uri.getQueryParameter("sign"),
+                url = uri.getQueryParameter("url"),
+                purpose = uri.getQueryParameter("purpose"),
+                mam = uri.getQueryParameter("mam")
+            )
+            android.util.Log.d("UpiDebug", "Parsed QR Details: $details")
+            details
         } catch (e: Exception) {
+            android.util.Log.e("UpiDebug", "Parse Error", e)
             null
         }
     }
@@ -261,10 +322,38 @@ object UpiManager {
         payeeName: String,
         amount: String,
         transactionNote: String,
-        launcher: androidx.activity.result.ActivityResultLauncher<Intent>
+        launcher: androidx.activity.result.ActivityResultLauncher<Intent>,
+        merchantCode: String? = null,
+        transactionRef: String? = null,
+        transactionId: String? = null,
+        mode: String? = null,
+        orgid: String? = null,
+        sign: String? = null,
+        url: String? = null,
+        purpose: String? = null,
+        mam: String? = null
     ) {
         try {
-            val uri = createUpiUri(payeeVpa, payeeName, amount, transactionNote)
+            val uri = createUpiUri(
+                payeeVpa, 
+                payeeName, 
+                amount, 
+                transactionNote, 
+                merchantCode, 
+                transactionRef, 
+                transactionId,
+                mode, 
+                orgid, 
+                sign,
+                url,
+                purpose,
+                mam
+            )
+            
+            android.util.Log.d("UpiDebug", "--- UPI Intent Launch ---")
+            android.util.Log.d("UpiDebug", "URI: $uri")
+            android.util.Log.d("UpiDebug", "App: ${app.name} (${app.packageName})")
+            
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
                 setPackage(app.packageName)
             }
@@ -275,12 +364,14 @@ object UpiManager {
                 android.widget.Toast.makeText(context, "This UPI application is unavailable.", android.widget.Toast.LENGTH_SHORT).show()
             }
         } catch (e: IllegalArgumentException) {
+            android.util.Log.e("UpiDebug", "Validation Error: ${e.message}")
             android.widget.Toast.makeText(context, e.message ?: "Invalid UPI payment details.", android.widget.Toast.LENGTH_SHORT).show()
         } catch (e: Exception) {
+            android.util.Log.e("UpiDebug", "Launch Error", e)
             android.widget.Toast.makeText(context, "Could not launch ${app.name}", android.widget.Toast.LENGTH_SHORT).show()
         }
     }
 
     private const val MAX_UPI_AMOUNT = 1_000_000.0
-    private val VPA_REGEX = Regex("^[a-zA-Z0-9.\\-_]{2,}@[a-zA-Z]{2,}$")
+    private val VPA_REGEX = Regex("^[a-zA-Z0-9.\\-_]{2,}@[a-zA-Z0-9.\\-_]{2,}$")
 }

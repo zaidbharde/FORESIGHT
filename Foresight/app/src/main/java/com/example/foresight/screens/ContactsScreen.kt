@@ -157,7 +157,10 @@ fun ContactsScreen(
                                 items(trusted) { contact ->
                                     ContactCard(
                                         contact = contact,
-                                        onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
+                                        onContactClick = { 
+                                            android.util.Log.d("UpiDebug", "ContactsScreen: Selected ${contact.name}, VPA: ${contact.upiId}")
+                                            onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) 
+                                        },
                                         onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
                                     )
                                 }
@@ -177,7 +180,10 @@ fun ContactsScreen(
                                 items(others) { contact ->
                                     ContactCard(
                                         contact = contact,
-                                        onContactClick = { onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) },
+                                        onContactClick = { 
+                                            android.util.Log.d("UpiDebug", "ContactsScreen: Selected ${contact.name}, VPA: ${contact.upiId}")
+                                            onContactClick(contact.name, contact.name.take(1).uppercase(), contact.color.toArgb()) 
+                                        },
                                         onToggleTrusted = { viewModel.toggleTrusted(contact.id) }
                                     )
                                 }

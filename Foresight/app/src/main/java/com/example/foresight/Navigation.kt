@@ -49,20 +49,105 @@ object ForesightRoutes {
 
     const val Contacts = "contacts"
     const val Payment = "payment/{contactName}/{initial}/{color}"
-    const val ReviewPayment = "review_payment/{contactName}/{amount}/{note}/{color}/{payeeVpa}"
-    const val Processing = "processing/{contactName}/{phone}/{amount}/{payeeVpa}"
-    const val RiskResult = "risk_result/{status}/{contactName}/{amount}/{note}/{color}/{payeeVpa}"
+    const val ReviewPayment = "review_payment/{contactName}/{amount}/{note}/{color}/{payeeVpa}?mc={mc}&tr={tr}&tid={tid}&mode={mode}&orgid={orgid}&sign={sign}&url={url}&purpose={purpose}&mam={mam}"
+    const val Processing = "processing/{contactName}/{phone}/{amount}/{payeeVpa}?mc={mc}&tr={tr}&tid={tid}&mode={mode}&orgid={orgid}&sign={sign}&url={url}&purpose={purpose}&mam={mam}"
+    const val RiskResult = "risk_result/{status}/{contactName}/{amount}/{note}/{color}/{payeeVpa}?mc={mc}&tr={tr}&tid={tid}&mode={mode}&orgid={orgid}&sign={sign}&url={url}&purpose={purpose}&mam={mam}"
+
     const val Success = "success/{contactName}/{amount}"
     const val QRDetails = "qr_details/{upiUri}"
     const val Notifications = "notifications"
 
     fun payment(name: String, initial: String, color: Int) = "payment/$name/$initial/$color"
-    fun review(name: String, amount: String, note: String, color: Int, vpa: String = "") = 
-        "review_payment/$name/$amount/${if (note.isEmpty()) "Payment" else note}/$color/${if (vpa.isEmpty()) "none" else vpa}"
-    fun processing(name: String, phone: String, amount: String, vpa: String = "") = 
-        "processing/$name/$phone/$amount/${if (vpa.isEmpty()) "none" else vpa}"
-    fun riskResult(status: String, name: String, amount: String, note: String, color: Int, vpa: String = "") = 
-        "risk_result/$status/$name/$amount/${if (note.isEmpty()) "Payment" else note}/$color/${if (vpa.isEmpty()) "none" else vpa}"
+    
+    fun review(
+        name: String, 
+        amount: String, 
+        note: String, 
+        color: Int, 
+        vpa: String = "", 
+        mc: String? = null, 
+        tr: String? = null, 
+        tid: String? = null,
+        mode: String? = null, 
+        orgid: String? = null, 
+        sign: String? = null,
+        url: String? = null,
+        purpose: String? = null,
+        mam: String? = null
+    ): String {
+        val base = "review_payment/$name/$amount/${if (note.isEmpty()) "Payment" else note}/$color/${if (vpa.isEmpty()) "none" else vpa}"
+        val query = mutableListOf<String>()
+        mc?.let { query.add("mc=$it") }
+        tr?.let { query.add("tr=$it") }
+        tid?.let { query.add("tid=$it") }
+        mode?.let { query.add("mode=$it") }
+        orgid?.let { query.add("orgid=$it") }
+        sign?.let { query.add("sign=$it") }
+        url?.let { query.add("url=$it") }
+        purpose?.let { query.add("purpose=$it") }
+        mam?.let { query.add("mam=$it") }
+        return if (query.isEmpty()) base else "$base?${query.joinToString("&")}"
+    }
+
+    fun processing(
+        name: String, 
+        phone: String, 
+        amount: String, 
+        vpa: String = "", 
+        mc: String? = null, 
+        tr: String? = null, 
+        tid: String? = null,
+        mode: String? = null, 
+        orgid: String? = null, 
+        sign: String? = null,
+        url: String? = null,
+        purpose: String? = null,
+        mam: String? = null
+    ): String {
+        val base = "processing/$name/$phone/$amount/${if (vpa.isEmpty()) "none" else vpa}"
+        val query = mutableListOf<String>()
+        mc?.let { query.add("mc=$it") }
+        tr?.let { query.add("tr=$it") }
+        tid?.let { query.add("tid=$it") }
+        mode?.let { query.add("mode=$it") }
+        orgid?.let { query.add("orgid=$it") }
+        sign?.let { query.add("sign=$it") }
+        url?.let { query.add("url=$it") }
+        purpose?.let { query.add("purpose=$it") }
+        mam?.let { query.add("mam=$it") }
+        return if (query.isEmpty()) base else "$base?${query.joinToString("&")}"
+    }
+
+    fun riskResult(
+        status: String, 
+        name: String, 
+        amount: String, 
+        note: String, 
+        color: Int, 
+        vpa: String = "", 
+        mc: String? = null, 
+        tr: String? = null, 
+        tid: String? = null,
+        mode: String? = null, 
+        orgid: String? = null, 
+        sign: String? = null,
+        url: String? = null,
+        purpose: String? = null,
+        mam: String? = null
+    ): String {
+        val base = "risk_result/$status/$name/$amount/${if (note.isEmpty()) "Payment" else note}/$color/${if (vpa.isEmpty()) "none" else vpa}"
+        val query = mutableListOf<String>()
+        mc?.let { query.add("mc=$it") }
+        tr?.let { query.add("tr=$it") }
+        tid?.let { query.add("tid=$it") }
+        mode?.let { query.add("mode=$it") }
+        orgid?.let { query.add("orgid=$it") }
+        sign?.let { query.add("sign=$it") }
+        url?.let { query.add("url=$it") }
+        purpose?.let { query.add("purpose=$it") }
+        mam?.let { query.add("mam=$it") }
+        return if (query.isEmpty()) base else "$base?${query.joinToString("&")}"
+    }
     fun success(name: String, amount: String) = "success/$name/$amount"
     fun qrDetails(uri: String) = "qr_details/${android.net.Uri.encode(uri)}"
 }
@@ -166,13 +251,26 @@ fun Navigation() {
                 arguments = listOf(navArgument("upiUri") { type = NavType.StringType })
             ) { backStackEntry ->
                 val uri = backStackEntry.arguments?.getString("upiUri") ?: ""
-                val decodedUri = android.net.Uri.decode(uri)
-                val upiDetails = UpiManager.parseUpiUri(decodedUri)
+                val upiDetails = UpiManager.parseUpiUri(uri)
                 QRDetailsScreen(
-                    upiUri = decodedUri,
+                    upiUri = uri,
                     onBackClick = { navController.popBackStack() },
                     onContinueClick = { name, amount, note ->
-                        navController.navigate(ForesightRoutes.review(name, amount, note, 0xFF7C4DFF.toInt(), upiDetails?.pa ?: ""))
+                        navController.navigate(
+                            ForesightRoutes.review(
+                                name, amount, note, 0xFF7C4DFF.toInt(), 
+                                upiDetails?.pa ?: "",
+                                mc = upiDetails?.mc,
+                                tr = upiDetails?.tr,
+                                tid = upiDetails?.tid,
+                                mode = upiDetails?.mode,
+                                orgid = upiDetails?.orgid,
+                                sign = upiDetails?.sign,
+                                url = upiDetails?.url,
+                                purpose = upiDetails?.purpose,
+                                mam = upiDetails?.mam
+                            )
+                        )
                     }
                 )
             }
@@ -255,7 +353,16 @@ fun Navigation() {
                     navArgument("amount") { type = NavType.StringType },
                     navArgument("note") { type = NavType.StringType },
                     navArgument("color") { type = NavType.IntType },
-                    navArgument("payeeVpa") { type = NavType.StringType }
+                    navArgument("payeeVpa") { type = NavType.StringType },
+                    navArgument("mc") { type = NavType.StringType; nullable = true },
+                    navArgument("tr") { type = NavType.StringType; nullable = true },
+                    navArgument("tid") { type = NavType.StringType; nullable = true },
+                    navArgument("mode") { type = NavType.StringType; nullable = true },
+                    navArgument("orgid") { type = NavType.StringType; nullable = true },
+                    navArgument("sign") { type = NavType.StringType; nullable = true },
+                    navArgument("url") { type = NavType.StringType; nullable = true },
+                    navArgument("purpose") { type = NavType.StringType; nullable = true },
+                    navArgument("mam") { type = NavType.StringType; nullable = true }
                 )
             ) { backStackEntry ->
                 val name = backStackEntry.arguments?.getString("contactName") ?: ""
@@ -263,6 +370,16 @@ fun Navigation() {
                 val note = backStackEntry.arguments?.getString("note") ?: ""
                 val color = backStackEntry.arguments?.getInt("color") ?: 0
                 val vpa = backStackEntry.arguments?.getString("payeeVpa") ?: ""
+                
+                val mc = backStackEntry.arguments?.getString("mc")
+                val tr = backStackEntry.arguments?.getString("tr")
+                val tid = backStackEntry.arguments?.getString("tid")
+                val mode = backStackEntry.arguments?.getString("mode")
+                val orgid = backStackEntry.arguments?.getString("orgid")
+                val sign = backStackEntry.arguments?.getString("sign")
+                val url = backStackEntry.arguments?.getString("url")
+                val purpose = backStackEntry.arguments?.getString("purpose")
+                val mam = backStackEntry.arguments?.getString("mam")
                 
                 val bankAccounts by userViewModel.bankAccounts.collectAsState()
                 val primaryBank = bankAccounts.find { it.isPrimary } ?: BankAccount(
@@ -289,7 +406,7 @@ fun Navigation() {
                     primaryBank = primaryBank,
                     onBackClick = { navController.popBackStack() },
                     onPayClick = {
-                        navController.navigate(ForesightRoutes.processing(name, phone, amount, finalVpa))
+                        navController.navigate(ForesightRoutes.processing(name, phone, amount, finalVpa, mc, tr, tid, mode, orgid, sign, url, purpose, mam))
                     }
                 )
             }
@@ -300,13 +417,32 @@ fun Navigation() {
                     navArgument("contactName") { type = NavType.StringType },
                     navArgument("phone") { type = NavType.StringType },
                     navArgument("amount") { type = NavType.StringType },
-                    navArgument("payeeVpa") { type = NavType.StringType }
+                    navArgument("payeeVpa") { type = NavType.StringType },
+                    navArgument("mc") { type = NavType.StringType; nullable = true },
+                    navArgument("tr") { type = NavType.StringType; nullable = true },
+                    navArgument("tid") { type = NavType.StringType; nullable = true },
+                    navArgument("mode") { type = NavType.StringType; nullable = true },
+                    navArgument("orgid") { type = NavType.StringType; nullable = true },
+                    navArgument("sign") { type = NavType.StringType; nullable = true },
+                    navArgument("url") { type = NavType.StringType; nullable = true },
+                    navArgument("purpose") { type = NavType.StringType; nullable = true },
+                    navArgument("mam") { type = NavType.StringType; nullable = true }
                 )
             ) { backStackEntry ->
                 val name = backStackEntry.arguments?.getString("contactName") ?: ""
                 val phone = backStackEntry.arguments?.getString("phone") ?: ""
                 val amount = backStackEntry.arguments?.getString("amount") ?: ""
                 val vpa = backStackEntry.arguments?.getString("payeeVpa") ?: ""
+                
+                val mc = backStackEntry.arguments?.getString("mc")
+                val tr = backStackEntry.arguments?.getString("tr")
+                val tid = backStackEntry.arguments?.getString("tid")
+                val mode = backStackEntry.arguments?.getString("mode")
+                val orgid = backStackEntry.arguments?.getString("orgid")
+                val sign = backStackEntry.arguments?.getString("sign")
+                val url = backStackEntry.arguments?.getString("url")
+                val purpose = backStackEntry.arguments?.getString("purpose")
+                val mam = backStackEntry.arguments?.getString("mam")
 
                 ProcessingScreen(
                     viewModel = viewModel,
@@ -314,7 +450,7 @@ fun Navigation() {
                     contactPhone = phone,
                     amount = amount,
                     onProcessingFinished = { _ ->
-                        navController.navigate(ForesightRoutes.riskResult("analyzed", name, amount, "Payment", 0xFF7C4DFF.toInt(), vpa)) {
+                        navController.navigate(ForesightRoutes.riskResult("analyzed", name, amount, "Payment", 0xFF7C4DFF.toInt(), vpa, mc, tr, tid, mode, orgid, sign, url, purpose, mam)) {
                             popUpTo(ForesightRoutes.Home)
                         }
                     },
@@ -330,7 +466,16 @@ fun Navigation() {
                     navArgument("amount") { type = NavType.StringType },
                     navArgument("note") { type = NavType.StringType },
                     navArgument("color") { type = NavType.IntType },
-                    navArgument("payeeVpa") { type = NavType.StringType }
+                    navArgument("payeeVpa") { type = NavType.StringType },
+                    navArgument("mc") { type = NavType.StringType; nullable = true },
+                    navArgument("tr") { type = NavType.StringType; nullable = true },
+                    navArgument("tid") { type = NavType.StringType; nullable = true },
+                    navArgument("mode") { type = NavType.StringType; nullable = true },
+                    navArgument("orgid") { type = NavType.StringType; nullable = true },
+                    navArgument("sign") { type = NavType.StringType; nullable = true },
+                    navArgument("url") { type = NavType.StringType; nullable = true },
+                    navArgument("purpose") { type = NavType.StringType; nullable = true },
+                    navArgument("mam") { type = NavType.StringType; nullable = true }
                 )
             ) { backStackEntry ->
                 val name = backStackEntry.arguments?.getString("contactName") ?: ""
@@ -338,6 +483,16 @@ fun Navigation() {
                 val note = backStackEntry.arguments?.getString("note") ?: ""
                 val colorValue = backStackEntry.arguments?.getInt("color") ?: 0
                 val vpa = backStackEntry.arguments?.getString("payeeVpa") ?: ""
+                
+                val mc = backStackEntry.arguments?.getString("mc")
+                val tr = backStackEntry.arguments?.getString("tr")
+                val tid = backStackEntry.arguments?.getString("tid")
+                val mode = backStackEntry.arguments?.getString("mode")
+                val orgid = backStackEntry.arguments?.getString("orgid")
+                val sign = backStackEntry.arguments?.getString("sign")
+                val url = backStackEntry.arguments?.getString("url")
+                val purpose = backStackEntry.arguments?.getString("purpose")
+                val mam = backStackEntry.arguments?.getString("mam")
                 
                 val prediction by viewModel.currentPrediction.collectAsState()
                 
@@ -377,7 +532,16 @@ fun Navigation() {
                             navController.popBackStack(ForesightRoutes.Home, inclusive = false)
                         },
                         payeeVpa = vpa,
-                        transactionNote = note
+                        transactionNote = note,
+                        mc = mc,
+                        tr = tr,
+                        tid = tid,
+                        mode = mode,
+                        orgid = orgid,
+                        sign = sign,
+                        url = url,
+                        purpose = purpose,
+                        mam = mam
                     )
                 }
             }

@@ -133,7 +133,10 @@ fun ReviewPaymentScreen(
 
             FSPrimaryButton(
                 text = "Pay ₹ $amount",
-                onClick = onPayClick
+                onClick = {
+                    android.util.Log.d("UpiDebug", "ReviewPaymentScreen: Clicked Pay. Name: $contactName, Amount: $amount, Note: $note")
+                    onPayClick()
+                }
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
